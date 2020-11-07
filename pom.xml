@@ -32,6 +32,7 @@
         <zookeeper.version>3.5.7</zookeeper.version>
         <curator.version>4.2.0</curator.version>
         <jedis.version>2.9.0</jedis.version>
+        <redisson.version>3.5.4</redisson.version>
     </properties>
 
     <dependencies>
@@ -57,6 +58,11 @@
         </dependency>
 
         <!--自定义依赖-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>${redisson.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-client</artifactId>
