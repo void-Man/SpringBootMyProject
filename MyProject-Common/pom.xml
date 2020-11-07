@@ -9,12 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>SpringBootRedis</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>RedisTemplateTester</module>
-        <module>RedisDistributedLock</module>
-    </modules>
+    <artifactId>MyProject-common</artifactId>
 
 
 </project>
