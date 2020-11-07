@@ -1,4 +1,4 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;

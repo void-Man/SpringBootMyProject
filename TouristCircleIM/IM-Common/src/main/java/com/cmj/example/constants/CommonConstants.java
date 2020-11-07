@@ -1,6 +1,26 @@
 package com.cmj.example.constants;
 
 public interface CommonConstants {
+    /**
+     * redis地址
+     */
+    public static final String REDIS_HOST = "192.168.198.153";
+    /**
+     * 最大空闲数
+     */
+    public static final int MAX_IDEL = 100;
+    /**
+     * 最大连接数
+     */
+    public static final int MAX_Total = 100;
+    /**
+     * 预热连接数
+     */
+    public static final int HOT_QUANTITY = 10;
+    /**
+     * 节点通信占用端口
+     */
+    public static final int LOCAL_PORT = 9000;
 
     /**
      * 魔数，可以通过配置获取

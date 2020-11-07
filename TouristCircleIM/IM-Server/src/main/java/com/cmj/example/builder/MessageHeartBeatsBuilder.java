@@ -1,6 +1,6 @@
 package com.cmj.example.builder;
 
-import com.cmj.example.utils.CommonUtils;
+import com.cmj.example.utils.common.CommonUtils;
 import com.cmj.example.vo.ProtoMsg;
 
 /**

@@ -1,4 +1,4 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedQueue;

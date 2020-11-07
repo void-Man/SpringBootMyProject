@@ -1,4 +1,4 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 /**
  * @author mengjie_chen

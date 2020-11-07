@@ -4,7 +4,7 @@ import com.cmj.example.builder.ChatResponceBuilder;
 import com.cmj.example.component.ServerSession;
 import com.cmj.example.component.SessionMap;
 import com.cmj.example.constants.CommonConstants;
-import com.cmj.example.utils.CommonUtils;
+import com.cmj.example.utils.common.CommonUtils;
 import com.cmj.example.vo.ChatMessageVo;
 import com.cmj.example.vo.ProtoMsg;
 

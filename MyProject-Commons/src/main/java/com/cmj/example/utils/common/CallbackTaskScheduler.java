@@ -1,4 +1,4 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 import com.google.common.util.concurrent.*;
 import org.checkerframework.checker.nullness.qual.Nullable;

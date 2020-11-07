@@ -1,15 +1,15 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.InetAddress;
 import java.net.URL;
 import java.net.URLDecoder;
 import java.nio.ByteBuffer;
 import java.text.DecimalFormat;
 
 public class IOUtil {
-
 
     public static String getUserHomeResourcePath(String resName) {
         String p = System.getProperty("user.dir") + File.separator + resName;
@@ -122,5 +122,23 @@ public class IOUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    /**
+     * 获取当前服务所在IP
+     *
+     * @param
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2020/11/7
+     */
+    public static String getHostAddress() {
+        String ip = null;
+        try {
+            ip = InetAddress.getLocalHost().getHostAddress();
+        } catch (Exception ex) {
+            System.out.println("获取ip报错" + ex.getMessage());
+        }
+        return ip;
     }
 }

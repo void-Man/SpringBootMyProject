@@ -2,8 +2,8 @@ package com.cmj.example.handle;
 
 import com.cmj.example.component.ServerSession;
 import com.cmj.example.processor.ChatProcesser;
-import com.cmj.example.utils.CallbackTask;
-import com.cmj.example.utils.CallbackTaskScheduler;
+import com.cmj.example.utils.common.CallbackTask;
+import com.cmj.example.utils.common.CallbackTaskScheduler;
 import com.cmj.example.vo.ChatMessageVo;
 import com.cmj.example.vo.ProtoMsg;
 import io.netty.channel.ChannelHandlerContext;

@@ -1,4 +1,4 @@
-package com.cmj.example.utils;
+package com.cmj.example.utils.common;
 
 public class NioDemoConfig extends ConfigProperties {
 

@@ -2,7 +2,7 @@ package com.cmj.example.handle;
 
 import com.cmj.example.component.ServerSession;
 import com.cmj.example.processor.HeartBeatsProcess;
-import com.cmj.example.utils.FutureTaskScheduler;
+import com.cmj.example.utils.common.FutureTaskScheduler;
 import com.cmj.example.vo.ProtoMsg;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.timeout.IdleStateEvent;

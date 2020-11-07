@@ -1,6 +1,6 @@
 package com.cmj.example;
 
-import com.cmj.example.utils.NettyDemoConfig;
+import com.cmj.example.utils.common.NettyDemoConfig;
 
 /**
  * @author mengjie_chen

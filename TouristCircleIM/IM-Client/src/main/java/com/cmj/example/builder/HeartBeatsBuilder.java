@@ -1,7 +1,7 @@
 package com.cmj.example.builder;
 
 import com.cmj.example.components.ClientSession;
-import com.cmj.example.utils.CommonUtils;
+import com.cmj.example.utils.common.CommonUtils;
 import com.cmj.example.vo.ProtoMsg;
 
 import static com.cmj.example.vo.ProtoMsg.HeadType.HEART_BEAT;

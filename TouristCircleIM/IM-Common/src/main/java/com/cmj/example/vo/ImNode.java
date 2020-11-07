@@ -65,6 +65,14 @@ public class ImNode implements Comparable<ImNode> {
         this.port = port;
     }
 
+    public void incrBalance(){
+        balance.incrementAndGet();
+    }
+
+    public void decrBalance(){
+        balance.decrementAndGet();
+    }
+
     @Override
     public int compareTo(ImNode o) {
         if (this.balance.get() > o.getBalance().get()) {
