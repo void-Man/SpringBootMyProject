@@ -6,7 +6,7 @@
     <modules>
         <module>SpringBootRedis</module>
         <module>TouristCircleIM</module>
-        <module>MyProject-common</module>
+        <module>MyProject-Commons</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
