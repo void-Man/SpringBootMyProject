@@ -1,4 +1,4 @@
-package com.cmj.example.vo;
+package com.cmj.example.component;
 
 import com.google.common.base.Objects;
 

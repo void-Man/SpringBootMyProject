@@ -1,4 +1,4 @@
-package com.cmj.example.vo;
+package com.cmj.example.component;
 
 import com.cmj.example.utils.common.CommonUtils;
 import com.cmj.example.utils.zk.ZookeeperClient;
@@ -31,7 +31,7 @@ public class ImLoadBalance {
      * 获取负载最小的节点
      *
      * @param
-     * @return com.cmj.example.vo.ImNode
+     * @return com.cmj.example.component.ImNode
      * @author mengjie_chen
      * @date 2020/11/9
      */
@@ -47,7 +47,7 @@ public class ImLoadBalance {
      * 获取负载最小的node
      *
      * @param nodeList
-     * @return com.cmj.example.vo.ImNode
+     * @return com.cmj.example.component.ImNode
      * @author mengjie_chen
      * @date 2020/11/10
      */
@@ -59,7 +59,7 @@ public class ImLoadBalance {
      * 从zk中获取所有的节点
      *
      * @param
-     * @return java.util.List<com.cmj.example.vo.ImNode>
+     * @return java.util.List<com.cmj.example.component.ImNode>
      * @author mengjie_chen
      * @date 2020/11/10
      */

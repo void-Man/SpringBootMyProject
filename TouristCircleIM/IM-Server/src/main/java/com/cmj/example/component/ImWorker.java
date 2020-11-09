@@ -1,4 +1,4 @@
-package com.cmj.example.vo;
+package com.cmj.example.component;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.constants.CommonConstants;
