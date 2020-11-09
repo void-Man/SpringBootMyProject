@@ -1,9 +1,12 @@
 package com.cmj.example.utils.zk;
 
+import com.alibaba.fastjson.JSONObject;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -63,6 +66,34 @@ public enum ZookeeperClient {
                     .forPath(path, data);
         }
         return path;
+    }
+
+    /**
+     * 功能描述
+     *
+     * @param path
+     * @param rClass
+     * @return java.util.List<R>
+     * @author mengjie_chen
+     * @date 2020/11/10
+     */
+    public <R> List<R> getChildDataByPath(String path, Class<R> rClass) {
+        List<R> resultList = new ArrayList<>(10);
+        try {
+            Stat stat = CURATORFRAMEWORK.checkExists().forPath(path);
+            if (Objects.isNull(stat)) {
+                return new ArrayList<>(10);
+            }
+            List<String> list = CURATORFRAMEWORK.getChildren().forPath(path);
+            for (String s : list) {
+                byte[] bytes = CURATORFRAMEWORK.getData().forPath(path + "/" + s);
+                R result = JSONObject.parseObject(bytes, rClass);
+                resultList.add(result);
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return resultList;
     }
 
 }
