@@ -7,6 +7,7 @@
         <module>SpringBootRedis</module>
         <module>TouristCircleIM</module>
         <module>MyProject-Commons</module>
+        <module>MyProject-Tester</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -58,6 +59,10 @@
         </dependency>
 
         <!--自定义依赖-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson</artifactId>
