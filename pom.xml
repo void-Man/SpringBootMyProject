@@ -8,6 +8,7 @@
         <module>TouristCircleIM</module>
         <module>MyProject-Commons</module>
         <module>MyProject-Tester</module>
+        <module>DesignPattern</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
