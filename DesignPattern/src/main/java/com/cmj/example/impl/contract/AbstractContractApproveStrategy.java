@@ -13,7 +13,7 @@ public abstract class AbstractContractApproveStrategy implements IContractApprov
 
     @Override
     public ResVo approve() {
-        if (check().isSuccess() && doInvoke().isSuccess()) {
+        if (check().isSuccess()) {
             save();
         }
         return resVo;
@@ -28,16 +28,6 @@ public abstract class AbstractContractApproveStrategy implements IContractApprov
      * @date 2020/11/19
      */
     protected abstract ResVo check();
-
-    /**
-     * 执行流程
-     *
-     * @param
-     * @return com.cmj.example.vo.ResVo
-     * @author mengjie_chen
-     * @date 2020/11/19
-     */
-    protected abstract ResVo doInvoke();
 
     /**
      * 保存数据
