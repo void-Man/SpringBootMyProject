@@ -1,7 +1,7 @@
 package com.cmj.example.impl.contract;
 
+import com.cmj.example.service.contract.IContractApproveStrategy;
 import com.cmj.example.service.contract.IThirdFlowStrategy;
-import com.cmj.example.vo.ContractApproveBaseParamVo;
 import com.cmj.example.vo.ResVo;
 
 /**
@@ -9,31 +9,32 @@ import com.cmj.example.vo.ResVo;
  * @description 审批流与审批逻辑桥接类
  * @date 2020/11/20
  */
-public abstract class AbstractThirdApproveAdapter extends AbstractContractApproveStrategy {
+public abstract class AbstractThirdApproveAdapter implements IContractApproveStrategy {
 
-    protected final ContractApproveBaseParamVo contractApproveBaseParamVo;
     protected final IThirdFlowStrategy thirdFlowStrategy;
+    protected final AbstractContractApproveStrategy contractApproveStrategy;
+    protected ResVo resVo = new ResVo();
 
-    protected AbstractThirdApproveAdapter(ContractApproveBaseParamVo contractApproveBaseParamVo, IThirdFlowStrategy thirdFlowStrategy) {
-        this.contractApproveBaseParamVo = contractApproveBaseParamVo;
+    protected AbstractThirdApproveAdapter(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
         this.thirdFlowStrategy = thirdFlowStrategy;
+        this.contractApproveStrategy = contractApproveStrategy;
     }
 
     @Override
     public ResVo approve() {
-        if (check().isSuccess() && thirdFlowStrategy.doFlow().isSuccess()) {
-            save();
+        if (localCheck().isSuccess()&& doFlow().isSuccess()){
+            contractApproveStrategy.save();
         }
         return resVo;
     }
 
-    @Override
-    protected ResVo check() {
-        return null;
+    protected ResVo localCheck() {
+        resVo = contractApproveStrategy.check();
+        return resVo;
     }
 
-    @Override
-    protected void save() {
-
+    protected ResVo doFlow(){
+        resVo = thirdFlowStrategy.doFlow();
+        return resVo;
     }
 }
