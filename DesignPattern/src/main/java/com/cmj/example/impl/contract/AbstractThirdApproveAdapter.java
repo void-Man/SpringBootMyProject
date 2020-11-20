@@ -22,18 +22,34 @@ public abstract class AbstractThirdApproveAdapter implements IContractApproveStr
 
     @Override
     public ResVo approve() {
-        if (localCheck().isSuccess()&& doFlow().isSuccess()){
+        if (localCheck().isSuccess() && doFlow().isSuccess()) {
             contractApproveStrategy.save();
         }
         return resVo;
     }
 
+    /**
+     * 本地校验
+     *
+     * @param
+     * @return com.cmj.example.vo.ResVo
+     * @author mengjie_chen
+     * @date 2020/11/20
+     */
     protected ResVo localCheck() {
         resVo = contractApproveStrategy.check();
         return resVo;
     }
 
-    protected ResVo doFlow(){
+    /**
+     * 调用审批流接口
+     *
+     * @param
+     * @return com.cmj.example.vo.ResVo
+     * @author mengjie_chen
+     * @date 2020/11/20
+     */
+    protected ResVo doFlow() {
         resVo = thirdFlowStrategy.doFlow();
         return resVo;
     }
