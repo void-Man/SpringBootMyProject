@@ -9,13 +9,13 @@ import com.cmj.example.vo.ResVo;
  * @description 审批流与审批逻辑桥接类
  * @date 2020/11/20
  */
-public abstract class AbstractThirdApproveAdapter implements IContractApproveStrategy {
+public abstract class AbstractThirdApproveDecorator implements IContractApproveStrategy {
 
     protected final IThirdFlowStrategy thirdFlowStrategy;
     protected final AbstractContractApproveStrategy contractApproveStrategy;
     protected ResVo resVo = new ResVo();
 
-    protected AbstractThirdApproveAdapter(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
+    protected AbstractThirdApproveDecorator(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
         this.thirdFlowStrategy = thirdFlowStrategy;
         this.contractApproveStrategy = contractApproveStrategy;
     }

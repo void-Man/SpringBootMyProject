@@ -8,11 +8,11 @@ import org.apache.log4j.Logger;
  * @author mengjie_chen
  * @description date 2020/11/20
  */
-public class CommonThirdApproveAdapter extends AbstractThirdApproveAdapter {
+public class CommonThirdApproveDecorator extends AbstractThirdApproveDecorator {
 
-    private static final Logger logger = Logger.getLogger(CommonThirdApproveAdapter.class);
+    private static final Logger logger = Logger.getLogger(CommonThirdApproveDecorator.class);
 
-    public CommonThirdApproveAdapter(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
+    public CommonThirdApproveDecorator(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
         super(thirdFlowStrategy, contractApproveStrategy);
         logger.info("into CommonThirdApproveAdapter");
     }
