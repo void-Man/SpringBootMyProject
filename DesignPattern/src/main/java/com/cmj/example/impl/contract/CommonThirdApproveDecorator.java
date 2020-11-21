@@ -1,7 +1,6 @@
 package com.cmj.example.impl.contract;
 
 import com.cmj.example.service.contract.IThirdFlowStrategy;
-import com.cmj.example.vo.ResVo;
 import org.apache.log4j.Logger;
 
 /**
@@ -15,10 +14,5 @@ public class CommonThirdApproveDecorator extends AbstractThirdApproveDecorator {
     public CommonThirdApproveDecorator(IThirdFlowStrategy thirdFlowStrategy, AbstractContractApproveStrategy contractApproveStrategy) {
         super(thirdFlowStrategy, contractApproveStrategy);
         logger.info("into CommonThirdApproveAdapter");
-    }
-
-    @Override
-    public ResVo approve() {
-        return super.approve();
     }
 }

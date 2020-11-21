@@ -21,7 +21,7 @@ public abstract class AbstractThirdApproveDecorator implements IContractApproveS
     }
 
     @Override
-    public ResVo approve() {
+    public final ResVo approve() {
         if (localCheck().isSuccess() && doFlow().isSuccess()) {
             contractApproveStrategy.save();
         }
