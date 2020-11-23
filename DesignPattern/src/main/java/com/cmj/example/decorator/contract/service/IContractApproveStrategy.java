@@ -1,16 +1,16 @@
-package com.cmj.example.service.contract;
+package com.cmj.example.decorator.contract.service;
 
 import com.cmj.example.vo.ResVo;
 
-public interface IThirdFlowStrategy {
+public interface IContractApproveStrategy {
 
     /**
-     * 审批流操作
+     * 审批合同
      * @author mengjie_chen
      * @date 2020/11/19
      * @param
      * @return com.cmj.example.vo.ResVo
      */
-    ResVo doFlow();
+    ResVo approve();
 
 }

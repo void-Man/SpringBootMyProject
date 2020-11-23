@@ -1,7 +1,7 @@
-package com.cmj.example.impl.contract;
+package com.cmj.example.decorator.contract.impl;
 
-import com.cmj.example.service.contract.IContractApproveStrategy;
-import com.cmj.example.service.contract.IThirdFlowStrategy;
+import com.cmj.example.decorator.contract.service.IContractApproveStrategy;
+import com.cmj.example.decorator.contract.service.IThirdFlowStrategy;
 import com.cmj.example.vo.ResVo;
 
 /**
