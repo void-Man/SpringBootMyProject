@@ -4,4 +4,5 @@ public interface Pipeline<T> {
 
     Pipeline addLast(T t);
 
+    T getHead();
 }

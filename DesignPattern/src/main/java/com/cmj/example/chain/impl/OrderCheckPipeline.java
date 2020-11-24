@@ -9,7 +9,7 @@ import java.util.Objects;
  * @description
  * @date 2020/11/24
  */
-public class DefaultPipeline implements Pipeline<AbstractOrderCheckInterceptor> {
+public class OrderCheckPipeline implements Pipeline<AbstractOrderCheckInterceptor> {
 
     private AbstractOrderCheckInterceptor head;
     private AbstractOrderCheckInterceptor tail;
@@ -30,13 +30,18 @@ public class DefaultPipeline implements Pipeline<AbstractOrderCheckInterceptor> 
         return this;
     }
 
+    @Override
+    public AbstractOrderCheckInterceptor getHead() {
+        return head;
+    }
+
     public static void main(String[] args) {
         MerchantCheckInterceptor merchantCheckInterceptor = new MerchantCheckInterceptor();
         MerchantCheckInterceptor merchantCheckInterceptor1 = new MerchantCheckInterceptor();
         MerchantCheckInterceptor merchantCheckInterceptor2 = new MerchantCheckInterceptor();
         MerchantCheckInterceptor merchantCheckInterceptor3 = new MerchantCheckInterceptor();
         @SuppressWarnings("unchecked")
-        Pipeline pipeline = new DefaultPipeline().
+        Pipeline pipeline = new OrderCheckPipeline().
                 addLast(merchantCheckInterceptor)
                 .addLast(merchantCheckInterceptor1)
                 .addLast(merchantCheckInterceptor2)
