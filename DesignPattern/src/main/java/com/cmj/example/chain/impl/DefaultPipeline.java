@@ -35,6 +35,7 @@ public class DefaultPipeline implements Pipeline<AbstractOrderCheckInterceptor> 
         MerchantCheckInterceptor merchantCheckInterceptor1 = new MerchantCheckInterceptor();
         MerchantCheckInterceptor merchantCheckInterceptor2 = new MerchantCheckInterceptor();
         MerchantCheckInterceptor merchantCheckInterceptor3 = new MerchantCheckInterceptor();
+        @SuppressWarnings("unchecked")
         Pipeline pipeline = new DefaultPipeline().
                 addLast(merchantCheckInterceptor)
                 .addLast(merchantCheckInterceptor1)
