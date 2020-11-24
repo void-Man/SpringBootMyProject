@@ -10,6 +10,7 @@ public class ProductCheckInterceptor extends AbstractOrderCheckInterceptor {
     @Override
     protected ResVo checkParam() {
         System.out.println("into ProductCheckInterceptor");
-        return new ResVo();
+        resVo.setSuccess(false);
+        return resVo;
     }
 }

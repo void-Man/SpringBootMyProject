@@ -7,13 +7,13 @@ import com.cmj.example.chain.service.Pipeline;
  * @description date 2020/11/24
  */
 public abstract class AbstractInterceptorInitializer<T extends Pipeline>{
-    protected AbstractInterceptorInitializer() {
-        T pipeLine = getPipeLine();
-        intit(pipeLine);
+    protected final T pipeline;
+
+    protected AbstractInterceptorInitializer(T pipeline) {
+        this.pipeline = pipeline;
+        intit(pipeline);
     }
 
     public abstract void intit(T t);
-
-    protected abstract T getPipeLine();
 
 }
