@@ -7,7 +7,7 @@ import com.cmj.example.chain.service.IOrderCheckInterceptor;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class OrderCheckInterceptorInitializer extends AbstractInterceptorInitializer<OrderCheckPipeline> {
+public abstract class OrderCheckInterceptorInitializer extends AbstractInterceptorInitializer<OrderCheckPipeline, IOrderCheckInterceptor> {
 
     public OrderCheckInterceptorInitializer() {
         super(new OrderCheckPipeline());
