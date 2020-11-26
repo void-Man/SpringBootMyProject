@@ -15,11 +15,10 @@ import java.util.Objects;
 public abstract class AbstractOrderSubmitInterceptor implements IOrderSubmitInterceptor {
 
     private IOrderSubmitInterceptor next;
-    protected ResVo resVo = new ResVo();
 
     @Override
     public ResVo check() {
-        resVo = this.checkParam();
+        ResVo resVo = this.checkParam();
         if (resVo.isSuccess() && Objects.nonNull(next)) {
             resVo = next.check();
         }
