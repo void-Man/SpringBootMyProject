@@ -1,6 +1,6 @@
 package com.cmj.example.chain.service;
 
-public interface Pipeline<T> {
+public interface OrderSubmitPipeline<T extends IOrderSubmitInterceptor> {
 
     /**
      * 尾插
@@ -10,7 +10,7 @@ public interface Pipeline<T> {
      * @author mengjie_chen
      * @date 2020/11/25
      */
-    Pipeline addLast(T t);
+    OrderSubmitPipeline addLast(T t);
 
     /**
      * 获取链中第一个节点

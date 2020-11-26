@@ -6,11 +6,10 @@ import com.cmj.example.vo.ResVo;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public class ProductCheckInterceptor extends AbstractOrderCheckInterceptor {
+public class MerchantSubmitInterceptor extends AbstractOrderSubmitInterceptor {
     @Override
     protected ResVo checkParam() {
-        System.out.println("into ProductCheckInterceptor");
-        resVo.setSuccess(false);
-        return resVo;
+        System.out.println("into MerchantCheckInterceptor");
+        return new ResVo();
     }
 }

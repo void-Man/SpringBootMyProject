@@ -2,8 +2,8 @@ package com.cmj.example.chain.service;
 
 import com.cmj.example.vo.ResVo;
 
-public interface IOrderCheckInterceptor {
+public interface IOrderInvokeHandle {
 
-    ResVo check();
+    ResVo invoke();
 
 }

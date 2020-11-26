@@ -1,19 +1,19 @@
 package com.cmj.example.components;
 
-import com.cmj.example.chain.impl.OrderCheckPipeline;
-import com.cmj.example.chain.service.IOrderCheckInterceptor;
+import com.cmj.example.chain.impl.OrderCheckOrderSubmitPipeline;
+import com.cmj.example.chain.service.IOrderSubmitInterceptor;
 
 /**
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class OrderCheckInterceptorInitializer extends AbstractInterceptorInitializer<OrderCheckPipeline, IOrderCheckInterceptor> {
+public abstract class OrderCheckInterceptorInitializer extends AbstractInterceptorInitializer<OrderCheckOrderSubmitPipeline, IOrderSubmitInterceptor> {
 
     public OrderCheckInterceptorInitializer() {
-        super(new OrderCheckPipeline());
+        super(new OrderCheckOrderSubmitPipeline());
     }
 
-    public IOrderCheckInterceptor getHead() {
+    public IOrderSubmitInterceptor getHead() {
         return pipeline.getHead();
     }
 }
