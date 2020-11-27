@@ -1,7 +1,8 @@
 package com.cmj.example.chain.impl;
 
-import com.cmj.example.chain.service.IOrderInvokeHandle;
-import com.cmj.example.chain.service.IOrderSubmitInterceptor;
+import com.cmj.example.chain.service.OrderInvokeHandle;
+import com.cmj.example.chain.service.OrderInvokeHandleCreator;
+import com.cmj.example.chain.service.OrderSubmitInterceptor;
 import com.cmj.example.vo.ResVo;
 
 import java.util.List;
@@ -12,9 +13,9 @@ import java.util.Objects;
  * @description
  * @date 2020/11/24
  */
-public abstract class AbstractOrderSubmitInterceptor implements IOrderSubmitInterceptor {
+public abstract class AbstractOrderSubmitInterceptor implements OrderSubmitInterceptor, OrderInvokeHandleCreator {
 
-    private IOrderSubmitInterceptor next;
+    private OrderSubmitInterceptor next;
 
     @Override
     public ResVo check() {
@@ -27,12 +28,13 @@ public abstract class AbstractOrderSubmitInterceptor implements IOrderSubmitInte
 
     protected abstract ResVo checkParam();
 
-    public void setNext(IOrderSubmitInterceptor next) {
+    public void setNext(OrderSubmitInterceptor next) {
         this.next = next;
     }
 
     @Override
-    public List<IOrderInvokeHandle> getHandleList() {
-        return null;
-    }
+    public abstract void addHandle(OrderInvokeHandle orderInvokeHandle);
+
+    @Override
+    public abstract List<OrderInvokeHandle> getHandles();
 }

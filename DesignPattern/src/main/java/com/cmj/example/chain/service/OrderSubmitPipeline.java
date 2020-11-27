@@ -1,6 +1,6 @@
 package com.cmj.example.chain.service;
 
-public interface OrderSubmitPipeline<T extends IOrderSubmitInterceptor> {
+public interface OrderSubmitPipeline<T extends OrderSubmitInterceptor> {
 
     /**
      * 尾插
