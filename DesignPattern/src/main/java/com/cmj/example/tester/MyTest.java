@@ -24,7 +24,7 @@ public class MyTest {
                         .addLast(new LimitBuySubmitInterceptor());
             }
         };
-        ResVo check = initializer.getHead().check();
+//        ResVo check = initializer.getHead().check();
     }
 
 }

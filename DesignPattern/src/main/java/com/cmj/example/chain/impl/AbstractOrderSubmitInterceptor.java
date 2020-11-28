@@ -4,6 +4,8 @@ import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.chain.service.OrderInvokeHandleCreator;
 import com.cmj.example.chain.service.OrderSubmitInterceptor;
 import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.SubmitOrderBaseParamVo;
+import com.cmj.example.vo.SubmitOrderContext;
 
 import java.util.List;
 import java.util.Objects;
@@ -13,22 +15,22 @@ import java.util.Objects;
  * @description
  * @date 2020/11/24
  */
-public abstract class AbstractOrderSubmitInterceptor implements OrderSubmitInterceptor, OrderInvokeHandleCreator {
+public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T>, OrderInvokeHandleCreator {
 
-    private OrderSubmitInterceptor next;
+    private OrderSubmitInterceptor<T> next;
 
     @Override
-    public ResVo check() {
-        ResVo resVo = this.checkParam();
+    public ResVo check(SubmitOrderContext<T> context) {
+        ResVo resVo = this.checkParam(context);
         if (resVo.isSuccess() && Objects.nonNull(next)) {
-            resVo = next.check();
+            resVo = next.check(context);
         }
         return resVo;
     }
 
-    protected abstract ResVo checkParam();
+    protected abstract ResVo checkParam(SubmitOrderContext<T> context);
 
-    public void setNext(OrderSubmitInterceptor next) {
+    public void setNext(OrderSubmitInterceptor<T> next) {
         this.next = next;
     }
 
