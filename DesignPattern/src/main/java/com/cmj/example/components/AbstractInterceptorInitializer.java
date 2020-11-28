@@ -2,12 +2,13 @@ package com.cmj.example.components;
 
 import com.cmj.example.chain.impl.abs.AbstractOrderSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.AbstractOrderSubmitPipeline;
+import com.cmj.example.vo.SubmitOrderBaseParamVo;
 
 /**
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubmitPipeline, R extends AbstractOrderSubmitInterceptor> {
+public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubmitPipeline,R extends SubmitOrderBaseParamVo> {
     protected final T pipeline;
 
     protected AbstractInterceptorInitializer(T pipeline) {
@@ -18,8 +19,8 @@ public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubm
     public abstract void intit(T t);
 
 
-    public R getHead() {
-        return (R) pipeline.getHead();
+    public AbstractOrderSubmitInterceptor<R> getHead() {
+        return pipeline.getHead();
     }
 
 }

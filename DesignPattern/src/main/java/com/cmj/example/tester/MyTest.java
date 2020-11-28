@@ -6,7 +6,6 @@ import com.cmj.example.chain.impl.abs.AbstractOrderSubmitPipeline;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.ResVo;
-import com.cmj.example.vo.SubmitOrderBaseParamVo;
 import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
@@ -27,6 +26,7 @@ public class MyTest {
             }
         };
         ResVo check = initializer.getHead().check(new SubmitOrderContext<>());
+
     }
 
 }
