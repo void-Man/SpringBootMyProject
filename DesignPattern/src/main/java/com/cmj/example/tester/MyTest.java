@@ -2,8 +2,8 @@ package com.cmj.example.tester;
 
 import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
 import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
-import com.cmj.example.chain.impl.abs.pileline.AbstractOrderSubmitPipeline;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
+import com.cmj.example.chain.impl.abs.pileline.DefaultOrderSubmitPipeline;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.ResVo;
 import com.cmj.example.vo.SubmitOrderContext;
@@ -19,7 +19,7 @@ public class MyTest {
     public void test1() {
         DefaultSubmitOrderInterceptorInitializer initializer = new DefaultSubmitOrderInterceptorInitializer() {
             @Override
-            public void intit(AbstractOrderSubmitPipeline orderCheckPipeline) {
+            public void intit(DefaultOrderSubmitPipeline orderCheckPipeline) {
                 orderCheckPipeline.addLast(new MerchantSubmitInterceptor())
                         .addLast(new ProductSubmitInterceptor())
                         .addLast(new LimitBuySubmitInterceptor());

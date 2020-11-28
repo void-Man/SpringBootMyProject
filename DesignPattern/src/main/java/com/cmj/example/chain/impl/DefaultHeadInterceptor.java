@@ -17,12 +17,9 @@ public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitIntercepto
 
     private final List<OrderInvokeHandle> handleList = new ArrayList<>(10);
 
-    public DefaultHeadInterceptor() {
-
-    }
-
     @Override
     protected ResVo checkParam(SubmitOrderContext context) {
+        System.out.println("into DefaultHeadInterceptor");
         return new ResVo();
     }
 
