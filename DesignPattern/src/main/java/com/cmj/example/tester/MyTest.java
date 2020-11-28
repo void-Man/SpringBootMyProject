@@ -2,7 +2,7 @@ package com.cmj.example.tester;
 
 import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
 import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
-import com.cmj.example.chain.impl.abs.AbstractOrderSubmitPipeline;
+import com.cmj.example.chain.impl.abs.pileline.AbstractOrderSubmitPipeline;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.ResVo;

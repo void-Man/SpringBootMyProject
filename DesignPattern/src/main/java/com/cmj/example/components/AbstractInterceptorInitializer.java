@@ -1,7 +1,7 @@
 package com.cmj.example.components;
 
-import com.cmj.example.chain.impl.abs.AbstractOrderSubmitInterceptor;
-import com.cmj.example.chain.impl.abs.AbstractOrderSubmitPipeline;
+import com.cmj.example.chain.impl.abs.interceptor.AbstractOrderSubmitInterceptor;
+import com.cmj.example.chain.impl.abs.pileline.AbstractOrderSubmitPipeline;
 import com.cmj.example.vo.SubmitOrderBaseParamVo;
 
 /**
