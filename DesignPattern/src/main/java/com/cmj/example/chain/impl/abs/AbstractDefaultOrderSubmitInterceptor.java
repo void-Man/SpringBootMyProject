@@ -1,4 +1,4 @@
-package com.cmj.example.chain.impl;
+package com.cmj.example.chain.impl.abs;
 
 import com.cmj.example.vo.SubmitOrderBaseParamVo;
 

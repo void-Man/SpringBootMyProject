@@ -1,4 +1,4 @@
-package com.cmj.example.chain.impl;
+package com.cmj.example.chain.impl.abs;
 
 import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.chain.service.OrderInvokeHandleCreator;

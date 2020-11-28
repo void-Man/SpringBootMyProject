@@ -2,10 +2,12 @@ package com.cmj.example.tester;
 
 import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
 import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
-import com.cmj.example.chain.impl.OrderCheckOrderSubmitPipeline;
+import com.cmj.example.chain.impl.abs.AbstractOrderSubmitPipeline;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
-import com.cmj.example.components.OrderCheckInterceptorInitializer;
+import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.SubmitOrderBaseParamVo;
+import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
 /**
@@ -16,15 +18,15 @@ public class MyTest {
 
     @Test
     public void test1() {
-        OrderCheckInterceptorInitializer initializer = new OrderCheckInterceptorInitializer() {
+        DefaultSubmitOrderInterceptorInitializer initializer = new DefaultSubmitOrderInterceptorInitializer() {
             @Override
-            public void intit(OrderCheckOrderSubmitPipeline orderCheckPipeline) {
+            public void intit(AbstractOrderSubmitPipeline orderCheckPipeline) {
                 orderCheckPipeline.addLast(new MerchantSubmitInterceptor())
                         .addLast(new ProductSubmitInterceptor())
                         .addLast(new LimitBuySubmitInterceptor());
             }
         };
-//        ResVo check = initializer.getHead().check();
+        ResVo check = initializer.getHead().check(new SubmitOrderContext<>());
     }
 
 }
