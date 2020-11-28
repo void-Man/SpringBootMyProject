@@ -10,7 +10,7 @@ public interface OrderSubmitPipeline<T extends OrderSubmitInterceptor> {
      * @author mengjie_chen
      * @date 2020/11/25
      */
-    OrderSubmitPipeline addLast(T t);
+    OrderSubmitPipeline<T> addLast(T t);
 
     /**
      * 获取链中第一个节点
