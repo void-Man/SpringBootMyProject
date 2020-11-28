@@ -4,7 +4,7 @@ import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInte
 
 /**
  * @author mengjie_chen
- * @description
+ * @description   默认提交订单流水线
  * @date 2020/11/28
  */
 public class DefaultOrderSubmitPipeline extends AbstractOrderSubmitPipeline<AbstractDefaultOrderSubmitInterceptor>{

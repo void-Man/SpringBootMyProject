@@ -20,7 +20,7 @@ public abstract class AbstractOrderSubmitPipeline<T extends AbstractOrderSubmitI
     }
 
     @Override
-    public OrderSubmitPipeline addLast(T t) {
+    public OrderSubmitPipeline<T> addLast(T t) {
         if (Objects.isNull(tail)) {
             tail = t;
             head.setNext(tail);

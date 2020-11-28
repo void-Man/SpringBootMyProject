@@ -8,7 +8,7 @@ import com.cmj.example.vo.SubmitOrderBaseParamVo;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubmitPipeline,R extends SubmitOrderBaseParamVo> {
+public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubmitPipeline, R extends SubmitOrderBaseParamVo> {
     protected final T pipeline;
 
     protected AbstractInterceptorInitializer(T pipeline) {
