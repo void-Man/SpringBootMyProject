@@ -17,7 +17,7 @@ import java.util.Objects;
  */
 public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T>, OrderInvokeHandleHolder {
 
-    private OrderSubmitInterceptor<T> next;
+    private OrderSubmitInterceptor next;
 
     @Override
     public ResVo check(SubmitOrderContext<T> context) {
@@ -30,7 +30,7 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
 
     protected abstract ResVo checkParam(SubmitOrderContext<T> context);
 
-    public void setNext(OrderSubmitInterceptor<T> next) {
+    public void setNext(OrderSubmitInterceptor next) {
         this.next = next;
     }
 
