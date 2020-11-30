@@ -4,5 +4,7 @@ import java.util.List;
 
 public interface OrderInvokeHandleHolder {
 
+    OrderInvokeHandle getCurrentHandle();
+
     List<OrderInvokeHandle> getHandles();
 }

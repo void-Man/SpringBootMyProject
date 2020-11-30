@@ -20,7 +20,7 @@ public class ProductSubmitInterceptor extends AbstractDefaultOrderSubmitIntercep
     }
 
     @Override
-    public OrderInvokeHandle getCurrentHandle(DefaultSubmitOrderParamVo defaultSubmitOrderParamVo) {
+    public OrderInvokeHandle getCurrentHandle() {
         return null;
     }
 }
