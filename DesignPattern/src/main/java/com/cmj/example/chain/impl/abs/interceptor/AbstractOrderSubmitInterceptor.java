@@ -22,6 +22,9 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     @Override
     public OrderResultVo check(SubmitOrderContext<T> context) {
         OrderResultVo resVo = this.checkParam(context);
+        if (resVo.isNeedHandle()) {
+            context.getHandleList().add(getCurrentHandle());
+        }
         if (resVo.isSuccess() && Objects.nonNull(next)) {
             resVo = next.check(context);
         }
@@ -35,8 +38,10 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     }
 
     @Override
-    public abstract void addHandle(OrderInvokeHandle orderInvokeHandle);
+    public abstract OrderInvokeHandle getCurrentHandle();
 
     @Override
-    public abstract List<OrderInvokeHandle> getHandles();
+    public List<OrderInvokeHandle> getHandles() {
+        return null;
+    }
 }

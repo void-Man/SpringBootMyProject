@@ -25,8 +25,8 @@ public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitIntercepto
     }
 
     @Override
-    public void addHandle(OrderInvokeHandle orderInvokeHandle) {
-
+    public OrderInvokeHandle getCurrentHandle() {
+        return null;
     }
 
     @Override
