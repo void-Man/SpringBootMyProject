@@ -3,7 +3,7 @@ package com.cmj.example.chain.impl;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
 import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 
 import java.util.List;
@@ -14,9 +14,9 @@ import java.util.List;
  */
 public class MerchantSubmitInterceptor extends AbstractDefaultOrderSubmitInterceptor {
     @Override
-    protected ResVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+    protected OrderResultVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
         System.out.println("into MerchantCheckInterceptor");
-        return new ResVo();
+        return new OrderResultVo();
     }
 
     @Override

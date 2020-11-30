@@ -3,10 +3,9 @@ package com.cmj.example.chain.impl;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
 import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,12 +15,13 @@ import java.util.List;
  */
 public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitInterceptor {
 
-    private final List<OrderInvokeHandle> handleList = new ArrayList<>(10);
+    private SubmitOrderContext<DefaultSubmitOrderParamVo> context;
 
     @Override
-    protected ResVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+    protected OrderResultVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+        this.context = context;
         System.out.println("into DefaultHeadInterceptor");
-        return new ResVo();
+        return new OrderResultVo();
     }
 
     @Override
@@ -31,6 +31,6 @@ public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitIntercepto
 
     @Override
     public List<OrderInvokeHandle> getHandles() {
-        return handleList;
+        return context.getHandleList();
     }
 }

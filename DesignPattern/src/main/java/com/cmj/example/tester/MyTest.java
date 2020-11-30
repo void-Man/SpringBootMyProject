@@ -5,7 +5,7 @@ import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.pileline.DefaultOrderSubmitPipeline;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
-import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
@@ -25,7 +25,7 @@ public class MyTest {
                         .addLast(new LimitBuySubmitInterceptor());
             }
         };
-        ResVo check = initializer.getHead().check(new SubmitOrderContext<>());
+        OrderResultVo check = initializer.getHead().check(new SubmitOrderContext<>());
 
     }
 

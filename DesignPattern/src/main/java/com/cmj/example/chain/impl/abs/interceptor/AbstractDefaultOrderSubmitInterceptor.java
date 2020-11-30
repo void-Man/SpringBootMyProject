@@ -1,7 +1,7 @@
 package com.cmj.example.chain.impl.abs.interceptor;
 
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.ResVo;
+import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 
 /**
@@ -11,5 +11,5 @@ import com.cmj.example.vo.SubmitOrderContext;
  */
 public abstract class AbstractDefaultOrderSubmitInterceptor extends AbstractOrderSubmitInterceptor<DefaultSubmitOrderParamVo> {
     @Override
-    protected abstract ResVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context);
+    protected abstract OrderResultVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context);
 }
