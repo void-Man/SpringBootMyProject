@@ -3,11 +3,16 @@ package com.cmj.example.tester;
 import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
 import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
+import com.cmj.example.chain.impl.abs.interceptor.AbstractOrderSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.pileline.DefaultOrderSubmitPipeline;
+import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
+import com.cmj.example.vo.DefaultSubmitOrderParamVo;
 import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
+
+import java.util.List;
 
 /**
  * @author mengjie_chen
@@ -25,7 +30,9 @@ public class MyTest {
                         .addLast(new LimitBuySubmitInterceptor());
             }
         };
-        OrderResultVo check = initializer.getHead().check(new SubmitOrderContext<>());
+        AbstractOrderSubmitInterceptor<DefaultSubmitOrderParamVo> head = initializer.getHead();
+        OrderResultVo check = head.check(new SubmitOrderContext<>());
+        List<OrderInvokeHandle> handles = head.getHandles();
 
     }
 
