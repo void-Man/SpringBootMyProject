@@ -7,6 +7,8 @@ package com.cmj.example.vo;
  */
 public class SubmitOrderBaseParamVo {
 
-    
+    // orderBase
+    // List<OrderHasProductBase>
+    // 地址base
 
 }

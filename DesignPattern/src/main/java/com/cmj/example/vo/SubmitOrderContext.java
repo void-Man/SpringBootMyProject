@@ -14,17 +14,17 @@ public class SubmitOrderContext<T extends SubmitOrderBaseParamVo> {
 
     private final List<OrderInvokeHandle> handleList = new ArrayList<>(10);
 
-    private T t;
+    private T param;
 
     public List<OrderInvokeHandle> getHandleList() {
         return handleList;
     }
 
-    public T getT() {
-        return t;
+    public T getParam() {
+        return param;
     }
 
-    public void setT(T t) {
-        this.t = t;
+    public void setParam(T param) {
+        this.param = param;
     }
 }
