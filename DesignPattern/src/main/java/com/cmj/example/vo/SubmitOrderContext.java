@@ -12,11 +12,11 @@ import java.util.List;
  */
 public class SubmitOrderContext<T extends SubmitOrderBaseParamVo> {
 
-    private final List<OrderInvokeHandle> handleList = new ArrayList<>(10);
+    private final List<OrderInvokeHandle<T>> handleList = new ArrayList<>(10);
 
     private T param;
 
-    public List<OrderInvokeHandle> getHandleList() {
+    public List<OrderInvokeHandle<T>> getHandleList() {
         return handleList;
     }
 

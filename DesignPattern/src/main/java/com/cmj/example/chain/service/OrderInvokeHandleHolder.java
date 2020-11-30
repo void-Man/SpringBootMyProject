@@ -1,10 +1,12 @@
 package com.cmj.example.chain.service;
 
+import com.cmj.example.vo.SubmitOrderBaseParamVo;
+
 import java.util.List;
 
-public interface OrderInvokeHandleHolder {
+public interface OrderInvokeHandleHolder<T extends SubmitOrderBaseParamVo> {
 
-    OrderInvokeHandle getCurrentHandle();
+    OrderInvokeHandle<T> getCurrentHandle();
 
-    List<OrderInvokeHandle> getHandles();
+    List<OrderInvokeHandle<T>> getHandles();
 }

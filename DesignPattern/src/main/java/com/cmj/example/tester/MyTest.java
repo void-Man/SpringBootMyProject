@@ -33,8 +33,8 @@ public class MyTest {
         AbstractOrderSubmitInterceptor<DefaultSubmitOrderParamVo> head = initializer.getHead();
         SubmitOrderContext<DefaultSubmitOrderParamVo> context = new SubmitOrderContext<>();
         OrderResultVo check = head.check(context);
-        List<OrderInvokeHandle> handles = head.getHandles();
-        for (OrderInvokeHandle handle : handles) {
+        List<OrderInvokeHandle<DefaultSubmitOrderParamVo>> handles = head.getHandles();
+        for (OrderInvokeHandle<DefaultSubmitOrderParamVo> handle : handles) {
             handle.invoke(context.getParam());
         }
     }

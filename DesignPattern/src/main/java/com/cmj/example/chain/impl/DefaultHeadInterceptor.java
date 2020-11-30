@@ -30,7 +30,7 @@ public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitIntercepto
     }
 
     @Override
-    public List<OrderInvokeHandle> getHandles() {
+    public List<OrderInvokeHandle<DefaultSubmitOrderParamVo>> getHandles() {
         return context.getHandleList();
     }
 }

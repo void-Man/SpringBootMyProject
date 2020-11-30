@@ -15,7 +15,7 @@ import java.util.Objects;
  * @description
  * @date 2020/11/24
  */
-public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T>, OrderInvokeHandleHolder {
+public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T>, OrderInvokeHandleHolder<T> {
 
     private OrderSubmitInterceptor next;
 
@@ -41,7 +41,7 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     public abstract OrderInvokeHandle getCurrentHandle();
 
     @Override
-    public List<OrderInvokeHandle> getHandles() {
+    public List<OrderInvokeHandle<T>> getHandles() {
         return null;
     }
 }
