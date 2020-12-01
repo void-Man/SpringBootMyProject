@@ -38,7 +38,7 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     }
 
     @Override
-    public abstract OrderInvokeHandle getCurrentHandle();
+    public abstract OrderInvokeHandle<T> getCurrentHandle();
 
     @Override
     public List<OrderInvokeHandle<T>> getHandles() {
