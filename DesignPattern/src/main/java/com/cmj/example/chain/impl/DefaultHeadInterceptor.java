@@ -16,9 +16,8 @@ import java.util.List;
 public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitInterceptor {
 
     @Override
-    protected OrderResultVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+    protected void checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
         System.out.println("into DefaultHeadInterceptor");
-        return new OrderResultVo();
     }
 
     @Override

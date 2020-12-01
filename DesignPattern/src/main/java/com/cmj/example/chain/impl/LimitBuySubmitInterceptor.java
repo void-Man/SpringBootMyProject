@@ -12,9 +12,8 @@ import com.cmj.example.vo.SubmitOrderContext;
  */
 public class LimitBuySubmitInterceptor extends AbstractDefaultOrderSubmitInterceptor {
     @Override
-    protected OrderResultVo checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+    protected void checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
         System.out.println("into LimitBuyCheckInterceptor");
-        return new OrderResultVo();
     }
 
     @Override

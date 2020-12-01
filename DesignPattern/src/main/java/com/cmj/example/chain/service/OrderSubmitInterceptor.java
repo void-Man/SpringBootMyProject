@@ -6,7 +6,7 @@ import com.cmj.example.vo.SubmitOrderContext;
 
 public interface OrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> {
 
-    OrderResultVo check(SubmitOrderContext<T> context);
+    void check(SubmitOrderContext<T> context);
 
     OrderInvokeHandler<T> getHandler();
 }

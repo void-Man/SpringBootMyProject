@@ -22,10 +22,6 @@ public class OrderResultVo {
      * 错误码描述
      */
     private String msg = "";
-    /**
-     * 附带remark信息
-     */
-    private String msgDetail;
 
     public int getCode() {
         return code;
@@ -57,13 +53,5 @@ public class OrderResultVo {
 
     public void setMsg(String msg) {
         this.msg = msg;
-    }
-
-    public String getMsgDetail() {
-        return msgDetail;
-    }
-
-    public void setMsgDetail(String msgDetail) {
-        this.msgDetail = msgDetail;
     }
 }
