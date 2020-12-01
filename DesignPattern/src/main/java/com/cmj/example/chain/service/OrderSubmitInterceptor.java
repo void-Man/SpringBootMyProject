@@ -8,4 +8,5 @@ public interface OrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> {
 
     OrderResultVo check(SubmitOrderContext<T> context);
 
+    OrderInvokeHandler<T> getHandler();
 }

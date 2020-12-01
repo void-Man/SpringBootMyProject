@@ -1,6 +1,6 @@
 package com.cmj.example.vo;
 
-import com.cmj.example.chain.service.OrderInvokeHandle;
+import com.cmj.example.chain.service.OrderInvokeHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,11 +12,11 @@ import java.util.List;
  */
 public class SubmitOrderContext<T extends SubmitOrderBaseParamVo> {
 
-    private final List<OrderInvokeHandle<T>> handleList = new ArrayList<>(10);
+    private final List<OrderInvokeHandler<T>> handleList = new ArrayList<>(10);
 
     private T param;
 
-    public List<OrderInvokeHandle<T>> getHandleList() {
+    public List<OrderInvokeHandler<T>> getHandleList() {
         return handleList;
     }
 

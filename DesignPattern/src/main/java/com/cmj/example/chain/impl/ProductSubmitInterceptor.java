@@ -1,7 +1,7 @@
 package com.cmj.example.chain.impl;
 
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
-import com.cmj.example.chain.service.OrderInvokeHandle;
+import com.cmj.example.chain.service.OrderInvokeHandler;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
 import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
@@ -20,7 +20,7 @@ public class ProductSubmitInterceptor extends AbstractDefaultOrderSubmitIntercep
     }
 
     @Override
-    public OrderInvokeHandle getCurrentHandle() {
+    public OrderInvokeHandler<DefaultSubmitOrderParamVo> getHandler() {
         return null;
     }
 }

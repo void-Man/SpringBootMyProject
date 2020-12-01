@@ -1,13 +1,11 @@
 package com.cmj.example.chain.impl.abs.interceptor;
 
-import com.cmj.example.chain.service.OrderInvokeHandle;
-import com.cmj.example.chain.service.OrderInvokeHandleHolder;
+import com.cmj.example.chain.service.OrderInvokeHandler;
 import com.cmj.example.chain.service.OrderSubmitInterceptor;
 import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderBaseParamVo;
 import com.cmj.example.vo.SubmitOrderContext;
 
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -15,7 +13,7 @@ import java.util.Objects;
  * @description
  * @date 2020/11/24
  */
-public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T>, OrderInvokeHandleHolder<T> {
+public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T> {
 
     private OrderSubmitInterceptor next;
 
@@ -23,7 +21,7 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     public OrderResultVo check(SubmitOrderContext<T> context) {
         OrderResultVo resVo = this.checkParam(context);
         if (resVo.isNeedHandle()) {
-            context.getHandleList().add(getCurrentHandle());
+            context.getHandleList().add(getHandler());
         }
         if (resVo.isSuccess() && Objects.nonNull(next)) {
             resVo = next.check(context);
@@ -38,10 +36,5 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     }
 
     @Override
-    public abstract OrderInvokeHandle<T> getCurrentHandle();
-
-    @Override
-    public List<OrderInvokeHandle<T>> getHandles() {
-        return null;
-    }
+    public abstract OrderInvokeHandler<T> getHandler();
 }

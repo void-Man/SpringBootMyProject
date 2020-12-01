@@ -5,7 +5,6 @@ import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
 import com.cmj.example.chain.impl.ProductSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractOrderSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.pileline.DefaultOrderSubmitPipeline;
-import com.cmj.example.chain.service.OrderInvokeHandle;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
 import com.cmj.example.vo.OrderResultVo;
@@ -33,9 +32,9 @@ public class MyTest {
         AbstractOrderSubmitInterceptor<DefaultSubmitOrderParamVo> head = initializer.getHead();
         SubmitOrderContext<DefaultSubmitOrderParamVo> context = new SubmitOrderContext<>();
         OrderResultVo check = head.check(context);
-        List<OrderInvokeHandle<DefaultSubmitOrderParamVo>> handles = head.getHandles();
-        for (OrderInvokeHandle<DefaultSubmitOrderParamVo> handle : handles) {
-            handle.invoke(context.getParam());
-        }
+//        List<OrderInvokeHandler<DefaultSubmitOrderParamVo>> handles = head.getHandles();
+//        for (OrderInvokeHandler<DefaultSubmitOrderParamVo> handle : handles) {
+//            handle.invoke(context.getParam());
+//        }
     }
 }
