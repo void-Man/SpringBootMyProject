@@ -21,10 +21,6 @@ public abstract class AbstractInterceptorInitializer<P1 extends AbstractOrderSub
         return this;
     }
 
-    public List<P1> getCheckerList() {
-        return checkerList;
-    }
-
     public <P2 extends SubmitOrderBaseParamVo> void check(SubmitOrderContext<P2> context) {
         for (P1 checker : checkerList) {
             checker.check(context);
