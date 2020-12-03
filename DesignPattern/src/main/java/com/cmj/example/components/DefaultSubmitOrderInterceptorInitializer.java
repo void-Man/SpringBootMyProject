@@ -9,7 +9,7 @@ import com.cmj.example.vo.SubmitOrderContext;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public class DefaultSubmitOrderInterceptorInitializer extends AbstractInterceptorInitializer<DefaultSubmitOrderParamVo, AbstractDefaultOrderSubmitInterceptor> {
+public class DefaultSubmitOrderInterceptorInitializer extends AbstractInterceptorInitializer<AbstractDefaultOrderSubmitInterceptor, DefaultSubmitOrderParamVo> {
 
     @Override
     public void check(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {

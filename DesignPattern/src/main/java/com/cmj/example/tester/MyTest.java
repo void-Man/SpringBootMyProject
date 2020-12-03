@@ -17,7 +17,7 @@ public class MyTest {
     @Test
     public void test1() {
         DefaultSubmitOrderInterceptorInitializer defaultSubmitOrderInterceptorInitializer = new DefaultSubmitOrderInterceptorInitializer();
-        AbstractInterceptorInitializer<DefaultSubmitOrderParamVo, AbstractDefaultOrderSubmitInterceptor> initializer = defaultSubmitOrderInterceptorInitializer
+        AbstractInterceptorInitializer<AbstractDefaultOrderSubmitInterceptor, DefaultSubmitOrderParamVo> initializer = defaultSubmitOrderInterceptorInitializer
                 .addLast(new LimitBuySubmitInterceptor())
                 .addLast(new MerchantSubmitInterceptor());
         initializer.invoke(new DefaultSubmitOrderParamVo());

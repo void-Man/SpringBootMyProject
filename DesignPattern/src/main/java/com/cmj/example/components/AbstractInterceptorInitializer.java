@@ -13,10 +13,10 @@ import java.util.List;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class AbstractInterceptorInitializer<E extends SubmitOrderBaseParamVo, T extends AbstractOrderSubmitInterceptor<E>> {
+public abstract class AbstractInterceptorInitializer<T extends AbstractOrderSubmitInterceptor<E>, E extends SubmitOrderBaseParamVo> {
     private final List<T> checkerList = new ArrayList<>(10);
 
-    public AbstractInterceptorInitializer<E, T> addLast(T checker) {
+    public AbstractInterceptorInitializer<T, E> addLast(T checker) {
         checkerList.add(checker);
         return this;
     }
