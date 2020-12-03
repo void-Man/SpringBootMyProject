@@ -6,7 +6,6 @@ import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInte
 import com.cmj.example.components.AbstractInterceptorInitializer;
 import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
 /**
@@ -18,8 +17,9 @@ public class MyTest {
     @Test
     public void test1() {
         DefaultSubmitOrderInterceptorInitializer defaultSubmitOrderInterceptorInitializer = new DefaultSubmitOrderInterceptorInitializer();
-        AbstractInterceptorInitializer<AbstractDefaultOrderSubmitInterceptor> initializer = defaultSubmitOrderInterceptorInitializer.addLast(new LimitBuySubmitInterceptor())
+        AbstractInterceptorInitializer<DefaultSubmitOrderParamVo, AbstractDefaultOrderSubmitInterceptor> initializer = defaultSubmitOrderInterceptorInitializer
+                .addLast(new LimitBuySubmitInterceptor())
                 .addLast(new MerchantSubmitInterceptor());
-        initializer.check(new SubmitOrderContext<DefaultSubmitOrderParamVo>());
+        initializer.invoke(new DefaultSubmitOrderParamVo());
     }
 }

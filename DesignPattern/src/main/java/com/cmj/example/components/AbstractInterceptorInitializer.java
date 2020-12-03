@@ -13,23 +13,23 @@ import java.util.List;
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public abstract class AbstractInterceptorInitializer<P1 extends AbstractOrderSubmitInterceptor> {
-    private final List<P1> checkerList = new ArrayList<>(10);
+public abstract class AbstractInterceptorInitializer<E extends SubmitOrderBaseParamVo, T extends AbstractOrderSubmitInterceptor<E>> {
+    private final List<T> checkerList = new ArrayList<>(10);
 
-    public AbstractInterceptorInitializer<P1> addLast(P1 checker) {
+    public AbstractInterceptorInitializer<E, T> addLast(T checker) {
         checkerList.add(checker);
         return this;
     }
 
-    public <P2 extends SubmitOrderBaseParamVo> void check(SubmitOrderContext<P2> context) {
-        for (P1 checker : checkerList) {
+    public void check(SubmitOrderContext<E> context) {
+        for (T checker : checkerList) {
             checker.check(context);
         }
     }
 
-    public <P2 extends SubmitOrderBaseParamVo> OrderResultVo invoke(P2 param) {
-        for (P1 checker : checkerList) {
-            OrderInvokeHandler handler = checker.getHandler();
+    public OrderResultVo invoke(E param) {
+        for (T checker : checkerList) {
+            OrderInvokeHandler<E> handler = checker.getHandler();
             handler.invoke(param);
         }
         return new OrderResultVo();
