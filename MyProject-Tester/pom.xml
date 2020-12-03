@@ -10,5 +10,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>MyProject-Tester</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.cmj</groupId>
+            <artifactId>MyProject-Commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -1,4 +1,4 @@
-package java.com.cmj.example;
+package com.cmj.example;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
