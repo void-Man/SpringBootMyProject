@@ -1,16 +1,17 @@
 package com.cmj.example;
 
-import org.junit.Test;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author mengjie_chen
  * @description date 2020/11/10
  */
+@SpringBootApplication
 public class ApplicationTester {
 
-    @Test
-    public void test1() {
-
+    public static void main(String[] args) {
+        SpringApplication.run(ApplicationTester.class, args);
     }
 
 }
