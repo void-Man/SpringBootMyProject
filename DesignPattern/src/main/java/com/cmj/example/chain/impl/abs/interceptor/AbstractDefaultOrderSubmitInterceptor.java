@@ -14,5 +14,5 @@ public abstract class AbstractDefaultOrderSubmitInterceptor extends AbstractOrde
     protected abstract void checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context);
 
     @Override
-    public abstract OrderInvokeHandler<DefaultSubmitOrderParamVo> getHandler();
+    public abstract OrderInvokeHandler<DefaultSubmitOrderParamVo> invocationHandler();
 }

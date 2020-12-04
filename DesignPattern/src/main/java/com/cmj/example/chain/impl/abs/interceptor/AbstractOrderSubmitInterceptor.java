@@ -12,7 +12,6 @@ import com.cmj.example.vo.SubmitOrderContext;
  */
 public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> implements OrderSubmitInterceptor<T> {
 
-
     @Override
     public void check(SubmitOrderContext<T> context) {
         this.checkParam(context);
@@ -21,5 +20,5 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     protected abstract void checkParam(SubmitOrderContext<T> context);
 
     @Override
-    public abstract OrderInvokeHandler<T> getHandler();
+    public abstract OrderInvokeHandler<T> invocationHandler();
 }

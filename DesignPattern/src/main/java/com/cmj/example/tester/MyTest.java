@@ -3,9 +3,10 @@ package com.cmj.example.tester;
 import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
 import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
-import com.cmj.example.components.AbstractInterceptorInitializer;
-import com.cmj.example.components.DefaultSubmitOrderInterceptorInitializer;
+import com.cmj.example.chain.impl.abs.initializer.AbstractInterceptorInitializer;
+import com.cmj.example.chain.impl.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
+import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
 /**
@@ -20,6 +21,6 @@ public class MyTest {
         AbstractInterceptorInitializer<AbstractDefaultOrderSubmitInterceptor, DefaultSubmitOrderParamVo> initializer = defaultSubmitOrderInterceptorInitializer
                 .addLast(new LimitBuySubmitInterceptor())
                 .addLast(new MerchantSubmitInterceptor());
-        initializer.invoke(new DefaultSubmitOrderParamVo());
+        initializer.invoke(new SubmitOrderContext<>());
     }
 }

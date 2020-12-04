@@ -1,5 +1,6 @@
-package com.cmj.example.components;
+package com.cmj.example.chain.impl;
 
+import com.cmj.example.chain.impl.abs.initializer.AbstractInterceptorInitializer;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
 import com.cmj.example.vo.OrderResultVo;
@@ -17,7 +18,7 @@ public class DefaultSubmitOrderInterceptorInitializer extends AbstractIntercepto
     }
 
     @Override
-    public OrderResultVo invoke(DefaultSubmitOrderParamVo param) {
-        return super.invoke(param);
+    public OrderResultVo invoke(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+        return super.invoke(context);
     }
 }

@@ -16,7 +16,7 @@ public class MerchantSubmitInterceptor extends AbstractDefaultOrderSubmitInterce
     }
 
     @Override
-    public OrderInvokeHandler<DefaultSubmitOrderParamVo> getHandler() {
+    public OrderInvokeHandler<DefaultSubmitOrderParamVo> invocationHandler() {
         return null;
     }
 }

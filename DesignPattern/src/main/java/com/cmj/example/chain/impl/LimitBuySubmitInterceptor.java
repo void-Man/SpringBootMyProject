@@ -3,7 +3,6 @@ package com.cmj.example.chain.impl;
 import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
 import com.cmj.example.chain.service.OrderInvokeHandler;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderContext;
 
 /**
@@ -17,7 +16,7 @@ public class LimitBuySubmitInterceptor extends AbstractDefaultOrderSubmitInterce
     }
 
     @Override
-    public OrderInvokeHandler<DefaultSubmitOrderParamVo> getHandler() {
+    public OrderInvokeHandler<DefaultSubmitOrderParamVo> invocationHandler() {
         return null;
     }
 }
