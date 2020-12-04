@@ -16,7 +16,7 @@ public class LimitBuySubmitInterceptor extends AbstractDefaultOrderSubmitInterce
     }
 
     @Override
-    public OrderInvokeHandler<DefaultSubmitOrderParamVo> invocationHandler() {
+    public OrderInvokeHandler<DefaultSubmitOrderParamVo> create() {
         return null;
     }
 }

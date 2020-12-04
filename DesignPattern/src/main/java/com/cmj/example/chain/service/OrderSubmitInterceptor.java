@@ -7,5 +7,5 @@ public interface OrderSubmitInterceptor<T extends SubmitOrderBaseParamVo> {
 
     void check(SubmitOrderContext<T> context);
 
-    OrderInvokeHandler<T> invocationHandler();
+    OrderInvokeHandler<T> create();
 }

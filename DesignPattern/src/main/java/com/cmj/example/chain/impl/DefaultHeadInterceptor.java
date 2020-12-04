@@ -18,7 +18,7 @@ public class DefaultHeadInterceptor extends AbstractDefaultOrderSubmitIntercepto
     }
 
     @Override
-    public OrderInvokeHandler<DefaultSubmitOrderParamVo> invocationHandler() {
+    public OrderInvokeHandler<DefaultSubmitOrderParamVo> create() {
         return null;
     }
 

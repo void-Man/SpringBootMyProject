@@ -32,7 +32,7 @@ public abstract class AbstractInterceptorInitializer<T extends OrderSubmitInterc
     @Override
     public OrderResultVo invoke(SubmitOrderContext<E> context) {
         for (T checker : checkerList) {
-            OrderInvokeHandler<E> handler = checker.invocationHandler();
+            OrderInvokeHandler<E> handler = checker.create();
             handler.invoke(context);
         }
         return new OrderResultVo();

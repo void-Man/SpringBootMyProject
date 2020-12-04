@@ -20,5 +20,5 @@ public abstract class AbstractOrderSubmitInterceptor<T extends SubmitOrderBasePa
     protected abstract void checkParam(SubmitOrderContext<T> context);
 
     @Override
-    public abstract OrderInvokeHandler<T> invocationHandler();
+    public abstract OrderInvokeHandler<T> create();
 }
