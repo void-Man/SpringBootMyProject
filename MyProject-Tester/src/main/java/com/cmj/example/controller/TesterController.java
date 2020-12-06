@@ -33,16 +33,16 @@ public class TesterController {
         return JSONObject.toJSONString(jsonObject);
     }
 
-    @RequestMapping(value = "/save", method = RequestMethod.GET)
+    @PostMapping("/save")
     @ResponseBody
     public String save() {
         UserVo userVo = UserVo.UserVoBuilder.userVo().userName("李四").password("123456").age(23).outerId(amazonProperties.getAssociateId()).build();
         userDao.save(userVo);
-        UserVo one = userDao.getOne(1L);
+        UserVo one = userDao.getOne(userVo.getUserId());
         return JSONObject.toJSONString(one);
     }
 
-    @RequestMapping(value = "/getUser", method = RequestMethod.GET)
+    @GetMapping("/getUser")
     @ResponseBody
     public String getUser() {
         UserVo userVo = UserVo.UserVoBuilder.userVo().userName("李四").password("123456").age(23).outerId(amazonProperties.getAssociateId()).build();

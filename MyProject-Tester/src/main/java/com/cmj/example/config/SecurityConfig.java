@@ -19,8 +19,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/").access("hasAnyRole('ACCESSER')")      // 登录者要有ACCESSER角色
-                .antMatchers("/**").permitAll();
+                .antMatchers("/tester").access("hasAnyRole('ACCESSER')")      // 登录者要有ACCESSER角色
+                .antMatchers("/**").permitAll()
+                .and().csrf().disable();
     }
 
     @Override
