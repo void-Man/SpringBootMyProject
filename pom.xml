@@ -9,6 +9,7 @@
         <module>MyProject-Commons</module>
         <module>MyProject-Tester</module>
         <module>DesignPattern</module>
+        <module>Project.Commons</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

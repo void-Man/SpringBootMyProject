@@ -1,7 +1,10 @@
 package com.cmj.example.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cmj.example.base.UserBase;
+import com.cmj.example.base.UserBaseExample;
 import com.cmj.example.dao.IUserDao;
+import com.cmj.example.mapper.UserBaseMapper;
 import com.cmj.example.mapper.UserMapper;
 import com.cmj.example.vo.AmazonProperties;
 import com.cmj.example.vo.UserVo;
@@ -23,6 +26,8 @@ public class TesterController {
     private IUserDao userDao;
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private UserBaseMapper userBaseMapper;
 
     public TesterController(AmazonProperties amazonProperties) {
         this.amazonProperties = amazonProperties;
@@ -52,5 +57,12 @@ public class TesterController {
     public String getAllUser() {
         List<UserVo> userVoList = userMapper.getAllUser();
         return JSONObject.toJSONString(userVoList);
+    }
+
+    @GetMapping("/getAllUserByMapper")
+    @ResponseBody
+    public String getAllUserByMapper() {
+        List<UserBase> userBaseList = userBaseMapper.selectByExample(new UserBaseExample().createCriteria().example());
+        return JSONObject.toJSONString(userBaseList);
     }
 }
