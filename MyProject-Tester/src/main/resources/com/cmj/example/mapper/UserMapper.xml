@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cmj.example.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="com.cmj.example.vo.UserVo">
+        select fid userId,fname userName from t_base_user
+    </select>
+
+</mapper>
