@@ -1,6 +1,7 @@
 package com.cmj.example.base;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class UserBaseExample {
@@ -832,6 +833,636 @@ public class UserBaseExample {
 
         public Criteria andOuterIdNotBetween(String value1, String value2) {
             addCriterion("FOuterId not between", value1, value2, "outerId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIsNull() {
+            addCriterion("FCreateTime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIsNotNull() {
+            addCriterion("FCreateTime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeEqualTo(Date value) {
+            addCriterion("FCreateTime =", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotEqualTo(Date value) {
+            addCriterion("FCreateTime <>", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThan(Date value) {
+            addCriterion("FCreateTime >", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("FCreateTime >=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThan(Date value) {
+            addCriterion("FCreateTime <", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("FCreateTime <=", value, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreateTime <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeIn(List<Date> values) {
+            addCriterion("FCreateTime in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotIn(List<Date> values) {
+            addCriterion("FCreateTime not in", values, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeBetween(Date value1, Date value2) {
+            addCriterion("FCreateTime between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("FCreateTime not between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIsNull() {
+            addCriterion("FUpdateTime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIsNotNull() {
+            addCriterion("FUpdateTime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeEqualTo(Date value) {
+            addCriterion("FUpdateTime =", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotEqualTo(Date value) {
+            addCriterion("FUpdateTime <>", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThan(Date value) {
+            addCriterion("FUpdateTime >", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("FUpdateTime >=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThan(Date value) {
+            addCriterion("FUpdateTime <", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThanOrEqualTo(Date value) {
+            addCriterion("FUpdateTime <=", value, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdateTime <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeIn(List<Date> values) {
+            addCriterion("FUpdateTime in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotIn(List<Date> values) {
+            addCriterion("FUpdateTime not in", values, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeBetween(Date value1, Date value2) {
+            addCriterion("FUpdateTime between", value1, value2, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdateTimeNotBetween(Date value1, Date value2) {
+            addCriterion("FUpdateTime not between", value1, value2, "updateTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeIsNull() {
+            addCriterion("FDeleteTime is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeIsNotNull() {
+            addCriterion("FDeleteTime is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeEqualTo(Date value) {
+            addCriterion("FDeleteTime =", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeNotEqualTo(Date value) {
+            addCriterion("FDeleteTime <>", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeGreaterThan(Date value) {
+            addCriterion("FDeleteTime >", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("FDeleteTime >=", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeLessThan(Date value) {
+            addCriterion("FDeleteTime <", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeLessThanOrEqualTo(Date value) {
+            addCriterion("FDeleteTime <=", value, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleteTime <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeIn(List<Date> values) {
+            addCriterion("FDeleteTime in", values, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeNotIn(List<Date> values) {
+            addCriterion("FDeleteTime not in", values, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeBetween(Date value1, Date value2) {
+            addCriterion("FDeleteTime between", value1, value2, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleteTimeNotBetween(Date value1, Date value2) {
+            addCriterion("FDeleteTime not between", value1, value2, "deleteTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorIsNull() {
+            addCriterion("FCreator is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorIsNotNull() {
+            addCriterion("FCreator is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorEqualTo(Integer value) {
+            addCriterion("FCreator =", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorNotEqualTo(Integer value) {
+            addCriterion("FCreator <>", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorGreaterThan(Integer value) {
+            addCriterion("FCreator >", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FCreator >=", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorLessThan(Integer value) {
+            addCriterion("FCreator <", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorLessThanOrEqualTo(Integer value) {
+            addCriterion("FCreator <=", value, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FCreator <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorIn(List<Integer> values) {
+            addCriterion("FCreator in", values, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorNotIn(List<Integer> values) {
+            addCriterion("FCreator not in", values, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorBetween(Integer value1, Integer value2) {
+            addCriterion("FCreator between", value1, value2, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andCreatorNotBetween(Integer value1, Integer value2) {
+            addCriterion("FCreator not between", value1, value2, "creator");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterIsNull() {
+            addCriterion("FUpdater is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterIsNotNull() {
+            addCriterion("FUpdater is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterEqualTo(Integer value) {
+            addCriterion("FUpdater =", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterNotEqualTo(Integer value) {
+            addCriterion("FUpdater <>", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterGreaterThan(Integer value) {
+            addCriterion("FUpdater >", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FUpdater >=", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterLessThan(Integer value) {
+            addCriterion("FUpdater <", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterLessThanOrEqualTo(Integer value) {
+            addCriterion("FUpdater <=", value, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FUpdater <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterIn(List<Integer> values) {
+            addCriterion("FUpdater in", values, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterNotIn(List<Integer> values) {
+            addCriterion("FUpdater not in", values, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterBetween(Integer value1, Integer value2) {
+            addCriterion("FUpdater between", value1, value2, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdaterNotBetween(Integer value1, Integer value2) {
+            addCriterion("FUpdater not between", value1, value2, "updater");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterIsNull() {
+            addCriterion("FDeleter is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterIsNotNull() {
+            addCriterion("FDeleter is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterEqualTo(Integer value) {
+            addCriterion("FDeleter =", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterNotEqualTo(Integer value) {
+            addCriterion("FDeleter <>", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterGreaterThan(Integer value) {
+            addCriterion("FDeleter >", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FDeleter >=", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterLessThan(Integer value) {
+            addCriterion("FDeleter <", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterLessThanOrEqualTo(Integer value) {
+            addCriterion("FDeleter <=", value, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FDeleter <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterIn(List<Integer> values) {
+            addCriterion("FDeleter in", values, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterNotIn(List<Integer> values) {
+            addCriterion("FDeleter not in", values, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterBetween(Integer value1, Integer value2) {
+            addCriterion("FDeleter between", value1, value2, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andDeleterNotBetween(Integer value1, Integer value2) {
+            addCriterion("FDeleter not between", value1, value2, "deleter");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteIsNull() {
+            addCriterion("FIsDelete is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteIsNotNull() {
+            addCriterion("FIsDelete is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteEqualTo(Integer value) {
+            addCriterion("FIsDelete =", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteNotEqualTo(Integer value) {
+            addCriterion("FIsDelete <>", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteGreaterThan(Integer value) {
+            addCriterion("FIsDelete >", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FIsDelete >=", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteLessThan(Integer value) {
+            addCriterion("FIsDelete <", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteLessThanOrEqualTo(Integer value) {
+            addCriterion("FIsDelete <=", value, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FIsDelete <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteIn(List<Integer> values) {
+            addCriterion("FIsDelete in", values, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteNotIn(List<Integer> values) {
+            addCriterion("FIsDelete not in", values, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteBetween(Integer value1, Integer value2) {
+            addCriterion("FIsDelete between", value1, value2, "isDelete");
+            return (Criteria) this;
+        }
+
+        public Criteria andIsDeleteNotBetween(Integer value1, Integer value2) {
+            addCriterion("FIsDelete not between", value1, value2, "isDelete");
             return (Criteria) this;
         }
     }
