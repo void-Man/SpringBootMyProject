@@ -15,7 +15,7 @@ import java.util.Collections;
  */
 @Entity
 @Table(name = "t_base_user")
-public class UserVo implements UserDetails {
+public class LoginUserVo implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -169,14 +169,14 @@ public class UserVo implements UserDetails {
             return this;
         }
 
-        public UserVo build() {
-            UserVo userVo = new UserVo();
-            userVo.setUserId(userId);
-            userVo.setUserName(userName);
-            userVo.setPassword(password);
-            userVo.setOuterId(outerId);
-            userVo.setAge(age);
-            return userVo;
+        public LoginUserVo build() {
+            LoginUserVo loginUserVo = new LoginUserVo();
+            loginUserVo.setUserId(userId);
+            loginUserVo.setUserName(userName);
+            loginUserVo.setPassword(password);
+            loginUserVo.setOuterId(outerId);
+            loginUserVo.setAge(age);
+            return loginUserVo;
         }
     }
 }
