@@ -11,7 +11,7 @@
  Target Server Version : 50718
  File Encoding         : 65001
 
- Date: 06/12/2020 22:12:17
+ Date: 08/12/2020 19:03:52
 */
 
 SET NAMES utf8mb4;
@@ -27,14 +27,19 @@ CREATE TABLE `t_base_user`  (
   `FPassword` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '密码',
   `FAge` int(11) NOT NULL DEFAULT 0 COMMENT '年龄',
   `FOuterId` varchar(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT '' COMMENT '外部ID',
+  `FCreateTime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+  `FUpdateTime` timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP(0) ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
+  `FDeleteTime` datetime(0) NULL DEFAULT NULL COMMENT '删除时间',
+  `FCreator` int(11) NOT NULL DEFAULT 0 COMMENT '创建者ID',
+  `FUpdater` int(11) NOT NULL DEFAULT 0 COMMENT '更新者ID',
+  `FDeleter` int(11) NULL DEFAULT NULL COMMENT '删除者ID',
+  `FIsDelete` tinyint(4) NOT NULL DEFAULT 0 COMMENT '是否删除（1是；0否）',
   PRIMARY KEY (`FId`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of t_base_user
 -- ----------------------------
-INSERT INTO `t_base_user` VALUES (6, '李四', '123456', 23, 'habuma-20');
-INSERT INTO `t_base_user` VALUES (7, '李四', '123456', 23, 'habuma-20');
 
 -- ----------------------------
 -- Table structure for t_ebuy_product
