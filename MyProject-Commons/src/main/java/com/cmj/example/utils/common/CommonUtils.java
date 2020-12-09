@@ -1,9 +1,6 @@
 package com.cmj.example.utils.common;
 
-import java.util.Collection;
-import java.util.Objects;
-import java.util.Random;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * @author mengjie_chen
@@ -42,5 +39,16 @@ public class CommonUtils {
         for (int i = 0; i < 50; i++) {
             System.out.println(CommonUtils.randomLongId());
         }
+    }
+
+    public static <T> List<List<T>> subList(List<T> sourceList, int batchSize) {
+        List<List<T>> list =  new ArrayList<>(10);
+        int sourceSize = sourceList.size();
+        int batch = sourceSize / batchSize + (sourceSize % batchSize == 0 ? 0 : 1);
+        for (int i = 0; i < batch; i++) {
+            List<T> subList = sourceList.subList(i * batchSize, (i == batch - 1) ? sourceSize : i * batchSize + batchSize);
+            list.add(subList);
+        }
+        return list;
     }
 }

@@ -646,6 +646,96 @@ public class UserBaseExample {
             return (Criteria) this;
         }
 
+        public Criteria andSexIsNull() {
+            addCriterion("FSex is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIsNotNull() {
+            addCriterion("FSex is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexEqualTo(Integer value) {
+            addCriterion("FSex =", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotEqualTo(Integer value) {
+            addCriterion("FSex <>", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThan(Integer value) {
+            addCriterion("FSex >", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FSex >=", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexGreaterThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThan(Integer value) {
+            addCriterion("FSex <", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThanColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThanOrEqualTo(Integer value) {
+            addCriterion("FSex <=", value, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexLessThanOrEqualToColumn(UserBase.Column column) {
+            addCriterion(new StringBuilder("FSex <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andSexIn(List<Integer> values) {
+            addCriterion("FSex in", values, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotIn(List<Integer> values) {
+            addCriterion("FSex not in", values, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexBetween(Integer value1, Integer value2) {
+            addCriterion("FSex between", value1, value2, "sex");
+            return (Criteria) this;
+        }
+
+        public Criteria andSexNotBetween(Integer value1, Integer value2) {
+            addCriterion("FSex not between", value1, value2, "sex");
+            return (Criteria) this;
+        }
+
         public Criteria andAgeIsNull() {
             addCriterion("FAge is null");
             return (Criteria) this;
