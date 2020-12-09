@@ -70,10 +70,9 @@ public class TesterController {
     @GetMapping("/getAllUserByMapper")
     @ResponseBody
     public String getAllUserByMapper() {
-        List<UserBase> userBaseList = userBaseMapper.selectByExample(new UserBaseExample().createCriteria()
-                .andIsDeleteEqualTo(0)
-                .andIdBetween(1000,9620)
-                .example());
+        List<UserBase> userBaseList = userBaseMapper.selectByExampleSelective(new UserBaseExample().createCriteria()
+                .andIdBetween(1, 10)
+                .example(), UserBase.Column.id, UserBase.Column.name, UserBase.Column.age, UserBase.Column.password, UserBase.Column.outerId);
         return JSONObject.toJSONString(userBaseList);
     }
 
