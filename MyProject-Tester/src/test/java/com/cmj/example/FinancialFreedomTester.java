@@ -16,7 +16,7 @@ public class FinancialFreedomTester {
         BigDecimal everyAmount = new BigDecimal("50000");
         BigDecimal incrAmount = new BigDecimal("10000");
         BigDecimal totalAmount = initAmount;
-        BigDecimal finalAmount = new BigDecimal("3000000");
+        BigDecimal finalAmount = new BigDecimal("30000000");
         BigDecimal rate = new BigDecimal("0.15");
 
         int year = 0;
