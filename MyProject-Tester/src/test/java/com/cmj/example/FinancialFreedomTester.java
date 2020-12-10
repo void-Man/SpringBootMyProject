@@ -16,7 +16,7 @@ public class FinancialFreedomTester {
         BigDecimal everyAmount = new BigDecimal("50000");
         BigDecimal incrAmount = new BigDecimal("10000");
         BigDecimal totalAmount = initAmount;
-        BigDecimal finalAmount = new BigDecimal("30000000");
+        BigDecimal finalAmount = new BigDecimal("3000000");
         BigDecimal rate = new BigDecimal("0.15");
 
         int year = 0;
@@ -26,7 +26,7 @@ public class FinancialFreedomTester {
                 break;
             }
             totalAmount = totalAmount.add(everyAmount.add(incrAmount.multiply(new BigDecimal(year - 1)))).add(totalAmount.multiply(rate));
-            System.out.println("year： " + year + "，totalAmount is：" + totalAmount);
+            System.out.println("year： " + year + "，totalAmount is：" + totalAmount.setScale(2,BigDecimal.ROUND_HALF_UP));
         }
     }
 
