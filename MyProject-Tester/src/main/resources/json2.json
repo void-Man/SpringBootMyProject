@@ -1,0 +1,213 @@
+[
+  {
+    "discountInMerchantVoList": [
+      {
+        "discountId": "7271bb8da086448ea281c8528d6609f5",
+        "discountQuantity": 1.900000,
+        "ebuyProductForBuyList": [
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "efda8661d7034845b03e8f4799816889",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "d807205b4a3f4053983440408142b9c1",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://download.wojiayun.cn/file/tempfile/none/2328/1359a1db61e841148e66aab9ac4b008a.jpg",
+            "price": 100.00,
+            "productId": "32e113ae4c624023b8b51e5059e9b5f1",
+            "productName": "黄桃1元",
+            "shelfState": 0
+          },
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "0dd29dbce3704b0ab4a1aa9c63af11ec",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "042bbbfd4c214307af0237aea7a635dd",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://download.wojiayun.cn/file/tempfile/none/7205/fc652ab831024f52862226c08afbf24c.jpg",
+            "price": 300.00,
+            "productId": "48eeb6ca849e4b1b82ffcbf01c911d4a",
+            "productName": "苦瓜",
+            "shelfState": 0
+          },
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "95b6fc5fa5b14f9a86efb9bf38f40396",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "fbc5529d22314d07bb975e64583b1508",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://download.wojiayun.cn/file/tempfile/none/9027/eaf32edbc5e24fe1829c341ec9dc6fab.jpg",
+            "price": 400.00,
+            "productId": "73d67eeec89846ef8066e1b9e4a0cd68",
+            "productName": "红提4元",
+            "shelfState": 0
+          },
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "0388d222847f4d9cb39797398aee7e37",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "7283c1be959e49ddb2e00b9aa8c2bced",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://download.wojiayun.cn/file/tempfile/none/3566/5b6dccc9ecc94823943b0e414589971a.jpg",
+            "price": 500.00,
+            "productId": "d6df42fcb9394ebc89ee9b43c9146bbd",
+            "productName": "无花果5元",
+            "shelfState": 0
+          }
+        ],
+        "limitQuantity": 2.0000,
+        "limitType": 1,
+        "type": 1
+      }
+    ],
+    "ebuyMerchantId": "b99f53c158ed4698807836d42b600425",
+    "ebuyMerchantName": "百信个体户333",
+    "isHasCoupon": 1
+  },
+  {
+    "discountInMerchantVoList": [
+      {
+        "discountId": "",
+        "ebuyProductForBuyList": [
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "c8a4245456f6429db2012a820176ed8d",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "9e527f10362949df80de32eed3526e77",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://wojiayun-1252177460.costj.myqcloud.com/2020-06-13/jpg/c8693cd8fd7248deae63b36dbc55baa9.jpg?imageView2/3/w/50/h/50/q/85",
+            "price": 10000.00,
+            "productId": "30d36ea4c981454f87ce948cd9832387",
+            "productName": "满减测试-打折01",
+            "shelfState": 0
+          }
+        ]
+      }
+    ],
+    "ebuyMerchantId": "0aa4683d5f754241aedb3982dd510e80",
+    "ebuyMerchantName": "7-ELEVEn",
+    "isHasCoupon": 1
+  },
+  {
+    "discountInMerchantVoList": [
+      {
+        "discountId": "3bb6d6d5551e44f588a99157693e0c92",
+        "discountQuantity": 5.000000,
+        "ebuyProductForBuyList": [
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "c8e0db7d53c148c39d44b23c74c5a012",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "c3441e475cdb469cad974717a20cacf1",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://wojiayun-1252177460.file.myqcloud.com/d5c2fc00acd24f2a8ef65291e15efcbf/2020-06-10/jpg/ee7ec81e70014277b31fc625399f1153.jpg?imageView2/3/w/50/h/50/q/85",
+            "price": 999.00,
+            "productId": "0acace2c92ce43d0bf0a345e30bc3f16",
+            "productName": "满减测试0610002",
+            "shelfState": 0
+          }
+        ],
+        "limitQuantity": 5.0000,
+        "limitType": 1,
+        "type": 2
+      },
+      {
+        "discountId": "",
+        "ebuyProductForBuyList": [
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "b67f7d42d7544ec29abd841a9a7d936e",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "d3ac7468ddba442487acf468223ae1ed",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://wojiayun-1252177460.file.myqcloud.com/d5c2fc00acd24f2a8ef65291e15efcbf/2020-05-15/jpg/c1dcff34f82a4ca28e3b2d2e47258395.jpg?imageView2/3/w/50/h/50/q/85",
+            "price": 990.00,
+            "productId": "e593a097ed2e4ab9ba1989f6f18dac44",
+            "productName": "梨花",
+            "shelfState": 0
+          },
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "6d45e1fe9d87482ea789baefc38c36f5",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "1dcb8091f9ac4305abd2729fc77155e7",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://wojiayun-1252177460.costj.myqcloud.com/d5c2fc00acd24f2a8ef65291e15efcbf/2020-06-16/jpg/515f15d7d6da484cb1a5e6993d647281.jpg?imageView2/3/w/50/h/50/q/85",
+            "price": 9999.00,
+            "productId": "3ed83ddbb84d492ea6e87f70308362fd",
+            "productName": "秒杀测试1602",
+            "shelfState": 0
+          },
+          {
+            "activityBuyCount": 0,
+            "activityBuyQty": 0,
+            "activityLeftcount": 0,
+            "buyQty": 1,
+            "ebuyBuyCartId": "7474c6ca00ae4ba98e135df7fe1172f4",
+            "ebuyProductParametersVoList": [],
+            "ebuyProductShelfId": "13cb2c2569fd4a9cb03b577c5a09df59",
+            "isHasAcitvityProduct": 0,
+            "isHasLeftCount": 1,
+            "isSellOut": 0,
+            "isSetMealProduct": 0,
+            "picBaseMini": "http://wojiayun-1252177460.file.myqcloud.com/d5c2fc00acd24f2a8ef65291e15efcbf/2020-06-29/jpg/a32d4c8ff1e64fda8801fbe175003052.jpg?imageView2/3/w/50/h/50/q/85",
+            "price": 2.00,
+            "productId": "34a9b73f9fb146efa3d5e332b2107623",
+            "productName": "促销062901",
+            "shelfState": 0
+          }
+        ]
+      }
+    ],
+    "ebuyMerchantId": "1631219ee9ca4f5a9c20b3f7b3d0e03a",
+    "ebuyMerchantName": "蜜桃甜",
+    "isHasCoupon": 1
+  }
+]
