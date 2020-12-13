@@ -71,7 +71,7 @@ public class TesterController {
     @ResponseBody
     public String getAllUserByMapper() {
         List<UserBase> userBaseList = userBaseMapper.selectByExampleSelective(new UserBaseExample().createCriteria()
-                .andIdBetween(5696, 6000)
+                .andIdBetween(600, 650)
                 .example(), UserBase.Column.id, UserBase.Column.name, UserBase.Column.age, UserBase.Column.password, UserBase.Column.outerId);
         return JSONObject.toJSONString(userBaseList);
     }
