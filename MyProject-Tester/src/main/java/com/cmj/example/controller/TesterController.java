@@ -1,6 +1,7 @@
 package com.cmj.example.controller;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cmj.example.StringUtils;
 import com.cmj.example.UserVo;
 import com.cmj.example.base.UserBase;
 import com.cmj.example.base.UserBaseExample;
@@ -58,6 +59,21 @@ public class TesterController {
         userBaseMapper.insertSelective(userBase);
         List<UserBase> userBaseList = userBaseMapper.selectByExample(new UserBaseExample().createCriteria().example());
         return JSONObject.toJSONString(userBaseList);
+    }
+
+    @PostMapping("/update")
+    @ResponseBody
+    public String update(Integer userId) {
+        UserBase userBase = UserBase.builder()
+                .id(userId)
+                .age(11)
+                .password(StringUtils.randomUUID())
+                .updateTime(new Date())
+                .updater(userId)
+                .build();
+        userBaseMapper.updateByPrimaryKeySelective(userBase);
+        UserBase resBase = userBaseMapper.selectByPrimaryKey(userId);
+        return JSONObject.toJSONString(resBase);
     }
 
     @GetMapping("/getAllUser")
