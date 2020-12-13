@@ -29,24 +29,4 @@
         <appender-ref ref="console"/>
 <!--        <appender-ref ref="FILE"/>-->
     </root>
-
-    <!--监控sql日志输出 -->
-    <logger name="jdbc.sqlonly" level="INFO" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.resultset" level="ERROR" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.resultsettable" level="INFO" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.connection" level="OFF" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.sqltiming" level="OFF" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.audit" level="OFF" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
 </configuration>
