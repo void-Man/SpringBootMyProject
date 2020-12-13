@@ -1,5 +1,6 @@
 package com.cmj.example;
 
+import com.cmj.example.utils.common.CommonUtils;
 import org.junit.Test;
 
 import java.math.BigDecimal;
@@ -26,8 +27,28 @@ public class FinancialFreedomTester {
                 break;
             }
             totalAmount = totalAmount.add(everyAmount.add(incrAmount.multiply(new BigDecimal(year - 1)))).add(totalAmount.multiply(rate));
-            System.out.println("year： " + year + "，totalAmount is：" + totalAmount.setScale(2,BigDecimal.ROUND_HALF_UP));
+            System.out.println("year： " + year + "，totalAmount is：" + totalAmount.setScale(2, BigDecimal.ROUND_HALF_UP));
         }
+    }
+
+    /**
+     * 贬值测试
+     *
+     * @param
+     * @return void
+     * @author mengjie_chen
+     * @date 2020/12/13
+     */
+    @Test
+    public void depreciationTest() {
+        BigDecimal rate = CommonUtils.div100("6.5");
+        BigDecimal initAmount = new BigDecimal("1000000");
+
+        int year = 15;
+        for (int i = 0; i < year; i++) {
+            initAmount = initAmount.subtract(initAmount.multiply(rate));
+        }
+        System.out.println(initAmount);
     }
 
 }
