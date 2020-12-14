@@ -35,7 +35,7 @@
         <appender-ref ref="console" />
     </logger>
     <!--  如不想看到表格数据，将INFO改为OFF -->
-    <logger name="jdbc.resultsettable" level="INFO" additivity="false">
+    <logger name="jdbc.resultsettable" level="OFF" additivity="false">
         <appender-ref ref="console"/>
     </logger>
     <logger name="jdbc.resultset" level="ERROR" additivity="false">
