@@ -9,6 +9,8 @@ import com.cmj.example.jpa.UserRepository;
 import com.cmj.example.mapper.UserBaseMapper;
 import com.cmj.example.mapper.UserMapper;
 import com.cmj.example.vo.AmazonProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +27,8 @@ import java.util.Random;
 @Controller
 @RequestMapping("/tester")
 public class TesterController {
+    private static final Logger logger = LoggerFactory.getLogger(TesterController.class);
+
     private final AmazonProperties amazonProperties;
     @Autowired
     private UserRepository userRepository;
@@ -89,6 +93,9 @@ public class TesterController {
         List<UserBase> userBaseList = userBaseMapper.selectByExampleSelective(new UserBaseExample().createCriteria()
                 .andIdBetween(600, 650)
                 .example(), UserBase.Column.id, UserBase.Column.name, UserBase.Column.age, UserBase.Column.password, UserBase.Column.outerId);
+        logger.debug("com.cmj.example.controller.TesterController.getAllUserByMapper---->111");
+        logger.info("com.cmj.example.controller.TesterController.getAllUserByMapper---->222");
+        logger.error("com.cmj.example.controller.TesterController.getAllUserByMapper---->333");
         return JSONObject.toJSONString(userBaseList);
     }
 

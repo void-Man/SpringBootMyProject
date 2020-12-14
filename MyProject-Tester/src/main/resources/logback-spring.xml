@@ -4,7 +4,7 @@
     <!--控制台日志配置-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %customcolor(%-5level) --- %magenta([%10thread]) %cyan(%logger{15}) : %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %customcolor(%-5level) --- %magenta([%10thread]) %cyan(%-c) : %msg%n</pattern>
             <charset>utf-8</charset>
         </encoder>
     </appender>
@@ -30,24 +30,8 @@
 <!--        <appender-ref ref="FILE"/>-->
     </root>
 
-    <!--监控sql日志输出 -->
-    <logger name="jdbc.sqlonly" level="OFF" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <!--  如不想看到表格数据，将INFO改为OFF -->
-    <logger name="jdbc.resultsettable" level="OFF" additivity="false">
-        <appender-ref ref="console"/>
-    </logger>
-    <logger name="jdbc.resultset" level="ERROR" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.connection" level="OFF" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.sqltiming" level="INFO" additivity="false">
-        <appender-ref ref="console" />
-    </logger>
-    <logger name="jdbc.audit" level="OFF" additivity="false">
+    <!-- 自定义日志 -->
+    <logger name="com.cmj.example" level="info" additivity="false">
         <appender-ref ref="console" />
     </logger>
 </configuration>
