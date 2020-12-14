@@ -39,6 +39,7 @@
         <mysql.version>8.0.21</mysql.version>
 <!--        <druid.version>1.1.10</druid.version>-->
         <mybatis.version>1.3.2</mybatis.version>
+        <log4jdbc.version>1.0.2</log4jdbc.version>
 <!--        <log4jdbc.version>1.16</log4jdbc.version>-->
 <!--        <googlecode.log4jdbc.version>1.2</googlecode.log4jdbc.version>-->
     </properties>
@@ -91,7 +92,7 @@
         <dependency>
             <groupId>com.integralblue</groupId>
             <artifactId>log4jdbc-spring-boot-starter</artifactId>
-            <version>1.0.2</version>
+            <version>${log4jdbc.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
