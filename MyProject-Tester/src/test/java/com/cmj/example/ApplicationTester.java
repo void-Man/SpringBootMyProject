@@ -1,9 +1,12 @@
 package com.cmj.example;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.base.UserBase;
 import com.cmj.example.mapper.UserBaseMapper;
 import com.cmj.example.utils.common.CommonUtils;
+import com.cmj.example.vo.UserConfigurationPropertiesVo;
+import com.cmj.example.vo.UserValueVo;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +31,10 @@ public class ApplicationTester {
 
     @Autowired
     private UserBaseMapper userBaseMapper;
+    @Autowired
+    private UserConfigurationPropertiesVo userConfigurationPropertiesVo;
+    @Autowired
+    private UserValueVo userValueVo;
 
     @Test
     public void readText() {
@@ -70,6 +77,12 @@ public class ApplicationTester {
                 e.printStackTrace();
             }
         }
+    }
+
+    @Test
+    public void test() {
+        System.out.println(JSONObject.toJSONString(userConfigurationPropertiesVo));
+        System.out.println(JSONObject.toJSONString(userValueVo));
     }
 
 }
