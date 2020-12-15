@@ -1,8 +1,9 @@
 package com.cmj.example.vo;
 
-import com.cmj.example.chain.service.OrderInvokeHandler;
+import com.cmj.example.commerce.vo.EbuyDeliveryOrderVo;
+import com.cmj.example.commerce.vo.EbuyOrderHasProductVo;
+import com.cmj.example.commerce.vo.EbuyOrderVo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,13 +13,21 @@ import java.util.List;
  */
 public class SubmitOrderContext<T extends SubmitOrderBaseParamVo> {
 
-    private final List<OrderInvokeHandler<T>> handleList = new ArrayList<>(10);
+    /**
+     * 订单信息
+     */
+    private EbuyOrderVo ebuyOrderVo;
+    /**
+     * 订单商品信息
+     */
+    private List<EbuyOrderHasProductVo> ebuyOrderHasProductVoList;
+    /**
+     * 运单信息
+     */
+    private EbuyDeliveryOrderVo ebuyDeliveryOrderVo;
+
 
     private T param;
-
-    public List<OrderInvokeHandler<T>> getHandleList() {
-        return handleList;
-    }
 
     public T getParam() {
         return param;
@@ -26,5 +35,29 @@ public class SubmitOrderContext<T extends SubmitOrderBaseParamVo> {
 
     public void setParam(T param) {
         this.param = param;
+    }
+
+    public EbuyOrderVo getEbuyOrderVo() {
+        return ebuyOrderVo;
+    }
+
+    public void setEbuyOrderVo(EbuyOrderVo ebuyOrderVo) {
+        this.ebuyOrderVo = ebuyOrderVo;
+    }
+
+    public List<EbuyOrderHasProductVo> getEbuyOrderHasProductVoList() {
+        return ebuyOrderHasProductVoList;
+    }
+
+    public void setEbuyOrderHasProductVoList(List<EbuyOrderHasProductVo> ebuyOrderHasProductVoList) {
+        this.ebuyOrderHasProductVoList = ebuyOrderHasProductVoList;
+    }
+
+    public EbuyDeliveryOrderVo getEbuyDeliveryOrderVo() {
+        return ebuyDeliveryOrderVo;
+    }
+
+    public void setEbuyDeliveryOrderVo(EbuyDeliveryOrderVo ebuyDeliveryOrderVo) {
+        this.ebuyDeliveryOrderVo = ebuyDeliveryOrderVo;
     }
 }

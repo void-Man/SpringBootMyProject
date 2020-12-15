@@ -1,8 +1,8 @@
 package com.cmj.example.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.cmj.example.StringUtils;
-import com.cmj.example.UserVo;
+import com.cmj.example.utils.StringUtils;
+import com.cmj.example.base.vo.UserVo;
 import com.cmj.example.base.UserBase;
 import com.cmj.example.base.UserBaseExample;
 import com.cmj.example.jpa.UserRepository;

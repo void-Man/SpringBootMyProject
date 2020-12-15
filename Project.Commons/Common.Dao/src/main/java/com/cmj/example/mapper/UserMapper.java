@@ -1,6 +1,6 @@
 package com.cmj.example.mapper;
 
-import com.cmj.example.UserVo;
+import com.cmj.example.base.vo.UserVo;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

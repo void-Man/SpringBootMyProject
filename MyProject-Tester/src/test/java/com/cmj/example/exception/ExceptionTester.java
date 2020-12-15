@@ -1,5 +1,6 @@
 package com.cmj.example.exception;
 
+import com.cmj.example.commerce.exception.SubmitOrderException;
 import org.junit.Test;
 
 /**

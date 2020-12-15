@@ -1,6 +1,6 @@
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <!--自定义颜色配置-->
-    <conversionRule conversionWord="customcolor" converterClass="com.cmj.example.LogbackColorful"/>
+    <conversionRule conversionWord="customcolor" converterClass="com.cmj.example.config.LogbackColorful"/>
     <!--控制台日志配置-->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>

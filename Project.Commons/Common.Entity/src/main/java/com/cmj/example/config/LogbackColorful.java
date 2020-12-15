@@ -1,4 +1,4 @@
-package com.cmj.example;
+package com.cmj.example.config;
 
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.spi.ILoggingEvent;
