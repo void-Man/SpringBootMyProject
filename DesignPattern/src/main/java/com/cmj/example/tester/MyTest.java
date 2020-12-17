@@ -1,12 +1,11 @@
 package com.cmj.example.tester;
 
-import com.cmj.example.chain.impl.LimitBuySubmitInterceptor;
-import com.cmj.example.chain.impl.MerchantSubmitInterceptor;
-import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
+import com.cmj.example.chain.impl.LimitBuySubmitChain;
+import com.cmj.example.chain.impl.MerchantSubmitChain;
+import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitChain;
 import com.cmj.example.chain.impl.abs.initializer.AbstractInterceptorInitializer;
 import com.cmj.example.chain.impl.DefaultSubmitOrderInterceptorInitializer;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.SubmitOrderContext;
 import org.junit.Test;
 
 /**
@@ -18,9 +17,9 @@ public class MyTest {
     @Test
     public void test1() {
         DefaultSubmitOrderInterceptorInitializer defaultSubmitOrderInterceptorInitializer = new DefaultSubmitOrderInterceptorInitializer();
-        AbstractInterceptorInitializer<AbstractDefaultOrderSubmitInterceptor, DefaultSubmitOrderParamVo> initializer = defaultSubmitOrderInterceptorInitializer
-                .addLast(new LimitBuySubmitInterceptor())
-                .addLast(new MerchantSubmitInterceptor());
-        initializer.invoke(new SubmitOrderContext<>());
+        AbstractInterceptorInitializer<AbstractDefaultOrderSubmitChain, DefaultSubmitOrderParamVo> initializer = defaultSubmitOrderInterceptorInitializer
+                .addLast(new LimitBuySubmitChain())
+                .addLast(new MerchantSubmitChain());
+        initializer.invoke(new DefaultSubmitOrderParamVo());
     }
 }

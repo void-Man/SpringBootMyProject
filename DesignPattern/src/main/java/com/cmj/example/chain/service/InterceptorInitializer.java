@@ -2,12 +2,11 @@ package com.cmj.example.chain.service;
 
 import com.cmj.example.vo.OrderResultVo;
 import com.cmj.example.vo.SubmitOrderBaseParamVo;
-import com.cmj.example.vo.SubmitOrderContext;
 
-public interface InterceptorInitializer<E extends SubmitOrderBaseParamVo> {
+public interface InterceptorInitializer<T extends SubmitOrderBaseParamVo> {
 
-    void check(SubmitOrderContext<E> context);
+    void check(T param);
 
-    OrderResultVo invoke(SubmitOrderContext<E> context);
+    OrderResultVo invoke(T param);
 
 }

@@ -1,17 +1,16 @@
 package com.cmj.example.chain.impl;
 
-import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitInterceptor;
+import com.cmj.example.chain.impl.abs.interceptor.AbstractDefaultOrderSubmitChain;
 import com.cmj.example.chain.service.OrderInvokeHandler;
 import com.cmj.example.vo.DefaultSubmitOrderParamVo;
-import com.cmj.example.vo.SubmitOrderContext;
 
 /**
  * @author mengjie_chen
  * @description date 2020/11/24
  */
-public class MerchantSubmitInterceptor extends AbstractDefaultOrderSubmitInterceptor {
+public class MerchantSubmitChain extends AbstractDefaultOrderSubmitChain {
     @Override
-    protected void checkParam(SubmitOrderContext<DefaultSubmitOrderParamVo> context) {
+    protected void checkParam(DefaultSubmitOrderParamVo paramVo) {
         System.out.println("into MerchantCheckInterceptor");
     }
 
