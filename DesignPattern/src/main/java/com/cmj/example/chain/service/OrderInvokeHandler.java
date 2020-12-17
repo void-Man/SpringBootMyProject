@@ -4,6 +4,6 @@ import com.cmj.example.vo.SubmitOrderBaseParamVo;
 
 public interface OrderInvokeHandler<T extends SubmitOrderBaseParamVo> {
 
-    void invoke(T param);
+    void handle(T param);
 
 }

@@ -31,17 +31,17 @@ public abstract class AbstractChainInitializer<T extends OrderSubmitChain<E>, E 
      * @date 2020/12/17
      */
     private void validate(E param) {
-        for (T checker : validatorList) {
-            checker.check(param);
+        for (T validator : validatorList) {
+            validator.check(param);
         }
     }
 
     @Override
     public OrderResultVo invoke(E param) {
         this.validate(param);
-        for (T checker : validatorList) {
-            OrderInvokeHandler<E> handler = checker.create();
-            handler.invoke(param);
+        for (T validator : validatorList) {
+            OrderInvokeHandler<E> handler = validator.create();
+            handler.handle(param);
         }
         return new OrderResultVo();
     }

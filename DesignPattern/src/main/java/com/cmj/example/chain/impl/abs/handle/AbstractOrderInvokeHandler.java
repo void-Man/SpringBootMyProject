@@ -10,7 +10,7 @@ import com.cmj.example.vo.SubmitOrderBaseParamVo;
 public abstract class AbstractOrderInvokeHandler<T extends SubmitOrderBaseParamVo> implements OrderInvokeHandler<T> {
 
     @Override
-    public void invoke(T param) {
+    public void handle(T param) {
 
     }
 }
