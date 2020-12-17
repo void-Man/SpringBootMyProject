@@ -20,6 +20,7 @@ public class MyTest {
         AbstractInterceptorInitializer<AbstractDefaultOrderSubmitChain, DefaultSubmitOrderParamVo> initializer = defaultSubmitOrderInterceptorInitializer
                 .addLast(new LimitBuySubmitChain())
                 .addLast(new MerchantSubmitChain());
-        initializer.invoke(new DefaultSubmitOrderParamVo());
+        DefaultSubmitOrderParamVo defaultSubmitOrderParamVo = new DefaultSubmitOrderParamVo();
+        initializer.invoke(defaultSubmitOrderParamVo);
     }
 }

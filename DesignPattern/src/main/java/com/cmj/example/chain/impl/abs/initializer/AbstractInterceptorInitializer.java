@@ -14,23 +14,23 @@ import java.util.List;
  * @description date 2020/11/24
  */
 public abstract class AbstractInterceptorInitializer<T extends OrderSubmitChain<E>, E extends SubmitOrderBaseParamVo> implements InterceptorInitializer<E> {
-    private final List<T> checkerList = new ArrayList<>(10);
+    private final List<T> validatorList = new ArrayList<>(10);
 
-    public AbstractInterceptorInitializer<T, E> addLast(T checker) {
-        checkerList.add(checker);
+    public AbstractInterceptorInitializer<T, E> addLast(T validator) {
+        validatorList.add(validator);
         return this;
     }
 
     @Override
     public void check(E param) {
-        for (T checker : checkerList) {
+        for (T checker : validatorList) {
             checker.check(param);
         }
     }
 
     @Override
     public OrderResultVo invoke(E param) {
-        for (T checker : checkerList) {
+        for (T checker : validatorList) {
             OrderInvokeHandler<E> handler = checker.create();
             handler.invoke(param);
         }
