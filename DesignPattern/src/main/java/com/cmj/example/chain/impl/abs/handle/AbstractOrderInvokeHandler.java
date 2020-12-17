@@ -1,6 +1,7 @@
 package com.cmj.example.chain.impl.abs.handle;
 
 import com.cmj.example.chain.service.OrderInvokeHandler;
+import com.cmj.example.vo.EbuyOrderBase;
 import com.cmj.example.vo.SubmitOrderBaseParamVo;
 
 /**
@@ -11,6 +12,7 @@ public abstract class AbstractOrderInvokeHandler<T extends SubmitOrderBaseParamV
 
     @Override
     public void handle(T param) {
+        EbuyOrderBase ebuyOrderBase = param.getEbuyOrderBase();
 
     }
 }
