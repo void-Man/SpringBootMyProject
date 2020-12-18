@@ -15,10 +15,10 @@ public class FinancialFreedomTester {
     public void freeTest() {
         BigDecimal initAmount = new BigDecimal("20000");
         BigDecimal everyAmount = new BigDecimal("50000");
-        BigDecimal incrAmount = new BigDecimal("10000");
+        BigDecimal incrAmount = new BigDecimal("15000");
         BigDecimal totalAmount = initAmount;
         BigDecimal finalAmount = new BigDecimal("3000000");
-        BigDecimal rate = new BigDecimal("0.15");
+        BigDecimal rate = new BigDecimal("0.20");
 
         int year = 0;
         while (true) {
