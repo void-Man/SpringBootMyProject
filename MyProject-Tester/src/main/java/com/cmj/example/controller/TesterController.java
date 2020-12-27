@@ -119,4 +119,28 @@ public class TesterController {
         }
         return ret;
     }
+
+    @GetMapping("/user")
+    @ResponseBody
+    public String getUser() {
+        return JSONObject.toJSONString("getUser");
+    }
+
+    @PostMapping("/user")
+    @ResponseBody
+    public String addUser() {
+        return JSONObject.toJSONString("addUser");
+    }
+
+    @PutMapping("/user")
+    @ResponseBody
+    public String putUser() {
+        return JSONObject.toJSONString("putUser");
+    }
+
+    @DeleteMapping("/user")
+    @ResponseBody
+    public String deleteUser() {
+        return JSONObject.toJSONString("deleteUser");
+    }
 }
