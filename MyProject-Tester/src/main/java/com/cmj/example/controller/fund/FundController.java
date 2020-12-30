@@ -1,10 +1,12 @@
-package com.cmj.example.controller;
+package com.cmj.example.controller.fund;
 
 import com.cmj.example.base.FundEntryBase;
+import com.cmj.example.fund.FundService;
 import com.cmj.example.utils.ExcelUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,10 +27,12 @@ import java.util.Objects;
 @RequestMapping("/fund")
 public class FundController {
 
+    @Autowired
+    private FundService fundService;
+
     @PostMapping("/saveFundEntry")
     @ResponseBody
     public String parseAndSave(HttpServletRequest request) throws Exception {
-
         //excel文件路径
         String excelPath = "C:\\Users\\Safendaga\\Downloads\\新建 Microsoft Excel 工作表.xlsx";
 
