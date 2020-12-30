@@ -656,7 +656,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdEqualTo(String value) {
+        public Criteria andIndustryIdEqualTo(Integer value) {
             addCriterion("FIndustryId =", value, "industryId");
             return (Criteria) this;
         }
@@ -666,7 +666,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdNotEqualTo(String value) {
+        public Criteria andIndustryIdNotEqualTo(Integer value) {
             addCriterion("FIndustryId <>", value, "industryId");
             return (Criteria) this;
         }
@@ -676,7 +676,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdGreaterThan(String value) {
+        public Criteria andIndustryIdGreaterThan(Integer value) {
             addCriterion("FIndustryId >", value, "industryId");
             return (Criteria) this;
         }
@@ -686,7 +686,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdGreaterThanOrEqualTo(String value) {
+        public Criteria andIndustryIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("FIndustryId >=", value, "industryId");
             return (Criteria) this;
         }
@@ -696,7 +696,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdLessThan(String value) {
+        public Criteria andIndustryIdLessThan(Integer value) {
             addCriterion("FIndustryId <", value, "industryId");
             return (Criteria) this;
         }
@@ -706,7 +706,7 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdLessThanOrEqualTo(String value) {
+        public Criteria andIndustryIdLessThanOrEqualTo(Integer value) {
             addCriterion("FIndustryId <=", value, "industryId");
             return (Criteria) this;
         }
@@ -716,32 +716,22 @@ public class StockBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdLike(String value) {
-            addCriterion("FIndustryId like", value, "industryId");
-            return (Criteria) this;
-        }
-
-        public Criteria andIndustryIdNotLike(String value) {
-            addCriterion("FIndustryId not like", value, "industryId");
-            return (Criteria) this;
-        }
-
-        public Criteria andIndustryIdIn(List<String> values) {
+        public Criteria andIndustryIdIn(List<Integer> values) {
             addCriterion("FIndustryId in", values, "industryId");
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdNotIn(List<String> values) {
+        public Criteria andIndustryIdNotIn(List<Integer> values) {
             addCriterion("FIndustryId not in", values, "industryId");
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdBetween(String value1, String value2) {
+        public Criteria andIndustryIdBetween(Integer value1, Integer value2) {
             addCriterion("FIndustryId between", value1, value2, "industryId");
             return (Criteria) this;
         }
 
-        public Criteria andIndustryIdNotBetween(String value1, String value2) {
+        public Criteria andIndustryIdNotBetween(Integer value1, Integer value2) {
             addCriterion("FIndustryId not between", value1, value2, "industryId");
             return (Criteria) this;
         }

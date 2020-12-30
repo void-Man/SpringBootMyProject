@@ -131,7 +131,7 @@
       distinct
     </if>
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>
@@ -173,7 +173,7 @@
     -->
     select
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>
@@ -208,7 +208,7 @@
     -->
     insert into t_base_funduser
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach close=")" collection="selective" item="column" open="(" separator=",">
           ${column.escapedColumnName}
         </foreach>
@@ -257,7 +257,7 @@
     </choose>
     values
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach close=")" collection="selective" item="column" open="(" separator=",">
           #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -322,7 +322,7 @@
     update t_base_funduser
     SET
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.escapedColumnName} = #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -402,7 +402,7 @@
     update t_base_funduser
     SET
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.escapedColumnName} = #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -491,7 +491,7 @@
     select
     'true' as QUERYID,
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>

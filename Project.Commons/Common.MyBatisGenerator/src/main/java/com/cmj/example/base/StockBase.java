@@ -40,7 +40,7 @@ public class StockBase implements Serializable {
      *
      * @mbg.generated
      */
-    private String industryId;
+    private Integer industryId;
 
     /**
      *
@@ -193,7 +193,7 @@ public class StockBase implements Serializable {
      *
      * @mbg.generated
      */
-    public String getIndustryId() {
+    public Integer getIndustryId() {
         return industryId;
     }
 
@@ -205,8 +205,8 @@ public class StockBase implements Serializable {
      *
      * @mbg.generated
      */
-    public void setIndustryId(String industryId) {
-        this.industryId = industryId == null ? null : industryId.trim();
+    public void setIndustryId(Integer industryId) {
+        this.industryId = industryId;
     }
 
     /**
@@ -487,7 +487,7 @@ public class StockBase implements Serializable {
          *
          * @mbg.generated
          */
-        public Builder industryId(String industryId) {
+        public Builder industryId(Integer industryId) {
             obj.setIndustryId(industryId);
             return this;
         }
@@ -604,7 +604,7 @@ public class StockBase implements Serializable {
         id("FId", "id", "INTEGER", false),
         name("FName", "name", "VARCHAR", false),
         number("FNumber", "number", "VARCHAR", false),
-        industryId("FIndustryId", "industryId", "VARCHAR", false),
+        industryId("FIndustryId", "industryId", "INTEGER", false),
         createTime("FCreateTime", "createTime", "TIMESTAMP", false),
         updateTime("FUpdateTime", "updateTime", "TIMESTAMP", false),
         deleteTime("FDeleteTime", "deleteTime", "TIMESTAMP", false),

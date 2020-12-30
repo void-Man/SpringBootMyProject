@@ -9,7 +9,7 @@
     <id column="FId" jdbcType="INTEGER" property="id" />
     <result column="FName" jdbcType="VARCHAR" property="name" />
     <result column="FNumber" jdbcType="VARCHAR" property="number" />
-    <result column="FIndustryId" jdbcType="VARCHAR" property="industryId" />
+    <result column="FIndustryId" jdbcType="INTEGER" property="industryId" />
     <result column="FCreateTime" jdbcType="TIMESTAMP" property="createTime" />
     <result column="FUpdateTime" jdbcType="TIMESTAMP" property="updateTime" />
     <result column="FDeleteTime" jdbcType="TIMESTAMP" property="deleteTime" />
@@ -130,7 +130,7 @@
       distinct
     </if>
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>
@@ -172,7 +172,7 @@
     -->
     select
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>
@@ -194,7 +194,7 @@
       FDeleteTime, FCreateUser, FUpdateUser, 
       FDeleteUser, FIsDelete)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{number,jdbcType=VARCHAR}, 
-      #{industryId,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{industryId,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
       #{deleteTime,jdbcType=TIMESTAMP}, #{createUser,jdbcType=VARCHAR}, #{updateUser,jdbcType=VARCHAR}, 
       #{deleteUser,jdbcType=VARCHAR}, #{isDelete,jdbcType=TINYINT})
   </insert>
@@ -205,7 +205,7 @@
     -->
     insert into t_base_stock
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach close=")" collection="selective" item="column" open="(" separator=",">
           ${column.escapedColumnName}
         </foreach>
@@ -251,7 +251,7 @@
     </choose>
     values
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach close=")" collection="selective" item="column" open="(" separator=",">
           #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -268,7 +268,7 @@
             #{record.number,jdbcType=VARCHAR},
           </if>
           <if test="record.industryId != null">
-            #{record.industryId,jdbcType=VARCHAR},
+            #{record.industryId,jdbcType=INTEGER},
           </if>
           <if test="record.createTime != null">
             #{record.createTime,jdbcType=TIMESTAMP},
@@ -313,7 +313,7 @@
     update t_base_stock
     SET
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.escapedColumnName} = #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -330,7 +330,7 @@
             FNumber = #{record.number,jdbcType=VARCHAR},
           </if>
           <if test="record.industryId != null">
-            FIndustryId = #{record.industryId,jdbcType=VARCHAR},
+            FIndustryId = #{record.industryId,jdbcType=INTEGER},
           </if>
           <if test="record.createTime != null">
             FCreateTime = #{record.createTime,jdbcType=TIMESTAMP},
@@ -369,7 +369,7 @@
     set FId = #{record.id,jdbcType=INTEGER},
       FName = #{record.name,jdbcType=VARCHAR},
       FNumber = #{record.number,jdbcType=VARCHAR},
-      FIndustryId = #{record.industryId,jdbcType=VARCHAR},
+      FIndustryId = #{record.industryId,jdbcType=INTEGER},
       FCreateTime = #{record.createTime,jdbcType=TIMESTAMP},
       FUpdateTime = #{record.updateTime,jdbcType=TIMESTAMP},
       FDeleteTime = #{record.deleteTime,jdbcType=TIMESTAMP},
@@ -389,7 +389,7 @@
     update t_base_stock
     SET
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.escapedColumnName} = #{record.${column.javaProperty},jdbcType=${column.jdbcType}}
         </foreach>
@@ -403,7 +403,7 @@
             FNumber = #{record.number,jdbcType=VARCHAR},
           </if>
           <if test="record.industryId != null">
-            FIndustryId = #{record.industryId,jdbcType=VARCHAR},
+            FIndustryId = #{record.industryId,jdbcType=INTEGER},
           </if>
           <if test="record.createTime != null">
             FCreateTime = #{record.createTime,jdbcType=TIMESTAMP},
@@ -439,7 +439,7 @@
     update t_base_stock
     set FName = #{name,jdbcType=VARCHAR},
       FNumber = #{number,jdbcType=VARCHAR},
-      FIndustryId = #{industryId,jdbcType=VARCHAR},
+      FIndustryId = #{industryId,jdbcType=INTEGER},
       FCreateTime = #{createTime,jdbcType=TIMESTAMP},
       FUpdateTime = #{updateTime,jdbcType=TIMESTAMP},
       FDeleteTime = #{deleteTime,jdbcType=TIMESTAMP},
@@ -474,7 +474,7 @@
     select
     'true' as QUERYID,
     <choose>
-      <when test="selective != null and selective.length > 0">
+      <when test="selective != null and selective.length &gt; 0">
         <foreach collection="selective" item="column" separator=",">
           ${column.aliasedEscapedColumnName}
         </foreach>
@@ -503,7 +503,7 @@
     values
     <foreach collection="list" item="item" separator=",">
       (#{item.id,jdbcType=INTEGER}, #{item.name,jdbcType=VARCHAR}, #{item.number,jdbcType=VARCHAR}, 
-        #{item.industryId,jdbcType=VARCHAR}, #{item.createTime,jdbcType=TIMESTAMP}, #{item.updateTime,jdbcType=TIMESTAMP}, 
+        #{item.industryId,jdbcType=INTEGER}, #{item.createTime,jdbcType=TIMESTAMP}, #{item.updateTime,jdbcType=TIMESTAMP}, 
         #{item.deleteTime,jdbcType=TIMESTAMP}, #{item.createUser,jdbcType=VARCHAR}, #{item.updateUser,jdbcType=VARCHAR}, 
         #{item.deleteUser,jdbcType=VARCHAR}, #{item.isDelete,jdbcType=TINYINT})
     </foreach>
@@ -532,7 +532,7 @@
           #{item.number,jdbcType=VARCHAR}
         </if>
         <if test="'FIndustryId'.toString() == column.value">
-          #{item.industryId,jdbcType=VARCHAR}
+          #{item.industryId,jdbcType=INTEGER}
         </if>
         <if test="'FCreateTime'.toString() == column.value">
           #{item.createTime,jdbcType=TIMESTAMP}

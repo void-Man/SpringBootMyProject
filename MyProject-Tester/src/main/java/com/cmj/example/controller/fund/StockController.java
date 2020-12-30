@@ -22,6 +22,15 @@ public class StockController {
     @Autowired
     private StockService stockService;
 
+    /**
+     * 新增股票
+     *
+     * @param request
+     * @param path
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2020/12/31
+     */
     @PostMapping("/addStock")
     @ResponseBody
     public String addStock(HttpServletRequest request, String path) throws IOException {

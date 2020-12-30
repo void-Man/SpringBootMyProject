@@ -37,4 +37,19 @@ public class IndustrController {
         return "{}";
     }
 
+    /**
+     * 更新股票行业信息
+     *
+     * @param request
+     * @param path
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2020/12/31
+     */
+    @PostMapping("/updateStock")
+    @ResponseBody
+    public String updateStock(HttpServletRequest request, String path) throws IOException {
+        industrService.updateStock(path);
+        return "{}";
+    }
 }
