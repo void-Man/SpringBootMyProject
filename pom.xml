@@ -10,6 +10,7 @@
         <module>MyProject-Tester</module>
         <module>DesignPattern</module>
         <module>Project.Commons</module>
+        <module>Project.Service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
