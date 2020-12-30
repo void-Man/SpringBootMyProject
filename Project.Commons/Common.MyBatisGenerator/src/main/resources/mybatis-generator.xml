@@ -127,7 +127,35 @@
             <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
             <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
         </table>
-        <table tableName="t_base_fundentry" domainObjectName="FundEntryBase" enableCountByExample="true"
+        <table tableName="t_base_fundpositionentry" domainObjectName="FundPositionEntryBase" enableCountByExample="true"
+               enableUpdateByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"
+               enableDeleteByExample="false"
+               enableDeleteByPrimaryKey="false">
+            <property name="useActualColumnNames" value="true"/>
+            <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
+            <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="t_base_funduser" domainObjectName="FundUserBase" enableCountByExample="true"
+               enableUpdateByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"
+               enableDeleteByExample="false"
+               enableDeleteByPrimaryKey="false">
+            <property name="useActualColumnNames" value="true"/>
+            <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
+            <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
+            <columnOverride column="FInOffer" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="t_base_industry" domainObjectName="IndustrBase" enableCountByExample="true"
+               enableUpdateByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"
+               enableDeleteByExample="false"
+               enableDeleteByPrimaryKey="false">
+            <property name="useActualColumnNames" value="true"/>
+            <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
+            <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="t_base_stock" domainObjectName="StockBase" enableCountByExample="true"
                enableUpdateByExample="true" enableSelectByExample="true"
                selectByExampleQueryId="true"
                enableDeleteByExample="false"
