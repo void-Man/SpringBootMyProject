@@ -3,6 +3,7 @@ package com.cmj.example.fund;
 import com.cmj.example.mapper.StockBaseMapper;
 import com.cmj.example.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
@@ -11,6 +12,7 @@ import java.io.IOException;
  * @description
  * @date 2020/12/30
  */
+@Service
 public class StockServiceImpl implements StockService{
 
     @Autowired
