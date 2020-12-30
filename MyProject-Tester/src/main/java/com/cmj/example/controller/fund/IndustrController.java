@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 
 /**
  * @author mengjie_chen
@@ -31,9 +32,9 @@ public class IndustrController {
      */
     @PostMapping("/addIndustr")
     @ResponseBody
-    public String addIndustr(HttpServletRequest request) {
-
-        return null;
+    public String addIndustr(HttpServletRequest request, String path) throws IOException {
+        industrService.addIndustr(path);
+        return "{}";
     }
 
 }
