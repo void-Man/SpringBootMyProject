@@ -1,5 +1,7 @@
 package com.cmj.example.fund;
 
+import java.io.IOException;
+
 public interface FundService {
     /**
      * 添加基金信息
@@ -9,5 +11,5 @@ public interface FundService {
      * @author mengjie_chen
      * @date 2021/1/1
      */
-    void addFund(String path);
+    void addFund(String path) throws IOException;
 }

@@ -173,5 +173,14 @@
             <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
             <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
         </table>
+        <table tableName="t_base_fund_has_funduser" domainObjectName="FundHasFundUserBase" enableCountByExample="true"
+               enableUpdateByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true"
+               enableDeleteByExample="false"
+               enableDeleteByPrimaryKey="false">
+            <property name="useActualColumnNames" value="true"/>
+            <columnRenamingRule searchString="^f|^F|^t|_" replaceString=""/>
+            <columnOverride column="FIsDelete" javaType="java.lang.Integer"/>
+        </table>
     </context>
 </generatorConfiguration>
