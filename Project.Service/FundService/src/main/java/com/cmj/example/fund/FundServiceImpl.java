@@ -43,7 +43,10 @@ public class FundServiceImpl implements FundService {
         List<FundBase> fundBaseList = new ArrayList<>(10);
         for (int i = 0; i < diffList.size(); i++) {
             JSONObject diffVo = diffList.getJSONObject(i);
-//            FundBase.
+            FundBase.builder()
+                    .name(diffVo.getString("sname"))
+                    .number(diffVo.getString("symbol"))
+                    .build();
         }
         return fundBaseList;
     }
