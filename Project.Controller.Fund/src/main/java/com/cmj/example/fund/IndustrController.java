@@ -1,4 +1,4 @@
-package com.cmj.example.controller.fund;
+package com.cmj.example.fund;
 
 import com.cmj.example.fund.IndustrService;
 import org.springframework.beans.factory.annotation.Autowired;

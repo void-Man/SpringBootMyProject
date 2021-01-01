@@ -11,6 +11,7 @@
         <module>DesignPattern</module>
         <module>Project.Commons</module>
         <module>Project.Service</module>
+        <module>Project.Controller.Fund</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -54,10 +55,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
