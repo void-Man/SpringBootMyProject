@@ -1,6 +1,6 @@
 package com.cmj.example.strategy.chain;
 
-import com.cmj.example.strategy.reader.FundDataReader;
+import com.cmj.example.strategy.reader.DataReader;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ import java.util.List;
  * @description
  * @date 2021/1/1
  */
-public abstract class AbstractFundInsertChain<T> implements FundInsertChain<T> {
+public abstract class AbstractDataImportChain<T> implements DataImportChain<T> {
 
     /**
      * 读取器
      */
-    protected final FundDataReader reader;
+    protected final DataReader reader;
 
-    public AbstractFundInsertChain(FundDataReader reader) {
+    public AbstractDataImportChain(DataReader reader) {
         this.reader = reader;
     }
 

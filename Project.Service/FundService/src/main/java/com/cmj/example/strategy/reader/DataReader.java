@@ -1,6 +1,6 @@
 package com.cmj.example.strategy.reader;
 
-public interface FundDataReader {
+public interface DataReader {
 
     /**
      * 读取数据

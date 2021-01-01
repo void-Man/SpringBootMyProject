@@ -2,7 +2,7 @@ package com.cmj.example.strategy.chain;
 
 import java.util.List;
 
-public interface FundInsertChain<T> {
+public interface DataImportChain<T> {
 
     /**
      * 获取需要保存的数据
