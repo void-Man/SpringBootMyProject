@@ -546,273 +546,93 @@ public class FundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIsNull() {
-            addCriterion("FStartTime is null");
+        public Criteria andBeginTimeIsNull() {
+            addCriterion("FBeginTime is null");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIsNotNull() {
-            addCriterion("FStartTime is not null");
+        public Criteria andBeginTimeIsNotNull() {
+            addCriterion("FBeginTime is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeEqualTo(Date value) {
-            addCriterion("FStartTime =", value, "startTime");
+        public Criteria andBeginTimeEqualTo(Date value) {
+            addCriterion("FBeginTime =", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime = ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeEqualToColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime = ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotEqualTo(Date value) {
-            addCriterion("FStartTime <>", value, "startTime");
+        public Criteria andBeginTimeNotEqualTo(Date value) {
+            addCriterion("FBeginTime <>", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime <> ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeNotEqualToColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThan(Date value) {
-            addCriterion("FStartTime >", value, "startTime");
+        public Criteria andBeginTimeGreaterThan(Date value) {
+            addCriterion("FBeginTime >", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime > ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeGreaterThanColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime > ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("FStartTime >=", value, "startTime");
+        public Criteria andBeginTimeGreaterThanOrEqualTo(Date value) {
+            addCriterion("FBeginTime >=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeGreaterThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime >= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeGreaterThanOrEqualToColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThan(Date value) {
-            addCriterion("FStartTime <", value, "startTime");
+        public Criteria andBeginTimeLessThan(Date value) {
+            addCriterion("FBeginTime <", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime < ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeLessThanColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime < ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThanOrEqualTo(Date value) {
-            addCriterion("FStartTime <=", value, "startTime");
+        public Criteria andBeginTimeLessThanOrEqualTo(Date value) {
+            addCriterion("FBeginTime <=", value, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeLessThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FStartTime <= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andBeginTimeLessThanOrEqualToColumn(FundUserBase.Column column) {
+            addCriterion(new StringBuilder("FBeginTime <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeIn(List<Date> values) {
-            addCriterion("FStartTime in", values, "startTime");
+        public Criteria andBeginTimeIn(List<Date> values) {
+            addCriterion("FBeginTime in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotIn(List<Date> values) {
-            addCriterion("FStartTime not in", values, "startTime");
+        public Criteria andBeginTimeNotIn(List<Date> values) {
+            addCriterion("FBeginTime not in", values, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeBetween(Date value1, Date value2) {
-            addCriterion("FStartTime between", value1, value2, "startTime");
+        public Criteria andBeginTimeBetween(Date value1, Date value2) {
+            addCriterion("FBeginTime between", value1, value2, "beginTime");
             return (Criteria) this;
         }
 
-        public Criteria andStartTimeNotBetween(Date value1, Date value2) {
-            addCriterion("FStartTime not between", value1, value2, "startTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeIsNull() {
-            addCriterion("FEndTime is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeIsNotNull() {
-            addCriterion("FEndTime is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeEqualTo(Date value) {
-            addCriterion("FEndTime =", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime = ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeNotEqualTo(Date value) {
-            addCriterion("FEndTime <>", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeNotEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime <> ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeGreaterThan(Date value) {
-            addCriterion("FEndTime >", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeGreaterThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime > ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeGreaterThanOrEqualTo(Date value) {
-            addCriterion("FEndTime >=", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeGreaterThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime >= ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeLessThan(Date value) {
-            addCriterion("FEndTime <", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeLessThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime < ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeLessThanOrEqualTo(Date value) {
-            addCriterion("FEndTime <=", value, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeLessThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FEndTime <= ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeIn(List<Date> values) {
-            addCriterion("FEndTime in", values, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeNotIn(List<Date> values) {
-            addCriterion("FEndTime not in", values, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeBetween(Date value1, Date value2) {
-            addCriterion("FEndTime between", value1, value2, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andEndTimeNotBetween(Date value1, Date value2) {
-            addCriterion("FEndTime not between", value1, value2, "endTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferIsNull() {
-            addCriterion("FInOffer is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferIsNotNull() {
-            addCriterion("FInOffer is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferEqualTo(Integer value) {
-            addCriterion("FInOffer =", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer = ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferNotEqualTo(Integer value) {
-            addCriterion("FInOffer <>", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferNotEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer <> ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferGreaterThan(Integer value) {
-            addCriterion("FInOffer >", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferGreaterThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer > ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferGreaterThanOrEqualTo(Integer value) {
-            addCriterion("FInOffer >=", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferGreaterThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer >= ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferLessThan(Integer value) {
-            addCriterion("FInOffer <", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferLessThanColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer < ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferLessThanOrEqualTo(Integer value) {
-            addCriterion("FInOffer <=", value, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferLessThanOrEqualToColumn(FundUserBase.Column column) {
-            addCriterion(new StringBuilder("FInOffer <= ").append(column.getEscapedColumnName()).toString());
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferIn(List<Integer> values) {
-            addCriterion("FInOffer in", values, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferNotIn(List<Integer> values) {
-            addCriterion("FInOffer not in", values, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferBetween(Integer value1, Integer value2) {
-            addCriterion("FInOffer between", value1, value2, "inOffer");
-            return (Criteria) this;
-        }
-
-        public Criteria andInOfferNotBetween(Integer value1, Integer value2) {
-            addCriterion("FInOffer not between", value1, value2, "inOffer");
+        public Criteria andBeginTimeNotBetween(Date value1, Date value2) {
+            addCriterion("FBeginTime not between", value1, value2, "beginTime");
             return (Criteria) this;
         }
 
