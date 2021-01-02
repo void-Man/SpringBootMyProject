@@ -7,6 +7,11 @@ import com.cmj.example.mapper.FundBaseMapper;
 import com.cmj.example.mapper.FundEntryBaseMapper;
 import com.cmj.example.mapper.FundTypeBaseMapper;
 import com.cmj.example.mapper.FundUserBaseMapper;
+import com.cmj.example.strategy.DefaultImportDataInitializer;
+import com.cmj.example.strategy.chain.FundDataImportChain;
+import com.cmj.example.strategy.chain.FundTypeDataImportChain;
+import com.cmj.example.strategy.chain.FundUserDataImportChain;
+import com.cmj.example.strategy.reader.JSONTextDataReader;
 import com.cmj.example.utils.CollectionUtils;
 import com.cmj.example.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -220,5 +225,12 @@ public class FundServiceImpl implements FundService {
             fundTypeBaseList.add(fundTypeBase);
         }
         return fundTypeBaseList;
+    }
+
+    public static void main(String[] args) {
+        DefaultImportDataInitializer defaultImportDataInitializer = new DefaultImportDataInitializer();
+        JSONTextDataReader reader = new JSONTextDataReader();
+        defaultImportDataInitializer.add(new FundDataImportChain(reader)).add(new FundTypeDataImportChain(reader)).add(new FundUserDataImportChain(reader));
+        defaultImportDataInitializer.ImportData("path");
     }
 }
