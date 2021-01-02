@@ -11,13 +11,13 @@ import java.util.List;
  * @description
  * @date 2021/1/3
  */
-public abstract class AbstractImportDataInitializer<T extends DataImportChain> implements ImportDataInitializer {
+public abstract class AbstractImportDataInitializer implements ImportDataInitializer {
 
-    private List<T> chains = new ArrayList<>(10);
+    private List<DataImportChain<?>> chains = new ArrayList<>(10);
 
     @Override
     public void ImportData(String path) {
-        for (DataImportChain chain : chains) {
+        for (DataImportChain<?> chain : chains) {
             List insertData = chain.getInsertData(path);
             chain.saveData(insertData);
         }
@@ -27,11 +27,11 @@ public abstract class AbstractImportDataInitializer<T extends DataImportChain> i
      * 添加处理器
      *
      * @param chain
-     * @return void
+     * @return com.cmj.example.strategy.ImportDataInitializer
      * @author mengjie_chen
      * @date 2021/1/3
      */
-    public AbstractImportDataInitializer<T> add(T chain) {
+    protected AbstractImportDataInitializer addChain(DataImportChain<?> chain) {
         chains.add(chain);
         return this;
     }
