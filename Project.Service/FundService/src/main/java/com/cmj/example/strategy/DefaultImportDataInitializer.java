@@ -2,7 +2,6 @@ package com.cmj.example.strategy;
 
 import com.cmj.example.strategy.chain.FundDataImportChain;
 import com.cmj.example.strategy.chain.FundTypeDataImportChain;
-import com.cmj.example.strategy.chain.FundUserDataImportChain;
 import com.cmj.example.strategy.reader.DataReader;
 
 /**
@@ -11,8 +10,10 @@ import com.cmj.example.strategy.reader.DataReader;
  * @date 2021/1/3
  */
 public class DefaultImportDataInitializer extends AbstractImportDataInitializer {
-    /**
 
+    // 需要一个包含路径和顺序的类
+
+    /**
      * chain的顺序
      *
      * @param reader
@@ -22,7 +23,6 @@ public class DefaultImportDataInitializer extends AbstractImportDataInitializer 
      */
     public DefaultImportDataInitializer(DataReader reader) {
         super.addChain(new FundTypeDataImportChain(reader))
-                .addChain(new FundDataImportChain(reader))
-                .addChain(new FundUserDataImportChain(reader));
+                .addChain(new FundDataImportChain(reader));
     }
 }

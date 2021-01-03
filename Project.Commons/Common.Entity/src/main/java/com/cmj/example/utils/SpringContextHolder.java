@@ -26,7 +26,7 @@ public class SpringContextHolder {
      * @date 2021/1/3
      */
     @Autowired
-    public static void setApplicationContext(ApplicationContext applicationContext) {
+    public void setApplicationContext(ApplicationContext applicationContext) {
         SpringContextHolder.applicationContext = applicationContext;
     }
 
