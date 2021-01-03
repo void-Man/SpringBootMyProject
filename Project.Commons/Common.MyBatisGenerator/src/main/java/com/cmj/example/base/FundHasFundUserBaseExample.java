@@ -457,7 +457,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdEqualTo(String value) {
+        public Criteria andFundIdEqualTo(Integer value) {
             addCriterion("FFundId =", value, "fundId");
             return (Criteria) this;
         }
@@ -467,7 +467,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotEqualTo(String value) {
+        public Criteria andFundIdNotEqualTo(Integer value) {
             addCriterion("FFundId <>", value, "fundId");
             return (Criteria) this;
         }
@@ -477,7 +477,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdGreaterThan(String value) {
+        public Criteria andFundIdGreaterThan(Integer value) {
             addCriterion("FFundId >", value, "fundId");
             return (Criteria) this;
         }
@@ -487,7 +487,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdGreaterThanOrEqualTo(String value) {
+        public Criteria andFundIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("FFundId >=", value, "fundId");
             return (Criteria) this;
         }
@@ -497,7 +497,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLessThan(String value) {
+        public Criteria andFundIdLessThan(Integer value) {
             addCriterion("FFundId <", value, "fundId");
             return (Criteria) this;
         }
@@ -507,7 +507,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLessThanOrEqualTo(String value) {
+        public Criteria andFundIdLessThanOrEqualTo(Integer value) {
             addCriterion("FFundId <=", value, "fundId");
             return (Criteria) this;
         }
@@ -517,32 +517,22 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLike(String value) {
-            addCriterion("FFundId like", value, "fundId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundIdNotLike(String value) {
-            addCriterion("FFundId not like", value, "fundId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundIdIn(List<String> values) {
+        public Criteria andFundIdIn(List<Integer> values) {
             addCriterion("FFundId in", values, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotIn(List<String> values) {
+        public Criteria andFundIdNotIn(List<Integer> values) {
             addCriterion("FFundId not in", values, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdBetween(String value1, String value2) {
+        public Criteria andFundIdBetween(Integer value1, Integer value2) {
             addCriterion("FFundId between", value1, value2, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotBetween(String value1, String value2) {
+        public Criteria andFundIdNotBetween(Integer value1, Integer value2) {
             addCriterion("FFundId not between", value1, value2, "fundId");
             return (Criteria) this;
         }
@@ -557,7 +547,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdEqualTo(String value) {
+        public Criteria andFundUserIdEqualTo(Integer value) {
             addCriterion("FFundUserId =", value, "fundUserId");
             return (Criteria) this;
         }
@@ -567,7 +557,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdNotEqualTo(String value) {
+        public Criteria andFundUserIdNotEqualTo(Integer value) {
             addCriterion("FFundUserId <>", value, "fundUserId");
             return (Criteria) this;
         }
@@ -577,7 +567,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdGreaterThan(String value) {
+        public Criteria andFundUserIdGreaterThan(Integer value) {
             addCriterion("FFundUserId >", value, "fundUserId");
             return (Criteria) this;
         }
@@ -587,7 +577,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdGreaterThanOrEqualTo(String value) {
+        public Criteria andFundUserIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("FFundUserId >=", value, "fundUserId");
             return (Criteria) this;
         }
@@ -597,7 +587,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdLessThan(String value) {
+        public Criteria andFundUserIdLessThan(Integer value) {
             addCriterion("FFundUserId <", value, "fundUserId");
             return (Criteria) this;
         }
@@ -607,7 +597,7 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdLessThanOrEqualTo(String value) {
+        public Criteria andFundUserIdLessThanOrEqualTo(Integer value) {
             addCriterion("FFundUserId <=", value, "fundUserId");
             return (Criteria) this;
         }
@@ -617,32 +607,22 @@ public class FundHasFundUserBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdLike(String value) {
-            addCriterion("FFundUserId like", value, "fundUserId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundUserIdNotLike(String value) {
-            addCriterion("FFundUserId not like", value, "fundUserId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundUserIdIn(List<String> values) {
+        public Criteria andFundUserIdIn(List<Integer> values) {
             addCriterion("FFundUserId in", values, "fundUserId");
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdNotIn(List<String> values) {
+        public Criteria andFundUserIdNotIn(List<Integer> values) {
             addCriterion("FFundUserId not in", values, "fundUserId");
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdBetween(String value1, String value2) {
+        public Criteria andFundUserIdBetween(Integer value1, Integer value2) {
             addCriterion("FFundUserId between", value1, value2, "fundUserId");
             return (Criteria) this;
         }
 
-        public Criteria andFundUserIdNotBetween(String value1, String value2) {
+        public Criteria andFundUserIdNotBetween(Integer value1, Integer value2) {
             addCriterion("FFundUserId not between", value1, value2, "fundUserId");
             return (Criteria) this;
         }

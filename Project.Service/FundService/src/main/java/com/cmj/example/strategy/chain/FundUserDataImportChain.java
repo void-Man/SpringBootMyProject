@@ -41,7 +41,7 @@ public class FundUserDataImportChain extends AbstractDataImportChain<FundUserBas
             for (int i = 0; i < diffList.size(); i++) {
                 JSONObject diffVo = diffList.getJSONObject(i);
                 String fundUserName = diffVo.getString("Name");
-                Date beginTime = diffVo.getDate("BDate");
+                Date beginTime = diffVo.getDate("RHDate");
 
                 // 数据基金经理已存在，跳过
                 if (allUserList.stream().anyMatch(fundUserBase -> fundUserBase.getName().equals(fundUserName))) {

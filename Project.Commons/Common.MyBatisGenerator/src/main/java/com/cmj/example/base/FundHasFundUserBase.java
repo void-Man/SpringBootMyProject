@@ -23,7 +23,7 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    private String fundId;
+    private Integer fundId;
 
     /**
      *
@@ -32,7 +32,7 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    private String fundUserId;
+    private Integer fundUserId;
 
     /**
      *
@@ -182,7 +182,7 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    public String getFundId() {
+    public Integer getFundId() {
         return fundId;
     }
 
@@ -194,8 +194,8 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFundId(String fundId) {
-        this.fundId = fundId == null ? null : fundId.trim();
+    public void setFundId(Integer fundId) {
+        this.fundId = fundId;
     }
 
     /**
@@ -206,7 +206,7 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    public String getFundUserId() {
+    public Integer getFundUserId() {
         return fundUserId;
     }
 
@@ -218,8 +218,8 @@ public class FundHasFundUserBase implements Serializable {
      *
      * @mbg.generated
      */
-    public void setFundUserId(String fundUserId) {
-        this.fundUserId = fundUserId == null ? null : fundUserId.trim();
+    public void setFundUserId(Integer fundUserId) {
+        this.fundUserId = fundUserId;
     }
 
     /**
@@ -598,7 +598,7 @@ public class FundHasFundUserBase implements Serializable {
          *
          * @mbg.generated
          */
-        public Builder fundId(String fundId) {
+        public Builder fundId(Integer fundId) {
             obj.setFundId(fundId);
             return this;
         }
@@ -611,7 +611,7 @@ public class FundHasFundUserBase implements Serializable {
          *
          * @mbg.generated
          */
-        public Builder fundUserId(String fundUserId) {
+        public Builder fundUserId(Integer fundUserId) {
             obj.setFundUserId(fundUserId);
             return this;
         }
@@ -791,8 +791,8 @@ public class FundHasFundUserBase implements Serializable {
      */
     public enum Column {
         id("FId", "id", "INTEGER", false),
-        fundId("FFundId", "fundId", "VARCHAR", false),
-        fundUserId("FFundUserId", "fundUserId", "VARCHAR", false),
+        fundId("FFundId", "fundId", "INTEGER", false),
+        fundUserId("FFundUserId", "fundUserId", "INTEGER", false),
         startTime("FStartTime", "startTime", "TIMESTAMP", false),
         inOffer("FInOffer", "inOffer", "TINYINT", false),
         profitRate("FProfitRate", "profitRate", "DECIMAL", false),
