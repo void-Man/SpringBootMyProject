@@ -56,4 +56,20 @@ public class FundController {
         return "{}";
     }
 
+    /**
+     * 添加基金持仓明细
+     *
+     * @param request
+     * @param path
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/1/1
+     */
+    @PostMapping("/addFundEntry")
+    @ResponseBody
+    public String addFundEntry(HttpServletRequest request, String path) throws Exception {
+        fundService.addFundHasUser(path);
+        return "{}";
+    }
+
 }
