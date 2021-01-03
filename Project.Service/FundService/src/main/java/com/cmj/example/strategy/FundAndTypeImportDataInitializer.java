@@ -9,7 +9,7 @@ import com.cmj.example.strategy.reader.DataReader;
  * @description
  * @date 2021/1/3
  */
-public class DefaultImportDataInitializer extends AbstractImportDataInitializer {
+public class FundAndTypeImportDataInitializer extends AbstractImportDataInitializer {
 
     // 需要一个包含路径和顺序的类
 
@@ -21,7 +21,7 @@ public class DefaultImportDataInitializer extends AbstractImportDataInitializer 
      * @author mengjie_chen
      * @date 2021/1/3
      */
-    public DefaultImportDataInitializer(DataReader reader) {
+    public FundAndTypeImportDataInitializer(DataReader reader) {
         super.addChain(new FundTypeDataImportChain(reader))
                 .addChain(new FundDataImportChain(reader));
     }
