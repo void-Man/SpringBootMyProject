@@ -18,8 +18,12 @@ import java.io.IOException;
 @RequestMapping("/stock")
 public class StockController {
 
-    @Autowired
     private StockService stockService;
+
+    @Autowired
+    public void setStockService(StockService stockService) {
+        this.stockService = stockService;
+    }
 
     /**
      * 新增股票

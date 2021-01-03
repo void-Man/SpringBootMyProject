@@ -11,9 +11,18 @@ import com.cmj.example.strategy.reader.DataReader;
  * @date 2021/1/3
  */
 public class DefaultImportDataInitializer extends AbstractImportDataInitializer {
+    /**
+
+     * chain的顺序
+     *
+     * @param reader
+     * @return
+     * @author mengjie_chen
+     * @date 2021/1/3
+     */
     public DefaultImportDataInitializer(DataReader reader) {
         super.addChain(new FundTypeDataImportChain(reader))
-                .addChain(new FundUserDataImportChain(reader))
-                .addChain(new FundDataImportChain(reader));
+                .addChain(new FundDataImportChain(reader))
+                .addChain(new FundUserDataImportChain(reader));
     }
 }

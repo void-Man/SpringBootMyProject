@@ -19,8 +19,12 @@ import java.io.IOException;
 @RequestMapping("/industr")
 public class IndustrController {
 
-    @Autowired
     private IndustrService industrService;
+
+    @Autowired
+    public void setIndustrService(IndustrService industrService) {
+        this.industrService = industrService;
+    }
 
     /**
      * 新增行业

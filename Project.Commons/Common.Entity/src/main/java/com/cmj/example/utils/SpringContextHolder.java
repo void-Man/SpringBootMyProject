@@ -10,23 +10,24 @@ import org.springframework.stereotype.Component;
  * @date 2021/1/2
  */
 @Component
-public enum SpringContextHolder {
+public class SpringContextHolder {
 
-    INSTANCE();
+    private SpringContextHolder() {
+    }
 
-    @Autowired
-    private ApplicationContext applicationContext;
+    private static ApplicationContext applicationContext;
 
     /**
-     * 获取 SpringContextHolder 实例
+     * setter 属性注入
      *
-     * @param
-     * @return com.cmj.example.utils.SpringContextHolder
+     * @param applicationContext
+     * @return void
      * @author mengjie_chen
-     * @date 2021/1/2
+     * @date 2021/1/3
      */
-    public static SpringContextHolder getInstance() {
-        return SpringContextHolder.INSTANCE;
+    @Autowired
+    public static void setApplicationContext(ApplicationContext applicationContext) {
+        SpringContextHolder.applicationContext = applicationContext;
     }
 
     /**
@@ -38,6 +39,6 @@ public enum SpringContextHolder {
      * @date 2021/1/2
      */
     public static <T> T getBean(Class<T> clazz) {
-        return getInstance().applicationContext.getBean(clazz);
+        return applicationContext.getBean(clazz);
     }
 }

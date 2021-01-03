@@ -17,8 +17,12 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/fund")
 public class FundController {
 
-    @Autowired
     private FundService fundService;
+
+    @Autowired
+    public void setFundService(FundService fundService) {
+        this.fundService = fundService;
+    }
 
     /**
      * 添加基金信息
