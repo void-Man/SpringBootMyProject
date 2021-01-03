@@ -25,7 +25,7 @@ public class FileUtils {
         while (null != (strLine = bufferedReader.readLine())) {
             stringBuilder.append(strLine);
         }
-        logger.info("com.cmj.example.utils.FileUtils.readFile.content.is----->{}", stringBuilder.toString());
+//        logger.info("com.cmj.example.utils.FileUtils.readFile.content.is----->{}", stringBuilder.toString());
         return stringBuilder.toString();
     }
 

@@ -40,4 +40,20 @@ public class FundController {
         return "{}";
     }
 
+    /**
+     * 添加基金经理和关系信息
+     *
+     * @param request
+     * @param path
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/1/1
+     */
+    @PostMapping("/addFundHasUser")
+    @ResponseBody
+    public String addFundHasUser(HttpServletRequest request, String path) throws Exception {
+        fundService.addFundHasUser(path);
+        return "{}";
+    }
+
 }

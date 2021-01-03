@@ -57,9 +57,9 @@ public class FundHasFundUserDataImportChain extends AbstractDataImportChain<Fund
                 String fundUserName = diffVo.getString("Name");
                 String fundNumber = diffVo.getString("Symbol");
                 Date startDate = diffVo.getDate("BDate");
-                BigDecimal profitRate = diffVo.getBigDecimal("NavRate").multiply(new BigDecimal("100"));
-                BigDecimal averageRate = diffVo.getBigDecimal("NavHYRate").multiply(new BigDecimal("100"));
-                Integer ranking = diffVo.getInteger("Rank");
+                BigDecimal profitRate = Optional.ofNullable(diffVo.getBigDecimal("NavRate")).orElse(BigDecimal.ZERO).multiply(new BigDecimal("100"));
+                BigDecimal averageRate = Optional.ofNullable(diffVo.getBigDecimal("NavHYRate")).orElse(BigDecimal.ZERO).multiply(new BigDecimal("100"));
+                Integer ranking = Optional.ofNullable(diffVo.getInteger("Rank")).orElse(0);
 
                 // 根据基金经理姓名找到基金经理数据
                 Optional<FundUserBase> existUserBase = allUserList.stream().filter(fundUserBase -> fundUserBase.getName().equals(fundUserName)).findFirst();
@@ -76,7 +76,7 @@ public class FundHasFundUserDataImportChain extends AbstractDataImportChain<Fund
                     continue;
                 }
                 // 已经在保存列表中，跳过
-                if (fundHasFundUserBaseList.stream().anyMatch(fundHasFundUserBase -> fundHasFundUserBase.getFundUserId().equals(existUserBase.get().getId())|| fundHasFundUserBase.getFundId().equals(existFundBase.get().getId()))) {
+                if (fundHasFundUserBaseList.stream().anyMatch(fundHasFundUserBase -> fundHasFundUserBase.getFundUserId().equals(existUserBase.get().getId()) || fundHasFundUserBase.getFundId().equals(existFundBase.get().getId()))) {
                     continue;
                 }
 

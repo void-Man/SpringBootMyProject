@@ -11,8 +11,6 @@ import com.cmj.example.strategy.reader.DataReader;
  */
 public class FundAndTypeImportDataInitializer extends AbstractImportDataInitializer {
 
-    // 需要一个包含路径和顺序的类
-
     /**
      * chain的顺序
      *
