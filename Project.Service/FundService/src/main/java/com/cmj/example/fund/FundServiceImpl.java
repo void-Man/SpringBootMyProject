@@ -6,6 +6,8 @@ import com.cmj.example.strategy.ImportDataInitializer;
 import com.cmj.example.strategy.reader.JSONTextDataReader;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author mengjie_chen
  * @description
@@ -24,5 +26,10 @@ public class FundServiceImpl implements FundService {
     public void addFundHasUser(String path) {
         ImportDataInitializer initializer = new FundHasUserImportDataInitializer(new JSONTextDataReader());
         initializer.ImportData(path);
+    }
+
+    @Override
+    public void addFundEntry(List<String> pathList) {
+
     }
 }

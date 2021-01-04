@@ -1,6 +1,7 @@
 package com.cmj.example.fund;
 
 import java.io.IOException;
+import java.util.List;
 
 public interface FundService {
     /**
@@ -22,4 +23,14 @@ public interface FundService {
      * @date 2021/1/3
      */
     void addFundHasUser(String path);
+
+    /**
+     * 添加基金持仓明细
+     *
+     * @param pathList
+     * @return void
+     * @author mengjie_chen
+     * @date 2021/1/4
+     */
+    void addFundEntry(List<String> pathList);
 }
