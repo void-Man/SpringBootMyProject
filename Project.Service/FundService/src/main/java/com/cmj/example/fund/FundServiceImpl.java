@@ -1,6 +1,7 @@
 package com.cmj.example.fund;
 
 import com.cmj.example.strategy.FundAndTypeImportDataInitializer;
+import com.cmj.example.strategy.FundEntryImportDataInitializer;
 import com.cmj.example.strategy.FundHasUserImportDataInitializer;
 import com.cmj.example.strategy.ImportDataInitializer;
 import com.cmj.example.strategy.reader.JSONTextDataReader;
@@ -30,9 +31,9 @@ public class FundServiceImpl implements FundService {
 
     @Override
     public void addFundEntry(List<String> pathList) {
-
-
-
-
+        for (String path : pathList) {
+            ImportDataInitializer initializer = new FundEntryImportDataInitializer(new JSONTextDataReader());
+            initializer.ImportData(path);
+        }
     }
 }

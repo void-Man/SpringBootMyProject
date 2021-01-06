@@ -457,7 +457,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdEqualTo(String value) {
+        public Criteria andFundIdEqualTo(Integer value) {
             addCriterion("FFundId =", value, "fundId");
             return (Criteria) this;
         }
@@ -467,7 +467,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotEqualTo(String value) {
+        public Criteria andFundIdNotEqualTo(Integer value) {
             addCriterion("FFundId <>", value, "fundId");
             return (Criteria) this;
         }
@@ -477,7 +477,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdGreaterThan(String value) {
+        public Criteria andFundIdGreaterThan(Integer value) {
             addCriterion("FFundId >", value, "fundId");
             return (Criteria) this;
         }
@@ -487,7 +487,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdGreaterThanOrEqualTo(String value) {
+        public Criteria andFundIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("FFundId >=", value, "fundId");
             return (Criteria) this;
         }
@@ -497,7 +497,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLessThan(String value) {
+        public Criteria andFundIdLessThan(Integer value) {
             addCriterion("FFundId <", value, "fundId");
             return (Criteria) this;
         }
@@ -507,7 +507,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLessThanOrEqualTo(String value) {
+        public Criteria andFundIdLessThanOrEqualTo(Integer value) {
             addCriterion("FFundId <=", value, "fundId");
             return (Criteria) this;
         }
@@ -517,32 +517,22 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andFundIdLike(String value) {
-            addCriterion("FFundId like", value, "fundId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundIdNotLike(String value) {
-            addCriterion("FFundId not like", value, "fundId");
-            return (Criteria) this;
-        }
-
-        public Criteria andFundIdIn(List<String> values) {
+        public Criteria andFundIdIn(List<Integer> values) {
             addCriterion("FFundId in", values, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotIn(List<String> values) {
+        public Criteria andFundIdNotIn(List<Integer> values) {
             addCriterion("FFundId not in", values, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdBetween(String value1, String value2) {
+        public Criteria andFundIdBetween(Integer value1, Integer value2) {
             addCriterion("FFundId between", value1, value2, "fundId");
             return (Criteria) this;
         }
 
-        public Criteria andFundIdNotBetween(String value1, String value2) {
+        public Criteria andFundIdNotBetween(Integer value1, Integer value2) {
             addCriterion("FFundId not between", value1, value2, "fundId");
             return (Criteria) this;
         }
@@ -557,7 +547,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdEqualTo(String value) {
+        public Criteria andStockIdEqualTo(Integer value) {
             addCriterion("FStockId =", value, "stockId");
             return (Criteria) this;
         }
@@ -567,7 +557,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdNotEqualTo(String value) {
+        public Criteria andStockIdNotEqualTo(Integer value) {
             addCriterion("FStockId <>", value, "stockId");
             return (Criteria) this;
         }
@@ -577,7 +567,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdGreaterThan(String value) {
+        public Criteria andStockIdGreaterThan(Integer value) {
             addCriterion("FStockId >", value, "stockId");
             return (Criteria) this;
         }
@@ -587,7 +577,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdGreaterThanOrEqualTo(String value) {
+        public Criteria andStockIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("FStockId >=", value, "stockId");
             return (Criteria) this;
         }
@@ -597,7 +587,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdLessThan(String value) {
+        public Criteria andStockIdLessThan(Integer value) {
             addCriterion("FStockId <", value, "stockId");
             return (Criteria) this;
         }
@@ -607,7 +597,7 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdLessThanOrEqualTo(String value) {
+        public Criteria andStockIdLessThanOrEqualTo(Integer value) {
             addCriterion("FStockId <=", value, "stockId");
             return (Criteria) this;
         }
@@ -617,123 +607,203 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
-        public Criteria andStockIdLike(String value) {
-            addCriterion("FStockId like", value, "stockId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStockIdNotLike(String value) {
-            addCriterion("FStockId not like", value, "stockId");
-            return (Criteria) this;
-        }
-
-        public Criteria andStockIdIn(List<String> values) {
+        public Criteria andStockIdIn(List<Integer> values) {
             addCriterion("FStockId in", values, "stockId");
             return (Criteria) this;
         }
 
-        public Criteria andStockIdNotIn(List<String> values) {
+        public Criteria andStockIdNotIn(List<Integer> values) {
             addCriterion("FStockId not in", values, "stockId");
             return (Criteria) this;
         }
 
-        public Criteria andStockIdBetween(String value1, String value2) {
+        public Criteria andStockIdBetween(Integer value1, Integer value2) {
             addCriterion("FStockId between", value1, value2, "stockId");
             return (Criteria) this;
         }
 
-        public Criteria andStockIdNotBetween(String value1, String value2) {
+        public Criteria andStockIdNotBetween(Integer value1, Integer value2) {
             addCriterion("FStockId not between", value1, value2, "stockId");
             return (Criteria) this;
         }
 
-        public Criteria andRateIsNull() {
-            addCriterion("FRate is null");
+        public Criteria andAmountIsNull() {
+            addCriterion("FAmount is null");
             return (Criteria) this;
         }
 
-        public Criteria andRateIsNotNull() {
-            addCriterion("FRate is not null");
+        public Criteria andAmountIsNotNull() {
+            addCriterion("FAmount is not null");
             return (Criteria) this;
         }
 
-        public Criteria andRateEqualTo(BigDecimal value) {
-            addCriterion("FRate =", value, "rate");
+        public Criteria andAmountEqualTo(BigDecimal value) {
+            addCriterion("FAmount =", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateEqualToColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate = ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount = ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateNotEqualTo(BigDecimal value) {
-            addCriterion("FRate <>", value, "rate");
+        public Criteria andAmountNotEqualTo(BigDecimal value) {
+            addCriterion("FAmount <>", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateNotEqualToColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate <> ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountNotEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount <> ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateGreaterThan(BigDecimal value) {
-            addCriterion("FRate >", value, "rate");
+        public Criteria andAmountGreaterThan(BigDecimal value) {
+            addCriterion("FAmount >", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateGreaterThanColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate > ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountGreaterThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount > ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateGreaterThanOrEqualTo(BigDecimal value) {
-            addCriterion("FRate >=", value, "rate");
+        public Criteria andAmountGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("FAmount >=", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateGreaterThanOrEqualToColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate >= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountGreaterThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount >= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateLessThan(BigDecimal value) {
-            addCriterion("FRate <", value, "rate");
+        public Criteria andAmountLessThan(BigDecimal value) {
+            addCriterion("FAmount <", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateLessThanColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate < ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountLessThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount < ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateLessThanOrEqualTo(BigDecimal value) {
-            addCriterion("FRate <=", value, "rate");
+        public Criteria andAmountLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("FAmount <=", value, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateLessThanOrEqualToColumn(FundPositionEntryBase.Column column) {
-            addCriterion(new StringBuilder("FRate <= ").append(column.getEscapedColumnName()).toString());
+        public Criteria andAmountLessThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FAmount <= ").append(column.getEscapedColumnName()).toString());
             return (Criteria) this;
         }
 
-        public Criteria andRateIn(List<BigDecimal> values) {
-            addCriterion("FRate in", values, "rate");
+        public Criteria andAmountIn(List<BigDecimal> values) {
+            addCriterion("FAmount in", values, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateNotIn(List<BigDecimal> values) {
-            addCriterion("FRate not in", values, "rate");
+        public Criteria andAmountNotIn(List<BigDecimal> values) {
+            addCriterion("FAmount not in", values, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("FRate between", value1, value2, "rate");
+        public Criteria andAmountBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("FAmount between", value1, value2, "amount");
             return (Criteria) this;
         }
 
-        public Criteria andRateNotBetween(BigDecimal value1, BigDecimal value2) {
-            addCriterion("FRate not between", value1, value2, "rate");
+        public Criteria andAmountNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("FAmount not between", value1, value2, "amount");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityIsNull() {
+            addCriterion("FStockQuantity is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityIsNotNull() {
+            addCriterion("FStockQuantity is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityEqualTo(Integer value) {
+            addCriterion("FStockQuantity =", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityNotEqualTo(Integer value) {
+            addCriterion("FStockQuantity <>", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityNotEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityGreaterThan(Integer value) {
+            addCriterion("FStockQuantity >", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityGreaterThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityGreaterThanOrEqualTo(Integer value) {
+            addCriterion("FStockQuantity >=", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityGreaterThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityLessThan(Integer value) {
+            addCriterion("FStockQuantity <", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityLessThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityLessThanOrEqualTo(Integer value) {
+            addCriterion("FStockQuantity <=", value, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityLessThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockQuantity <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityIn(List<Integer> values) {
+            addCriterion("FStockQuantity in", values, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityNotIn(List<Integer> values) {
+            addCriterion("FStockQuantity not in", values, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityBetween(Integer value1, Integer value2) {
+            addCriterion("FStockQuantity between", value1, value2, "stockQuantity");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockQuantityNotBetween(Integer value1, Integer value2) {
+            addCriterion("FStockQuantity not between", value1, value2, "stockQuantity");
             return (Criteria) this;
         }
 

@@ -54,7 +54,7 @@ public class FundController {
      */
     @PostMapping("/addFundHasUser")
     @ResponseBody
-    public String addFundHasUser(HttpServletRequest request, String path) throws Exception {
+    public String addFundHasUser(HttpServletRequest request, String path) {
         fundService.addFundHasUser(path);
         return "{}";
     }
@@ -70,7 +70,7 @@ public class FundController {
      */
     @PostMapping("/addFundEntry")
     @ResponseBody
-    public String addFundEntry(HttpServletRequest request, String paths) throws Exception {
+    public String addFundEntry(HttpServletRequest request, String paths) {
         List<String> pathList = Stream.of(paths.split(",")).collect(Collectors.toList());
         fundService.addFundEntry(pathList);
         return "{}";
