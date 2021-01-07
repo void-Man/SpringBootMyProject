@@ -33,4 +33,14 @@ public interface FundService {
      * @date 2021/1/4
      */
     void addFundEntry(List<String> pathList);
+
+    /**
+     * 更新基金成立时间
+     *
+     * @param
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/1/7
+     */
+    void updateFundCreateTime() throws IOException;
 }

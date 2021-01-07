@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -73,6 +74,21 @@ public class FundController {
     public String addFundEntry(HttpServletRequest request, String paths) {
         List<String> pathList = Stream.of(paths.split(",")).collect(Collectors.toList());
         fundService.addFundEntry(pathList);
+        return "{}";
+    }
+
+    /**
+     * 更新基金成立时间
+     *
+     * @param
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/1/7
+     */
+    @PostMapping("/updateFundCreateTime")
+    @ResponseBody
+    public String updateFundCreateTime() throws IOException {
+        fundService.updateFundCreateTime();
         return "{}";
     }
 

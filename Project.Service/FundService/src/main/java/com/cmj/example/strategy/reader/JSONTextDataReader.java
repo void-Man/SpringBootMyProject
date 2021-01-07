@@ -22,7 +22,7 @@ public class JSONTextDataReader extends AbstractDataReader {
             return file;
         } catch (IOException e) {
             logger.error("JSONTextDataReader.read失败----->", e);
-            throw new RuntimeException("SONTextDataReader.read失败");
+            throw new RuntimeException("JSONTextDataReader.read失败");
         }
     }
 }
