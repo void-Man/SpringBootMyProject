@@ -1,7 +1,5 @@
 package com.cmj.example;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.base.UserBase;
 import com.cmj.example.mapper.UserBaseMapper;
 import com.cmj.example.utils.common.CommonUtils;
@@ -19,7 +17,6 @@ import java.io.FileInputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * @author mengjie_chen
@@ -81,8 +78,6 @@ public class ApplicationTester {
 
     @Test
     public void test() {
-        System.out.println(JSONObject.toJSONString(userConfigurationPropertiesVo));
-        System.out.println(JSONObject.toJSONString(userValueVo));
     }
 
 }

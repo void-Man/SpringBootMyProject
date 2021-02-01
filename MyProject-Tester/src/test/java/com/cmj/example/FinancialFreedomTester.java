@@ -41,10 +41,10 @@ public class FinancialFreedomTester {
      */
     @Test
     public void depreciationTest() {
-        BigDecimal rate = CommonUtils.div100("6.5");
-        BigDecimal initAmount = new BigDecimal("1000000");
+        BigDecimal rate = CommonUtils.div100("6.8");
+        BigDecimal initAmount = new BigDecimal("7500");
 
-        int year = 15;
+        int year = 7;
         for (int i = 0; i < year; i++) {
             initAmount = initAmount.subtract(initAmount.multiply(rate));
         }
