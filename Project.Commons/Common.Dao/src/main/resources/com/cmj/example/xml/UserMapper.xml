@@ -4,6 +4,13 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.cmj.example.mapper.UserMapper">
 
+    <update id="updateCreateTimeById">
+        update t_base_user SET FCreateTime = #{date} where FId IN
+        <foreach collection="idList" item="item" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </update>
+
     <select id="getAllUser" resultType="com.cmj.example.base.vo.UserVo">
         select fid userId,fname userName from t_base_user
     </select>

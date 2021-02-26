@@ -1,6 +1,7 @@
 package com.cmj.example.mapper;
 
 import com.cmj.example.base.vo.UserVo;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -10,4 +11,5 @@ public interface UserMapper {
 
     List<UserVo> getAllUser();
 
+    void updateCreateTimeById(@Param("date") String date, @Param("idList") List<Integer> idList);
 }
