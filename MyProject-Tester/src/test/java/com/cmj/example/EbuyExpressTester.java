@@ -112,7 +112,8 @@ public class EbuyExpressTester {
         });
     }
 
-    public void test(){
+    @Test
+    public void testUpdateOrderStatus() {
         String orderNoListStr = "";
         String ebuyOrderNoVoListStr = "";
         List<String> orderNoList = JSONArray.parseArray(orderNoListStr, String.class);
@@ -127,8 +128,8 @@ public class EbuyExpressTester {
                     v1.setProductQty(v1.getProductQty() + v2.getProductQty());
                     return v1;
                 })));
-        List<EbuyDeliveryQtyVo> ebuyDeliveryQtyVoList = null;
-
+        String ebuyDeliveryQtyVoListStr = "[{\"orderNo\":\"234701184325952\",\"productQty\":3},{\"orderNo\":\"234701184325952\",\"productQty\":1},{\"orderNo\":\"234701184325952\",\"productQty\":1}]";
+        List<EbuyDeliveryQtyVo> ebuyDeliveryQtyVoList = JSONArray.parseArray(ebuyDeliveryQtyVoListStr, EbuyDeliveryQtyVo.class);
         HashMap<String, Optional<EbuyDeliveryQtyVo>> deliveryOrderMap = ebuyDeliveryQtyVoList.stream()
                 .collect(groupingBy(EbuyDeliveryQtyVo::getOrderNo, HashMap::new, reducing((v1, v2) -> {
                     v1.setProductQty(v1.getProductQty() + v2.getProductQty());
