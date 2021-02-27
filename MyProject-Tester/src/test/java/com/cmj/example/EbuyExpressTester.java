@@ -4,13 +4,14 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.TypeReference;
 import com.cmj.example.utils.CollectionUtils;
-import com.cmj.example.vo.EbuyDeliveryHasProductVo;
-import com.cmj.example.vo.EbuyDeliveryVo;
-import com.cmj.example.vo.EbuyOrderExpressVo;
+import com.cmj.example.vo.*;
 import org.junit.Test;
 
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.util.stream.Collectors.groupingBy;
+import static java.util.stream.Collectors.reducing;
 
 /**
  * @author mengjie_chen
@@ -28,7 +29,8 @@ public class EbuyExpressTester {
         List<EbuyOrderExpressVo> dbExpressVoList = JSONArray.parseArray(dbExpressVoListStr, EbuyOrderExpressVo.class);
         List<EbuyDeliveryVo> ebuyDeliveryVos = JSONArray.parseArray(ebuyDeliveryVoListStr, EbuyDeliveryVo.class);
         List<EbuyOrderExpressVo> unImpotList = JSONArray.parseArray(unImpotListStr, EbuyOrderExpressVo.class);
-        HashMap<String, EbuyOrderExpressVo> totalOrderNoPrdtNameMap = JSON.parseObject(totalOrderNoPrdtNameMapStr, new TypeReference<HashMap<String, EbuyOrderExpressVo>>() {});
+        HashMap<String, EbuyOrderExpressVo> totalOrderNoPrdtNameMap = JSON.parseObject(totalOrderNoPrdtNameMapStr, new TypeReference<HashMap<String, EbuyOrderExpressVo>>() {
+        });
         this.validateProductQty(dbExpressVoList, ebuyDeliveryVos, unImpotList, totalOrderNoPrdtNameMap);
         System.out.println();
     }
@@ -108,5 +110,36 @@ public class EbuyExpressTester {
                 }
             }
         });
+    }
+
+    public void test(){
+        String orderNoListStr = "";
+        String ebuyOrderNoVoListStr = "";
+        List<String> orderNoList = JSONArray.parseArray(orderNoListStr, String.class);
+        List<EbuyOrderHasProductFlagMapVo> ebuyOrderNoVoList = JSONArray.parseArray(ebuyOrderNoVoListStr, EbuyOrderHasProductFlagMapVo.class);
+        this.updateOrderStatus(orderNoList, ebuyOrderNoVoList);
+        System.out.println();
+    }
+
+    protected void updateOrderStatus(List<String> orderNoList, List<EbuyOrderHasProductFlagMapVo> ebuyOrderNoVoList) {
+        HashMap<String, Optional<EbuyOrderHasProductFlagMapVo>> orderProductMap = ebuyOrderNoVoList.stream()
+                .collect(groupingBy(EbuyOrderHasProductFlagMapVo::getOrderNo, HashMap::new, reducing((v1, v2) -> {
+                    v1.setProductQty(v1.getProductQty() + v2.getProductQty());
+                    return v1;
+                })));
+        List<EbuyDeliveryQtyVo> ebuyDeliveryQtyVoList = null;
+
+        HashMap<String, Optional<EbuyDeliveryQtyVo>> deliveryOrderMap = ebuyDeliveryQtyVoList.stream()
+                .collect(groupingBy(EbuyDeliveryQtyVo::getOrderNo, HashMap::new, reducing((v1, v2) -> {
+                    v1.setProductQty(v1.getProductQty() + v2.getProductQty());
+                    return v1;
+                })));
+        deliveryOrderMap.forEach((orderNo, productQty) -> {
+            EbuyOrderHasProductFlagMapVo ebuyOrderHasProductFlagMapVo = orderProductMap.get(orderNo).get();
+            if (productQty.get().getProductQty().equals(ebuyOrderHasProductFlagMapVo.getProductQty())) {
+                System.out.println();
+            }
+        });
+
     }
 }
