@@ -11,7 +11,7 @@
         <module>DesignPattern</module>
         <module>Project.Commons</module>
         <module>Project.Service</module>
-        <module>Project.Controller.Fund</module>
+        <module>Project.Controllers</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
