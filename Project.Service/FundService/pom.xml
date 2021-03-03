@@ -25,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>Fund</artifactId>
+            <artifactId>FundInterface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

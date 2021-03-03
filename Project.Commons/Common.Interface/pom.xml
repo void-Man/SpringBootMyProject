@@ -12,7 +12,7 @@
     <artifactId>Common.Interface</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>Fund</module>
+        <module>FundInterface</module>
     </modules>
 
 
