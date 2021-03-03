@@ -13,12 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>Common.Interface</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.cmj</groupId>
             <artifactId>Common.MyBatisGenerator</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
@@ -26,6 +20,12 @@
         <dependency>
             <groupId>com.cmj</groupId>
             <artifactId>Common.Entity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.cmj</groupId>
+            <artifactId>Fund</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
