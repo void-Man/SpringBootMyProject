@@ -1,7 +1,7 @@
 package com.cmj.example;
 
 import com.alibaba.fastjson.JSONObject;
-import com.cmj.example.vo.UserVo;
+import com.cmj.example.vo.UserTestVo;
 
 /**
  * @author mengjie_chen
@@ -10,7 +10,7 @@ import com.cmj.example.vo.UserVo;
  */
 public class ThreadLocalTester {
 
-    private static final ThreadLocal<UserVo> local = new ThreadLocal<>();
+    private static final ThreadLocal<UserTestVo> local = new ThreadLocal<>();
 
     public static void main(String[] args) {
         initUser();
@@ -19,21 +19,21 @@ public class ThreadLocalTester {
     }
 
     public static void initUser() {
-        UserVo userVo = UserVo.UserVoBuilder.userVo()
+        UserTestVo userTestVo = UserTestVo.UserVoBuilder.userVo()
                 .userId(111l)
                 .userName("张三")
                 .age(10)
                 .build();
-        local.set(userVo);
+        local.set(userTestVo);
     }
 
     public static void editUser() {
-        UserVo userVo = local.get();
-        userVo.setUserName("李四");
-        userVo.setAge(20);
+        UserTestVo userTestVo = local.get();
+        userTestVo.setUserName("李四");
+        userTestVo.setAge(20);
     }
 
-    public static UserVo getUser() {
+    public static UserTestVo getUser() {
         return local.get();
     }
 

@@ -8,7 +8,7 @@ import lombok.Data;
  * @date 2020/12/5
  */
 @Data
-public class UserVo {
+public class UserTestVo {
 
     private Long userId;
     private String userName;
@@ -55,14 +55,14 @@ public class UserVo {
             return this;
         }
 
-        public UserVo build() {
-            UserVo userVo = new UserVo();
-            userVo.setUserId(userId);
-            userVo.setUserName(userName);
-            userVo.setPassword(password);
-            userVo.setOuterId(outerId);
-            userVo.setAge(age);
-            return userVo;
+        public UserTestVo build() {
+            UserTestVo userTestVo = new UserTestVo();
+            userTestVo.setUserId(userId);
+            userTestVo.setUserName(userName);
+            userTestVo.setPassword(password);
+            userTestVo.setOuterId(outerId);
+            userTestVo.setAge(age);
+            return userTestVo;
         }
     }
 }
