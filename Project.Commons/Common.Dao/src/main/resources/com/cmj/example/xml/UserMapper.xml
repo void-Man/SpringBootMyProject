@@ -11,7 +11,7 @@
         </foreach>
     </update>
 
-    <select id="getAllUser" resultType="com.cmj.example.base.vo.UserVo">
+    <select id="getAllUser" resultType="com.cmj.example.vo.UserVo">
         select fid userId,fname userName from t_base_user
     </select>
 
