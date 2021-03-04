@@ -25,12 +25,6 @@
         </dependency>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>Common.Dao</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.cmj</groupId>
             <artifactId>Common.JpaRepository</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
@@ -44,6 +38,12 @@
         <dependency>
             <groupId>com.cmj</groupId>
             <artifactId>ConfigEntity</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.cmj</groupId>
+            <artifactId>UserDao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
