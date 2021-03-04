@@ -15,7 +15,7 @@
         <module>BaseEntity</module>
         <module>FundEntity</module>
         <module>ConfigEntity</module>
-        <module>Commerce.Entity</module>
+        <module>CommerceEntity</module>
         <module>UserEntity</module>
     </modules>
 
