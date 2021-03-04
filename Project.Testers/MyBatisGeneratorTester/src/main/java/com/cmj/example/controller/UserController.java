@@ -2,7 +2,7 @@ package com.cmj.example.controller;
 
 import com.cmj.example.base.UserBase;
 import com.cmj.example.base.UserBaseExample;
-import com.cmj.example.base.vo.UserCreateTimeVo;
+import com.cmj.example.vo.UserCreateTimeVo;
 import com.cmj.example.mapper.UserBaseMapper;
 import com.cmj.example.mapper.UserMapper;
 import com.cmj.example.utils.DateTimeUtils;

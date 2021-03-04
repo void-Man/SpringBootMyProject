@@ -1,4 +1,4 @@
-package com.cmj.example.base.vo;
+package com.cmj.example.vo;
 
 /**
  * @author mengjie_chen

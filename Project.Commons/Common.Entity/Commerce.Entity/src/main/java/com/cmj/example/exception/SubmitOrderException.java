@@ -1,4 +1,4 @@
-package com.cmj.example.commerce.exception;
+package com.cmj.example.exception;
 
 /**
  * @author mengjie_chen

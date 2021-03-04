@@ -3,7 +3,7 @@ package com.cmj.example.strategy.chain;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.base.*;
-import com.cmj.example.fund.FundEntryVo;
+import com.cmj.example.vo.FundEntryVo;
 import com.cmj.example.mapper.*;
 import com.cmj.example.strategy.reader.DataReader;
 import com.cmj.example.utils.CollectionUtils;

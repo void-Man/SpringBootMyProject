@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>Common.Entity</artifactId>
+            <artifactId>Commerce.Entity</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>

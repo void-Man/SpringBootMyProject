@@ -1,4 +1,4 @@
-package com.cmj.example.fund;
+package com.cmj.example.vo;
 
 import lombok.Data;
 

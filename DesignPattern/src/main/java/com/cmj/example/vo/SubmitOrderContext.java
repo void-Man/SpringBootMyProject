@@ -1,8 +1,8 @@
 package com.cmj.example.vo;
 
-import com.cmj.example.commerce.vo.EbuyDeliveryOrderVo;
-import com.cmj.example.commerce.vo.EbuyOrderHasProductVo;
-import com.cmj.example.commerce.vo.EbuyOrderVo;
+import com.cmj.example.vo.EbuyDeliveryOrderVo;
+import com.cmj.example.vo.EbuyOrderHasProductVo;
+import com.cmj.example.vo.EbuyOrderVo;
 
 import java.util.List;
 

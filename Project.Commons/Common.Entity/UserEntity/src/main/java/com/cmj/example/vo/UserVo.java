@@ -1,4 +1,4 @@
-package com.cmj.example.base.vo;
+package com.cmj.example.vo;
 
 import lombok.Data;
 

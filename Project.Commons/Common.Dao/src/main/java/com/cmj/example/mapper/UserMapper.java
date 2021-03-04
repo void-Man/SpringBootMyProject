@@ -1,6 +1,6 @@
 package com.cmj.example.mapper;
 
-import com.cmj.example.base.vo.UserVo;
+import com.cmj.example.vo.UserVo;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

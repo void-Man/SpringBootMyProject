@@ -10,6 +10,7 @@ import com.cmj.example.mapper.IndustrBaseMapper;
 import com.cmj.example.mapper.StockBaseMapper;
 import com.cmj.example.utils.CollectionUtils;
 import com.cmj.example.utils.FileUtils;
+import com.cmj.example.vo.IndustrVo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
