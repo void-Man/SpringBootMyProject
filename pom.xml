@@ -7,11 +7,11 @@
         <module>SpringBootRedis</module>
         <module>TouristCircleIM</module>
         <module>MyProject-Commons</module>
-        <module>MyProject-Tester</module>
         <module>DesignPattern</module>
         <module>Project.Commons</module>
         <module>Project.Service</module>
         <module>Project.Controllers</module>
+        <module>Project.Testers</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
