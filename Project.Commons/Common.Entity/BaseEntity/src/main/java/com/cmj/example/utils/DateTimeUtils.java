@@ -1,6 +1,6 @@
 package com.cmj.example.utils;
 
-import com.cmj.example.base.vo.CycleRateResultVo;
+import com.cmj.example.vo.CycleRateResultVo;
 import org.springframework.util.StringUtils;
 
 import java.math.BigDecimal;
@@ -33,11 +33,11 @@ public class DateTimeUtils {
      * @date 2021/1/6
      */
     public static boolean isLessThanDate(String dateStr, String dateFormart) {
-        if (org.springframework.util.StringUtils.isEmpty(dateStr)) {
+        if (StringUtils.isEmpty(dateStr)) {
             return false;
         }
         Date now = new Date();
-        if (org.springframework.util.StringUtils.isEmpty(dateFormart)) {
+        if (StringUtils.isEmpty(dateFormart)) {
             dateFormart = DateTimeUtils.DATETIME_FORMAT;
         }
         Date date = DateTimeUtils.parse(dateStr, dateFormart);
@@ -55,12 +55,12 @@ public class DateTimeUtils {
      * @date 2021/1/6
      */
     public static boolean isBetweenInDate(String startDateStr, String endTimeStr, String dateFormart) {
-        if (org.springframework.util.StringUtils.isEmpty(startDateStr) || org.springframework.util.StringUtils.isEmpty(endTimeStr)) {
+        if (StringUtils.isEmpty(startDateStr) || StringUtils.isEmpty(endTimeStr)) {
             System.out.println("时间异常");
             return false;
         }
         Date now = new Date();
-        if (org.springframework.util.StringUtils.isEmpty(dateFormart)) {
+        if (StringUtils.isEmpty(dateFormart)) {
             dateFormart = DateTimeUtils.DATETIME_FORMAT;
         }
         Date startDate = DateTimeUtils.parse(startDateStr, dateFormart);
@@ -501,7 +501,7 @@ public class DateTimeUtils {
      * @date 2019/10/10
      */
     public static boolean compareDate(String d1, String d2, String format) {
-        if (org.springframework.util.StringUtils.isEmpty(d1) || org.springframework.util.StringUtils.isEmpty(d2)) {
+        if (StringUtils.isEmpty(d1) || StringUtils.isEmpty(d2)) {
             System.out.println("时间异常");
             return false;
         }

@@ -19,13 +19,13 @@
         </dependency>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>Common.Entity</artifactId>
+            <artifactId>FundInterface</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.cmj</groupId>
-            <artifactId>FundInterface</artifactId>
+            <artifactId>BaseEntity</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
