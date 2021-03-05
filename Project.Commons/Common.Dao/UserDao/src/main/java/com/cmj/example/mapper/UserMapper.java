@@ -12,4 +12,6 @@ public interface UserMapper {
     List<UserVo> getAllUser();
 
     void updateCreateTimeById(@Param("date") String date, @Param("idList") List<Integer> idList);
+
+    List<UserVo> getFirst100User();
 }

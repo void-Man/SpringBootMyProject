@@ -12,6 +12,10 @@
     </update>
 
     <select id="getAllUser" resultType="com.cmj.example.vo.UserVo">
+        select fid userId,fname userName from t_base_user
+    </select>
+
+    <select id="getFirst100User" resultType="com.cmj.example.vo.UserVo">
         select fid userId,fname userName from t_base_user limit 0,100
     </select>
 
