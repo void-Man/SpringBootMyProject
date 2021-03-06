@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.base.*;
 import com.cmj.example.mapper.FundBaseMapper;
+import com.cmj.example.mapper.FundDao;
 import com.cmj.example.mapper.FundPositionEntryBaseMapper;
 import com.cmj.example.mapper.StockBaseMapper;
 import com.cmj.example.strategy.FundAndTypeImportDataInitializer;
@@ -13,6 +14,7 @@ import com.cmj.example.strategy.ImportDataInitializer;
 import com.cmj.example.strategy.reader.JSONTextDataReader;
 import com.cmj.example.utils.HttpsUtils;
 import com.cmj.example.utils.StringUtils;
+import com.cmj.example.vo.IndustryPositionVo;
 import com.cmj.example.vo.StockIndustryResultVo;
 import com.cmj.example.vo.StockRateVo;
 import org.apache.http.message.BasicHeader;
@@ -23,10 +25,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.math.BigDecimal;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -46,6 +46,8 @@ public class FundServiceImpl implements FundService {
     private StockBaseMapper stockBaseMapper;
     @Autowired
     private FundPositionEntryBaseMapper fundPositionEntryBaseMapper;
+    @Autowired
+    private FundDao fundDao;
 
     @Override
     public void addFund(String path) {
@@ -111,10 +113,29 @@ public class FundServiceImpl implements FundService {
     }
 
     @Override
-    public List<StockIndustryResultVo> getStockIndustryInfo(String fundNumbers) {
-        List<String> fundNUmberList = JSONArray.parseArray(fundNumbers, String.class);
-
-        return null;
+    public List<IndustryPositionVo> getStockIndustryInfo(String fundNumbers) {
+        List<String> fundNUmberList = Arrays.asList(fundNumbers.split(","));
+        List<StockIndustryResultVo> stockIndustryResultVoList = fundDao.getStockIndustryInfo(fundNUmberList);
+        BigDecimal totalAmount = stockIndustryResultVoList.stream().filter(Objects::nonNull).map(StockIndustryResultVo::getAmount).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
+        List<IndustryPositionVo> industryPositionVoList = new ArrayList<>(10);
+        stockIndustryResultVoList.stream()
+                .collect(Collectors.groupingBy(StockIndustryResultVo::getIndustryName))
+                .forEach((industryName, list) -> {
+                    BigDecimal industryTotalAmount = list.stream().filter(Objects::nonNull).map(StockIndustryResultVo::getAmount).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
+                    IndustryPositionVo industryPositionVo = new IndustryPositionVo();
+                    industryPositionVo.setIndustryName(industryName);
+                    industryPositionVo.setAmount(industryTotalAmount);
+                    industryPositionVoList.add(industryPositionVo);
+                });
+        for (int i = 0; i < industryPositionVoList.size(); i++) {
+            IndustryPositionVo industryPositionVo = industryPositionVoList.get(i);
+            if (industryPositionVoList.size() - 1 == i) {
+                industryPositionVo.setRate(new BigDecimal("100").subtract(industryPositionVoList.stream().map(IndustryPositionVo::getRate).filter(Objects::nonNull).reduce(BigDecimal::add).orElse(BigDecimal.ZERO)));
+                break;
+            }
+            industryPositionVo.setRate(industryPositionVo.getAmount().divide(totalAmount, 20, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal("100")));
+        }
+        return industryPositionVoList;
     }
 
     /**

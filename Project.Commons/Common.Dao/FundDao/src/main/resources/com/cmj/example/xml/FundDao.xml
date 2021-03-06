@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cmj.example.mapper.FundDao">
+
+    <select id="getStockIndustryInfo" resultType="com.cmj.example.vo.StockIndustryResultVo">
+        SELECT
+            fund.FName fundName,
+            fund.FNumber fundNumber,
+            stock.FName stockName,
+            stock.FNumber stockNumber,
+            industry.FName industryName,
+            position.FAmount amount
+        FROM
+            t_base_fund fund
+            INNER JOIN t_base_fundpositionentry position ON fund.FId = position.FFundId
+            INNER JOIN t_base_stock stock ON stock.FId = position.FStockId
+            INNER JOIN t_base_industry industry ON industry.FId = stock.FIndustryId
+        WHERE
+            fund.FNumber IN
+            <foreach collection="fundNUmberList" close=")" open="(" item="item" separator=",">
+                #{item}
+            </foreach>
+    </select>
+</mapper>

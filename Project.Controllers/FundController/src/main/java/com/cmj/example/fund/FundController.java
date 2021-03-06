@@ -1,6 +1,7 @@
 package com.cmj.example.fund;
 
 import com.alibaba.fastjson.JSONObject;
+import com.cmj.example.vo.IndustryPositionVo;
 import com.cmj.example.vo.StockIndustryResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -121,7 +122,7 @@ public class FundController {
     @GetMapping("/getStockIndustryInfo")
     @ResponseBody
     public String getStockIndustryInfo(String fundNumbers) throws IOException {
-        List<StockIndustryResultVo> resultVoList = fundService.getStockIndustryInfo(fundNumbers);
+        List<IndustryPositionVo> resultVoList = fundService.getStockIndustryInfo(fundNumbers);
         return JSONObject.toJSONString(resultVoList);
     }
 

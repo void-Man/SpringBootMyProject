@@ -1,6 +1,6 @@
 package com.cmj.example.fund;
 
-import com.cmj.example.vo.StockIndustryResultVo;
+import com.cmj.example.vo.IndustryPositionVo;
 
 import java.io.IOException;
 import java.util.List;
@@ -64,5 +64,5 @@ public interface FundService {
      * @author mengjie_chen
      * @date 2021/3/6
      */
-    List<StockIndustryResultVo> getStockIndustryInfo(String fundNumbers);
+    List<IndustryPositionVo> getStockIndustryInfo(String fundNumbers);
 }
