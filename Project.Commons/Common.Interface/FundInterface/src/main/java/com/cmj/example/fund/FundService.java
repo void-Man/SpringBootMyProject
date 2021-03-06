@@ -1,5 +1,7 @@
 package com.cmj.example.fund;
 
+import com.cmj.example.vo.StockIndustryResultVo;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -53,4 +55,14 @@ public interface FundService {
      * @date 2021/3/6
      */
     void addTop10Stock(String fundNumber) throws IOException;
+
+    /**
+     * 根据基金代码分析股票行业分布情况
+     *
+     * @param fundNumbers
+     * @return java.util.List<com.cmj.example.vo.StockIndustryResultVo>
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    List<StockIndustryResultVo> getStockIndustryInfo(String fundNumbers);
 }

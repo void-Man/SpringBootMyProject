@@ -13,6 +13,7 @@ import com.cmj.example.strategy.ImportDataInitializer;
 import com.cmj.example.strategy.reader.JSONTextDataReader;
 import com.cmj.example.utils.HttpsUtils;
 import com.cmj.example.utils.StringUtils;
+import com.cmj.example.vo.StockIndustryResultVo;
 import com.cmj.example.vo.StockRateVo;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
@@ -107,6 +108,13 @@ public class FundServiceImpl implements FundService {
             addList.add(addBase);
         }
         fundPositionEntryBaseMapper.batchInsertSelective(addList, FundPositionEntryBase.Column.fundId, FundPositionEntryBase.Column.stockId, FundPositionEntryBase.Column.amount, FundPositionEntryBase.Column.stockQuantity, FundPositionEntryBase.Column.stockRate);
+    }
+
+    @Override
+    public List<StockIndustryResultVo> getStockIndustryInfo(String fundNumbers) {
+        List<String> fundNUmberList = JSONArray.parseArray(fundNumbers, String.class);
+
+        return null;
     }
 
     /**

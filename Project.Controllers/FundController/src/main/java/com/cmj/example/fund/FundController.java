@@ -1,5 +1,7 @@
 package com.cmj.example.fund;
 
+import com.alibaba.fastjson.JSONObject;
+import com.cmj.example.vo.StockIndustryResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -106,6 +108,21 @@ public class FundController {
     public String addTop10Stock(String fundNumber) throws IOException {
         fundService.addTop10Stock(fundNumber);
         return "{}";
+    }
+
+    /**
+     * 根据基金代码分析股票行业分布情况
+     *
+     * @param fundNumbers
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    @GetMapping("/getStockIndustryInfo")
+    @ResponseBody
+    public String getStockIndustryInfo(String fundNumbers) throws IOException {
+        List<StockIndustryResultVo> resultVoList = fundService.getStockIndustryInfo(fundNumbers);
+        return JSONObject.toJSONString(resultVoList);
     }
 
 }
