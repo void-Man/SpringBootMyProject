@@ -2,7 +2,6 @@ package com.cmj.example.fund;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cmj.example.vo.IndustryPositionVo;
-import com.cmj.example.vo.StockIndustryResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
