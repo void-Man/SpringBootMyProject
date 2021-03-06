@@ -2,6 +2,7 @@ package com.cmj.example.fund;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -89,6 +90,21 @@ public class FundController {
     @ResponseBody
     public String updateFundCreateTime() throws IOException {
         fundService.updateFundCreateTime();
+        return "{}";
+    }
+
+    /**
+     * 保存基金前10大重仓股
+     *
+     * @param fundNumber
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    @PostMapping("/addTop10Stock")
+    @ResponseBody
+    public String addTop10Stock(String fundNumber) throws IOException {
+        fundService.addTop10Stock(fundNumber);
         return "{}";
     }
 

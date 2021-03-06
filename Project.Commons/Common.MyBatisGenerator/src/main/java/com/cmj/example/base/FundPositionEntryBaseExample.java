@@ -807,6 +807,96 @@ public class FundPositionEntryBaseExample {
             return (Criteria) this;
         }
 
+        public Criteria andStockRateIsNull() {
+            addCriterion("FStockRate is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateIsNotNull() {
+            addCriterion("FStockRate is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateEqualTo(BigDecimal value) {
+            addCriterion("FStockRate =", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate = ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateNotEqualTo(BigDecimal value) {
+            addCriterion("FStockRate <>", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateNotEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate <> ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateGreaterThan(BigDecimal value) {
+            addCriterion("FStockRate >", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateGreaterThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate > ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateGreaterThanOrEqualTo(BigDecimal value) {
+            addCriterion("FStockRate >=", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateGreaterThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate >= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateLessThan(BigDecimal value) {
+            addCriterion("FStockRate <", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateLessThanColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate < ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateLessThanOrEqualTo(BigDecimal value) {
+            addCriterion("FStockRate <=", value, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateLessThanOrEqualToColumn(FundPositionEntryBase.Column column) {
+            addCriterion(new StringBuilder("FStockRate <= ").append(column.getEscapedColumnName()).toString());
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateIn(List<BigDecimal> values) {
+            addCriterion("FStockRate in", values, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateNotIn(List<BigDecimal> values) {
+            addCriterion("FStockRate not in", values, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("FStockRate between", value1, value2, "stockRate");
+            return (Criteria) this;
+        }
+
+        public Criteria andStockRateNotBetween(BigDecimal value1, BigDecimal value2) {
+            addCriterion("FStockRate not between", value1, value2, "stockRate");
+            return (Criteria) this;
+        }
+
         public Criteria andCreateTimeIsNull() {
             addCriterion("FCreateTime is null");
             return (Criteria) this;

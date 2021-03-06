@@ -1,16 +1,21 @@
 package com.cmj.example.fund;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.cmj.example.base.FundBase;
-import com.cmj.example.base.FundBaseExample;
+import com.cmj.example.base.*;
 import com.cmj.example.mapper.FundBaseMapper;
+import com.cmj.example.mapper.FundPositionEntryBaseMapper;
+import com.cmj.example.mapper.StockBaseMapper;
 import com.cmj.example.strategy.FundAndTypeImportDataInitializer;
 import com.cmj.example.strategy.FundEntryImportDataInitializer;
 import com.cmj.example.strategy.FundHasUserImportDataInitializer;
 import com.cmj.example.strategy.ImportDataInitializer;
 import com.cmj.example.strategy.reader.JSONTextDataReader;
 import com.cmj.example.utils.HttpsUtils;
+import com.cmj.example.utils.StringUtils;
+import com.cmj.example.vo.StockRateVo;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +26,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -32,12 +39,12 @@ import java.util.stream.Collectors;
 public class FundServiceImpl implements FundService {
     private static final Logger logger = LoggerFactory.getLogger(FundServiceImpl.class);
 
-    private FundBaseMapper fundBaseMapper;
-
     @Autowired
-    public void setFundBaseMapper(FundBaseMapper fundBaseMapper) {
-        this.fundBaseMapper = fundBaseMapper;
-    }
+    private FundBaseMapper fundBaseMapper;
+    @Autowired
+    private StockBaseMapper stockBaseMapper;
+    @Autowired
+    private FundPositionEntryBaseMapper fundPositionEntryBaseMapper;
 
     @Override
     public void addFund(String path) {
@@ -77,14 +84,106 @@ public class FundServiceImpl implements FundService {
         }
     }
 
+    @Override
+    public void addTop10Stock(String fundNumber) throws IOException {
+        FundBase fundBase = fundBaseMapper.selectOneByExample(new FundBaseExample().createCriteria()
+                .andIsDeleteEqualTo(0)
+                .andNumberEqualTo(fundNumber)
+                .example());
+        List<StockRateVo> stockRateVoList = this.requestStockRateInfo(fundNumber);
+        List<FundPositionEntryBase> addList = new ArrayList<>(10);
+        for (StockRateVo stockRateVo : stockRateVoList) {
+            StockBase stockBase = stockBaseMapper.selectOneByExample(new StockBaseExample().createCriteria()
+                    .andIsDeleteEqualTo(0)
+                    .andNumberEqualTo(stockRateVo.getCode())
+                    .example());
+            FundPositionEntryBase addBase = FundPositionEntryBase.builder()
+                    .fundId(fundBase.getId())
+                    .stockId(stockBase.getId())
+                    .stockQuantity(stockRateVo.getCount())
+                    .amount(stockRateVo.getTotal_assets())
+                    .stockRate(stockRateVo.getRatio())
+                    .build();
+            addList.add(addBase);
+        }
+        fundPositionEntryBaseMapper.batchInsertSelective(addList, FundPositionEntryBase.Column.fundId, FundPositionEntryBase.Column.stockId, FundPositionEntryBase.Column.amount, FundPositionEntryBase.Column.stockQuantity, FundPositionEntryBase.Column.stockRate);
+    }
+
+    /**
+     * 请求获取股票持仓数量
+     *
+     * @param
+     * @param fundNumber
+     * @return java.util.List<com.cmj.example.vo.StockRateVo>
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    private List<StockRateVo> requestStockRateInfo(String fundNumber) throws IOException {
+        String url = "https://web.ifzq.gtimg.cn/fund/newfund/fundInvesting/getInvesting";
+        List<BasicNameValuePair> paramList = new ArrayList<>(10);
+        paramList.add(new BasicNameValuePair("app", "web"));
+        paramList.add(new BasicNameValuePair("symbol", "jj" + fundNumber));
+        paramList.add(new BasicNameValuePair("_callback", "jQuery111102605675353179122_1615003191043"));
+        paramList.add(new BasicNameValuePair("_", "1615003191044"));
+        String result = HttpsUtils.get(url, paramList);
+        result = this.patternStr(result);
+        return this.toStockRateVo(result);
+    }
+
+    /**
+     * 将json串解析为对象
+     *
+     * @param content
+     * @return java.util.List<com.cmj.example.vo.StockRateVo>
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    private List<StockRateVo> toStockRateVo(String content) {
+        JSONObject jsonObject = JSONObject.parseObject(content);
+        String top10Str = jsonObject.getJSONObject("data").getJSONObject("data").getString("zhongcang");
+        return JSONArray.parseArray(top10Str, StockRateVo.class);
+    }
+
+    /**
+     * 正则匹配获取json串
+     *
+     * @param content
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    private String patternStr(String content) {
+        // 替换前面多余的字符串
+        String preStr = "jQuery(.*\\()";
+        Matcher preMacher = Pattern.compile(preStr).matcher(content);
+        if (preMacher.find()) {
+            String noPre = preMacher.replaceAll("");
+            if (StringUtils.isEmpty(noPre)) {
+                throw new RuntimeException("解析JSON错误");
+            }
+            // 替换后面多余的字符串
+            String afterStr = "\\)";
+            Matcher afterMatcher = Pattern.compile(afterStr).matcher(noPre);
+            if (afterMatcher.find()) {
+                String noAfter = afterMatcher.replaceAll("");
+                if (StringUtils.isEmpty(noAfter)) {
+                    throw new RuntimeException("解析JSON错误");
+                }
+                return noAfter;
+            }
+        } else {
+            throw new RuntimeException("解析JSON错误");
+        }
+        return null;
+    }
+
     /**
      * 获取基金信息
      *
-     * @param
-     * @param i
+     * @param current
      * @return java.lang.String
      * @author mengjie_chen
-     * @date 2021/1/7
+     * @date 2021/3/6
      */
     private String getFundInfo(int current) throws IOException {
         String url = "https://www.touzid.com/index.php?/fund/ajax/metrics/";

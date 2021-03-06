@@ -43,4 +43,14 @@ public interface FundService {
      * @date 2021/1/7
      */
     void updateFundCreateTime() throws IOException;
+
+    /**
+     * addTop10Stock
+     *
+     * @param fundNumber
+     * @return void
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    void addTop10Stock(String fundNumber) throws IOException;
 }

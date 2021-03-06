@@ -1,8 +1,11 @@
 package com.cmj.example.utils;
 
+import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.entity.StringEntity;
@@ -10,6 +13,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicHeader;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.ssl.SSLContextBuilder;
 import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
@@ -95,6 +99,29 @@ public class HttpsUtils {
         httpPost.setEntity(stringEntity);
 
         CloseableHttpResponse response = httpClient.execute(httpPost);
+        int code = response.getStatusLine().getStatusCode();
+        String msg = response.getStatusLine().getReasonPhrase();
+        if (code != 200) {
+            throw new RuntimeException("请求结果异常：" + msg);
+        }
+        HttpEntity e = response.getEntity();
+        return EntityUtils.toString(e, "UTF-8");
+    }
+
+    /**
+     * 发送带参数的get请求
+     *
+     * @param url
+     * @param paramList
+     * @return java.lang.String
+     * @author mengjie_chen
+     * @date 2021/3/6
+     */
+    public static String get(String url, List<BasicNameValuePair> paramList) throws IOException {
+        CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(createSSLConnSocketFactory()).setConnectionManager(connMgr).setDefaultRequestConfig(requestConfig).build();
+        String params = EntityUtils.toString(new UrlEncodedFormEntity(paramList, Consts.UTF_8));
+        HttpGet httpGet = new HttpGet(url + "?" + params);
+        CloseableHttpResponse response = httpClient.execute(httpGet);
         int code = response.getStatusLine().getStatusCode();
         String msg = response.getStatusLine().getReasonPhrase();
         if (code != 200) {
