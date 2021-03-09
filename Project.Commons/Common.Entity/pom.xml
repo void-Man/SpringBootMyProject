@@ -19,6 +19,7 @@
         <module>UserEntity</module>
         <module>SimpleTestEntity</module>
         <module>SpringTesterEntity</module>
+        <module>SpiderEntity</module>
     </modules>
 
 
