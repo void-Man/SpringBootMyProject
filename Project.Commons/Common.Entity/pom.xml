@@ -18,6 +18,7 @@
         <module>CommerceEntity</module>
         <module>UserEntity</module>
         <module>SimpleTestEntity</module>
+        <module>SpringTesterEntity</module>
     </modules>
 
 
