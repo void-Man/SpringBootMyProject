@@ -7,6 +7,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -17,6 +19,7 @@ import javax.annotation.PostConstruct;
  * @date 2021/3/9
  */
 @Component
+@Order(0)
 public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(Person.class);
@@ -24,10 +27,28 @@ public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean
     private String name;
     private String address;
     private String phone;
+    @Autowired
+    private HumanVo humanVo;
 
-    public Person() {
+//    public Person() {
+//        logger.info("Person.Person -----> 进入Person构造方法");
+//    }
+
+    public Person(HumanVo humanVo) {
         logger.info("Person.Person -----> 进入Person构造方法");
+        this.humanVo = humanVo;
     }
+//    public Person(StudentVo studentVo) {
+//        this.studentVo = studentVo;
+//    }
+
+//    public StudentVo getStudentVo() {
+//        return studentVo;
+//    }
+//
+//    public void setStudentVo(StudentVo studentVo) {
+//        this.studentVo = studentVo;
+//    }
 
     public String getName() {
         return name;
