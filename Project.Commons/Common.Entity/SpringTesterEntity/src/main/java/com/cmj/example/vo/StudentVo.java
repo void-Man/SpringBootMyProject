@@ -2,7 +2,6 @@ package com.cmj.example.vo;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +10,6 @@ import org.springframework.stereotype.Component;
  * @date 2021/3/9
  */
 @Component
-@Order(1)
 public class StudentVo {
     private static final Logger logger = LoggerFactory.getLogger(StudentVo.class);
 

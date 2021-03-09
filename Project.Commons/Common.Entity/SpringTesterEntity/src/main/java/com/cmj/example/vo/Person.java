@@ -8,7 +8,6 @@ import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -19,12 +18,11 @@ import javax.annotation.PostConstruct;
  * @date 2021/3/9
  */
 @Component
-@Order(0)
 public class Person implements BeanFactoryAware, BeanNameAware, InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(Person.class);
 
-    private String name;
+    private String name = "Person";
     private String address;
     private String phone;
     @Autowired

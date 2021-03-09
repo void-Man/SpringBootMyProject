@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class HumanVo {
     private static final Logger logger = LoggerFactory.getLogger(HumanVo.class);
 
-    private String name;
+    private String name = "HumanVo";
     @Autowired
     private Person person;
 
