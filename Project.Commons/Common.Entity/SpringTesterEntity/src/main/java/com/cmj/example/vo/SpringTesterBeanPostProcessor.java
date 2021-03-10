@@ -17,7 +17,7 @@ public class SpringTesterBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Person || bean instanceof HumanVo) {
+        if (bean instanceof Person) {
             logger.info("SpringTesterBeanPostProcessor.postProcessBeforeInitialization() -----> 进入SpringTesterBeanPostProcessor.postProcessBeforeInitialization)方法");
         }
         return bean;
@@ -25,7 +25,7 @@ public class SpringTesterBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        if (bean instanceof Person || bean instanceof HumanVo) {
+        if (bean instanceof Person) {
             logger.info("SpringTesterBeanPostProcessor.postProcessAfterInitialization() -----> 进入SpringTesterBeanPostProcessor.postProcessAfterInitialization)方法");
         }
         return bean;
