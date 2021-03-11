@@ -133,7 +133,7 @@ public class FundServiceImpl implements FundService {
                 industryPositionVo.setRate(new BigDecimal("100").subtract(industryPositionVoList.stream().map(IndustryPositionVo::getRate).filter(Objects::nonNull).reduce(BigDecimal::add).orElse(BigDecimal.ZERO)));
                 break;
             }
-            industryPositionVo.setRate(industryPositionVo.getAmount().divide(totalAmount, 20, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal("100")));
+            industryPositionVo.setRate(industryPositionVo.getAmount().divide(totalAmount, 20, BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal("100")).setScale(2, BigDecimal.ROUND_HALF_UP));
         }
         return industryPositionVoList;
     }
